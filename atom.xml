@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://yehchge.github.com/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-12T01:07:15+08:00</updated>
+  <updated>2014-05-12T23:44:23+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -14,11 +14,60 @@
 
   
   <entry>
+    <title type="html"><![CDATA[我的第一個中文標題]]></title>
+    <link href="http://yehchge.github.com/blog/2014/05/12/this-is-first-octopress-chinese-title/"/>
+    <updated>2014-05-12T23:43:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2014/05/12/this-is-first-octopress-chinese-title</id>
+    <content type="html"><![CDATA[<p>這裡是第一篇的 OctoPress 的 部落格中文!! 哈囉, 世界!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[測試 MarkDown 語法]]></title>
+    <link href="http://yehchge.github.com/blog/2014/05/12/test-markdown/"/>
+    <updated>2014-05-12T23:40:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2014/05/12/test-markdown</id>
+    <content type="html"><![CDATA[<h1>This is second Title.</h1>
+
+<p><strong> Hello World, Octopress !! </strong></p>
+
+<ul>
+<li>第一次</li>
+<li>第二次</li>
+<li>串接</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一段 PHP 程式碼]]></title>
+    <link href="http://yehchge.github.com/blog/2014/05/12/the-php-code/"/>
+    <updated>2014-05-12T23:28:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2014/05/12/the-php-code</id>
+    <content type="html"><![CDATA[<p>產生一段 PHP 程式碼:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>for($i=0;$i&lt;=10;$i++):
+</span><span class='line'>      echo "Hello World!"."&lt;br>";
+</span><span class='line'>  endfor;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>夾在中間能夠正常!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[想在主頁顯示摘要]]></title>
     <link href="http://yehchge.github.com/blog/2014/05/12/more-more-more/"/>
     <updated>2014-05-12T01:05:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2014/05/12/more-more-more</id>
     <content type="html"><![CDATA[<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
+
+<!-- more -->
+
 
 <p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
 ]]></content>
