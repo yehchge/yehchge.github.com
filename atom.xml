@@ -4,7 +4,7 @@
   <title><![CDATA[我的 Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-16T00:27:56+08:00</updated>
+  <updated>2014-05-16T00:38:41+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -391,8 +391,210 @@ Comments
     <link href="http://yehchge.github.com/blog/2012/04/04/ajax-poll/"/>
     <updated>2012-04-04T23:46:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2012/04/04/ajax-poll</id>
-    <content type="html"><![CDATA[<div class='post'>
-<style type="text/css"><!-- pre { font-family: monospace; color: #ffffff; background-color: #333333; } .Special { color: #ffdead; } .Underlined { color: #80a0ff; text-decoration: underline; } .Constant { color: #ffa0a0; } .Type { color: #bdb76b; font-weight: bold; } .PreProc { color: #cd5c5c; } .Statement { color: #f0e68c; font-weight: bold; } .Identifier { color: #98fb98; }  code {      display: block; /* fixes a strange ie margin bug */     font-family: Courier New;      font-size: 8pt;      overflow:auto;      background: #f0f0f0 url(https://sites.google.com/site/yehchge/home/Code_BG.png) left top repeat-y;     border: 1px solid #ccc;     padding: 1px 1px 1px 12px;     max-height:400px;     line-height: 1.2em; } --></style> 這是一個 AJAX Poll 投票的範例<br/><br/>1. HTML Code(ajax_poll.htm):<br/><code><pre><br /><br /><span class="Identifier">&lt;</span><span class="Statement">html</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;</span><span class="Statement">head</span><span class="Identifier">&gt;</span><br /><span class="PreProc">    </span><span class="Identifier">&lt;</span><span class="Statement">meta</span><span class="Identifier"> </span><span class="Type">charset</span><span class="Identifier">=</span><span class="Constant">&quot;utf-8&quot;</span><span class="Identifier"> /&gt;</span><br /><span class="PreProc">    </span><span class="Identifier">&lt;</span><span class="Statement">title</span><span class="Identifier">&gt;</span><span class="Title">AJAX Poll</span><span class="Identifier">&lt;/</span><span class="Statement">title</span><span class="Identifier">&gt;</span><br /><span class="PreProc">    </span><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier"> </span><span class="Type">src</span><span class="Identifier">=</span><span class="Constant">&quot;ajax_poll.js&quot;</span><span class="Identifier">&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><span class="PreProc"> </span><br /><span class="PreProc">  </span><span class="Identifier">&lt;/</span><span class="Statement">head</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;</span><span class="Statement">body</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">h3</span><span class="Identifier">&gt;&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;<a href="http://www.w3schools.com/php/php_ajax_poll.asp">http://www.w3schools.com/php/php_ajax_poll.asp</a>&quot;</span><span class="Identifier">&gt;</span><span class="Underlined">AJAX Poll</span><span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;&lt;/</span><span class="Statement">h3</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">div</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;poll&quot;</span><span class="Identifier">&gt;</span><br />      <span class="Identifier">&lt;</span><span class="Statement">h2</span><span class="Identifier">&gt;</span><span class="Title">Do you like PHP and AJAX so far?</span><span class="Identifier">&lt;/</span><span class="Statement">h2</span><span class="Identifier">&gt;</span><br />      <span class="Identifier">&lt;</span><span class="Statement">form</span><span class="Identifier">&gt;</span><br />        Yes: <span class="Identifier">&lt;</span><span class="Statement">input</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;radio&quot;</span><span class="Identifier"> </span><span class="Type">name</span><span class="Identifier">=</span><span class="Constant">&quot;vote&quot;</span><span class="Identifier"> </span><span class="Type">value</span><span class="Identifier">=</span><span class="Constant">&quot;0&quot;</span><span class="Identifier"> </span><span class="Special">onclick=&quot;</span><span class="Special">getVote</span>(<span class="Identifier">this</span><span class="Special">.value</span>)<span class="Special">&quot;</span><span class="Identifier">&gt;&lt;</span><span class="Statement">br</span><span class="Identifier"> /&gt;</span><br />        No: <span class="Identifier">&lt;</span><span class="Statement">input</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;radio&quot;</span><span class="Identifier"> </span><span class="Type">name</span><span class="Identifier">=</span><span class="Constant">&quot;vote&quot;</span><span class="Identifier"> </span><span class="Type">value</span><span class="Identifier">=</span><span class="Constant">&quot;1&quot;</span><span class="Identifier"> </span><span class="Special">onclick=&quot;</span><span class="Special">getVote</span>(<span class="Identifier">this</span><span class="Special">.value</span>)<span class="Special">&quot;</span><span class="Identifier">&gt;</span><br />      <span class="Identifier">&lt;/</span><span class="Statement">form</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;/</span><span class="Statement">div</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;index.htm&quot;</span><span class="Identifier">&gt;</span><span class="Underlined">Home</span><span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;/</span><span class="Statement">body</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;/</span><span class="Statement">html</span><span class="Identifier">&gt;</span><br /><br /></pre></code><br/><br/> 2. Javascript Code(ajax_poll.js):<br/><code><pre><br /><br /><span class="Identifier">var</span> xmlHttp;<br /><br /><span class="Identifier">function</span> getVote(<span class="Statement">int</span>) <span class="Identifier">{</span><br />  xmlHttp=GetXmlHttpObject();<br />  <span class="Statement">if</span> (xmlHttp==<span class="Statement">null</span>) <span class="Identifier">{</span><br />    <span class="Statement">alert</span>(<span class="Constant">&quot;Browser does not support HTTP Request&quot;</span>);<br />    <span class="Statement">return</span>;<br />  <span class="Identifier">}</span><br />  <span class="Identifier">var</span> url=<span class="Constant">&quot;ajax_poll.php&quot;</span>;<br />  url=url+<span class="Constant">&quot;?vote=&quot;</span>+<span class="Statement">int</span>;<br />  url=url+<span class="Constant">&quot;&amp;sid=&quot;</span>+Math.random();<br />  xmlHttp.onreadystatechange=stateChanged;<br />  xmlHttp.open(<span class="Constant">&quot;GET&quot;</span>,url,<span class="Constant">true</span>);<br />  xmlHttp.send(<span class="Statement">null</span>);<br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span> stateChanged() <span class="Identifier">{</span><br />  <span class="Statement">if</span> (xmlHttp.readyState==4 || xmlHttp.readyState==<span class="Constant">&quot;complete&quot;</span>) <span class="Identifier">{</span><br />    <span class="Statement">document</span>.getElementById(<span class="Constant">&quot;poll&quot;</span>).innerHTML=xmlHttp.responseText;<br />  <span class="Identifier">}</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span> GetXmlHttpObject() <span class="Identifier">{</span><br />  <span class="Identifier">var</span> objXMLHttp=<span class="Statement">null</span>;<br />  <span class="Statement">if</span> (<span class="Statement">window</span>.XMLHttpRequest) <span class="Identifier">{</span><br />    objXMLHttp=<span class="Statement">new</span> XMLHttpRequest();<br />  <span class="Identifier">}</span> <span class="Statement">else</span> <span class="Statement">if</span> (<span class="Statement">window</span>.ActiveXObject) <span class="Identifier">{</span><br />    objXMLHttp=<span class="Statement">new</span> ActiveXObject(<span class="Constant">&quot;Microsoft.XMLHTTP&quot;</span>);<br />  <span class="Identifier">}</span><br />  <span class="Statement">return</span> objXMLHttp;<br /><span class="Identifier">}</span><br /><br /></pre></code><br/><br/> 3. PHP Code(ajax_poll.php):<br/><code><pre><br /><br /><span class="Special">&lt;?php</span><br /><br /><span class="Statement">$</span><span class="Identifier">vote</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">_REQUEST</span><span class="Special">[</span>'<span class="Constant">vote</span>'<span class="Special">]</span>;<br /><br /><span class="Comment">//get content of textfile</span><br /><span class="Statement">$</span><span class="Identifier">filename</span> <span class="Statement">=</span> &quot;<span class="Constant">ajax_poll.txt</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">content</span> <span class="Statement">=</span> <span class="Identifier">file</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">filename</span><span class="Special">)</span>;<br /><br /><span class="Comment">//put content in array</span><br /><span class="Statement">$</span><span class="Identifier">array</span> <span class="Statement">=</span> <span class="Identifier">explode</span><span class="Special">(</span>&quot;<span class="Constant">||</span>&quot;, <span class="Statement">$</span><span class="Identifier">content</span><span class="Special">[</span><span class="Constant">0</span><span class="Special">])</span>;<br /><span class="Statement">$</span><span class="Identifier">yes</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">array</span><span class="Special">[</span><span class="Constant">0</span><span class="Special">]</span>;<br /><span class="Statement">$</span><span class="Identifier">no</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">array</span><span class="Special">[</span><span class="Constant">1</span><span class="Special">]</span>;<br /><br /><span class="Statement">if</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">vote</span> <span class="Statement">==</span> <span class="Constant">0</span><span class="Special">)</span> <span class="Statement">$</span><span class="Identifier">yes</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">yes</span> <span class="Statement">+</span> <span class="Constant">1</span>;<br /><span class="Statement">if</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">vote</span> <span class="Statement">==</span> <span class="Constant">1</span><span class="Special">)</span> <span class="Statement">$</span><span class="Identifier">no</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">no</span> <span class="Statement">+</span> <span class="Constant">1</span>;<br /><br /><span class="Comment">//insert votes to txt file</span><br /><span class="Statement">$</span><span class="Identifier">insertvote</span> <span class="Statement">=</span> <span class="Statement">$</span><span class="Identifier">yes</span><span class="Statement">.</span>&quot;<span class="Constant">||</span>&quot;<span class="Statement">.</span><span class="Statement">$</span><span class="Identifier">no</span>;<br /><span class="Statement">$</span><span class="Identifier">fp</span> <span class="Statement">=</span> <span class="Identifier">fopen</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">filename</span>,&quot;<span class="Constant">w</span>&quot;<span class="Special">)</span>;<br /><span class="Identifier">fputs</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">fp</span>,<span class="Statement">$</span><span class="Identifier">insertvote</span><span class="Special">)</span>;<br /><span class="Identifier">fclose</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">fp</span><span class="Special">)</span>;<br /><br /><span class="Special">?&gt;</span><br /><br /><span class="Identifier">&lt;</span><span class="Statement">h2</span><span class="Identifier">&gt;</span><span class="Title">Result:</span><span class="Identifier">&lt;/</span><span class="Statement">h2</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">table</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;</span><span class="Statement">tr</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">td</span><span class="Identifier">&gt;</span>Yes:<span class="Identifier">&lt;/</span><span class="Statement">td</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">td</span><span class="Identifier">&gt;</span><br />      <span class="Identifier">&lt;</span><span class="Statement">img</span><span class="Identifier"> </span><span class="Type">src</span><span class="Identifier">=</span><span class="Constant">&quot;images\\poll.gif&quot;</span><span class="Identifier"> </span><span class="Type">width</span><span class="Identifier">=</span><span class="Constant">'</span><span class="Special">&lt;?php</span> <span class="PreProc">echo</span><span class="Special">(</span><span class="Constant">100</span><span class="Statement">*</span><span class="Identifier">round</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">yes</span><span class="Statement">/</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">no</span><span class="Statement">+</span><span class="Statement">$</span><span class="Identifier">yes</span><span class="Special">)</span>,<span class="Constant">2</span><span class="Special">))</span>; <span class="Special">?&gt;</span><span class="Constant">'</span><span class="Identifier"> </span><span class="Type">height</span><span class="Identifier">=</span><span class="Constant">'20'</span><span class="Identifier">&gt;</span><br />      <span class="Special">&lt;?php</span> <span class="PreProc">echo</span><span class="Special">(</span><span class="Constant">100</span><span class="Statement">*</span><span class="Identifier">round</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">yes</span><span class="Statement">/</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">no</span><span class="Statement">+</span><span class="Statement">$</span><span class="Identifier">yes</span><span class="Special">)</span>,<span class="Constant">2</span><span class="Special">))</span>; <span class="Special">?&gt;</span>%<br />    <span class="Identifier">&lt;/</span><span class="Statement">td</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;/</span><span class="Statement">tr</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;</span><span class="Statement">tr</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">td</span><span class="Identifier">&gt;</span>No:<span class="Identifier">&lt;/</span><span class="Statement">td</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">td</span><span class="Identifier">&gt;</span><br />      <span class="Identifier">&lt;</span><span class="Statement">img</span><span class="Identifier"> </span><span class="Type">src</span><span class="Identifier">=</span><span class="Constant">&quot;images\\poll.gif&quot;</span><span class="Identifier"> </span><span class="Type">width</span><span class="Identifier">=</span><span class="Constant">'</span><span class="Special">&lt;?php</span> <span class="PreProc">echo</span><span class="Special">(</span><span class="Constant">100</span><span class="Statement">*</span><span class="Identifier">round</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">no</span><span class="Statement">/</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">no</span><span class="Statement">+</span><span class="Statement">$</span><span class="Identifier">yes</span><span class="Special">)</span>,<span class="Constant">2</span><span class="Special">))</span>; <span class="Special">?&gt;</span><span class="Constant">'</span><span class="Identifier"> </span><span class="Type">height</span><span class="Identifier">=</span><span class="Constant">'20'</span><span class="Identifier">&gt;</span><br />      <span class="Special">&lt;?php</span> <span class="PreProc">echo</span><span class="Special">(</span><span class="Constant">100</span><span class="Statement">*</span><span class="Identifier">round</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">no</span><span class="Statement">/</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">no</span><span class="Statement">+</span><span class="Statement">$</span><span class="Identifier">yes</span><span class="Special">)</span>,<span class="Constant">2</span><span class="Special">))</span>; <span class="Special">?&gt;</span>%<br />    <span class="Identifier">&lt;/</span><span class="Statement">td</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;/</span><span class="Statement">tr</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;/</span><span class="Statement">table</span><span class="Identifier">&gt;</span><br /><br /></pre></code><br/><br/> 4. TXT Code(ajax_poll.txt):<br/><code><pre><br /><br />0||0<br /><br /></pre></code><br/><br/> 5. 下載 poll.gif 檔案, 放到 images 資料夾下.<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-ARnQ1QFOfK4/T3xstL86Z_I/AAAAAAAABNM/HKKFrNnA6eY/s1600/poll.gif" imageanchor="1" style=""><img border="0" height="200" width="30" src="http://1.bp.blogspot.com/-ARnQ1QFOfK4/T3xstL86Z_I/AAAAAAAABNM/HKKFrNnA6eY/s200/poll.gif" /></a></div><br/><br/>6. 寫好後, 執行 ajax_poll.htm, 完成!</div>
+    <content type="html"><![CDATA[這是一個 AJAX Poll 投票的範例
+
+1. HTML Code(ajax_poll.htm):
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;html>
+</span><span class='line'>  &lt;head>
+</span><span class='line'>    &lt;meta charset="utf-8" />
+</span><span class='line'>    &lt;title>AJAX Poll&lt;/title>
+</span><span class='line'>    &lt;script src="ajax_poll.js">&lt;/script> 
+</span><span class='line'>  &lt;/head>
+</span><span class='line'>  &lt;body>
+</span><span class='line'>    &lt;h3>&lt;a href="http://www.w3schools.com/php/php_ajax_poll.asp">AJAX Poll&lt;/a>&lt;/h3>
+</span><span class='line'>    &lt;div id="poll">
+</span><span class='line'>      &lt;h2>Do you like PHP and AJAX so far?&lt;/h2>
+</span><span class='line'>      &lt;form>
+</span><span class='line'>        Yes: &lt;input type="radio" name="vote" value="0" onclick="getVote(this.value)">&lt;br />
+</span><span class='line'>        No: &lt;input type="radio" name="vote" value="1" onclick="getVote(this.value)">
+</span><span class='line'>      &lt;/form>
+</span><span class='line'>    &lt;/div>
+</span><span class='line'>    &lt;a href="index.htm">Home&lt;/a>
+</span><span class='line'>  &lt;/body>
+</span><span class='line'>&lt;/html></span></code></pre></td></tr></table></div></figure>
+
+2. Javascript Code(ajax_poll.js):
+ 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xmlHttp;
+</span><span class='line'>
+</span><span class='line'>function getVote(int) {
+</span><span class='line'>  xmlHttp=GetXmlHttpObject();
+</span><span class='line'>  if (xmlHttp==null) {
+</span><span class='line'>    alert("Browser does not support HTTP Request");
+</span><span class='line'>    return;
+</span><span class='line'>  }
+</span><span class='line'>  var url="ajax_poll.php";
+</span><span class='line'>  url=url+"?vote="+int;
+</span><span class='line'>  url=url+"&sid="+Math.random();
+</span><span class='line'>  xmlHttp.onreadystatechange=stateChanged;
+</span><span class='line'>  xmlHttp.open("GET",url,true);
+</span><span class='line'>  xmlHttp.send(null);
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function stateChanged() {
+</span><span class='line'>  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") {
+</span><span class='line'>    document.getElementById("poll").innerHTML=xmlHttp.responseText;
+</span><span class='line'>  }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function GetXmlHttpObject() {
+</span><span class='line'>  var objXMLHttp=null;
+</span><span class='line'>  if (window.XMLHttpRequest) {
+</span><span class='line'>    objXMLHttp=new XMLHttpRequest();
+</span><span class='line'>  } else if (window.ActiveXObject) {
+</span><span class='line'>    objXMLHttp=new ActiveXObject("Microsoft.XMLHTTP");
+</span><span class='line'>  }
+</span><span class='line'>  return objXMLHttp;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+3. PHP Code(ajax_poll.php):
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>
+</span><span class='line'>$vote = $_REQUEST['vote'];
+</span><span class='line'>
+</span><span class='line'>//get content of textfile
+</span><span class='line'>$filename = "ajax_poll.txt";
+</span><span class='line'>$content = file($filename);
+</span><span class='line'>
+</span><span class='line'>//put content in array
+</span><span class='line'>$array = explode("||", $content[0]);
+</span><span class='line'>$yes = $array[0];
+</span><span class='line'>$no = $array[1];
+</span><span class='line'>
+</span><span class='line'>if ($vote == 0) $yes = $yes + 1;
+</span><span class='line'>if ($vote == 1) $no = $no + 1;
+</span><span class='line'>
+</span><span class='line'>//insert votes to txt file
+</span><span class='line'>$insertvote = $yes."||".$no;
+</span><span class='line'>$fp = fopen($filename,"w");
+</span><span class='line'>fputs($fp,$insertvote);
+</span><span class='line'>fclose($fp);
+</span><span class='line'>
+</span><span class='line'>?>
+</span><span class='line'>
+</span><span class='line'>&lt;h2>Result:&lt;/h2>
+</span><span class='line'>&lt;table>
+</span><span class='line'>  &lt;tr>
+</span><span class='line'>    &lt;td>Yes:&lt;/td>
+</span><span class='line'>    &lt;td>
+</span><span class='line'>      &lt;img src="images/poll.gif" width='&lt;?php echo(100*round($yes/($no+$yes),2)); ?>' height='20'>
+</span><span class='line'>      &lt;?php echo(100*round($yes/($no+$yes),2)); ?>%
+</span><span class='line'>    &lt;/td>
+</span><span class='line'>  &lt;/tr>
+</span><span class='line'>  &lt;tr>
+</span><span class='line'>    &lt;td>No:&lt;/td>
+</span><span class='line'>    &lt;td>
+</span><span class='line'>      &lt;img src="images/poll.gif" width='&lt;?php echo(100*round($no/($no+$yes),2)); ?>' height='20'>
+</span><span class='line'>      &lt;?php echo(100*round($no/($no+$yes),2)); ?>%
+</span><span class='line'>    &lt;/td>
+</span><span class='line'>  &lt;/tr>
+</span><span class='line'>&lt;/table></span></code></pre></td></tr></table></div></figure>
+
+4. TXT Code(ajax_poll.txt):
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0||0</span></code></pre></td></tr></table></div></figure>
+
+
+5. 下載 poll.gif 檔案, 放到 images 資料夾下.
+
+<a href="http://1.bp.blogspot.com/-ARnQ1QFOfK4/T3xstL86Z_I/AAAAAAAABNM/HKKFrNnA6eY/s1600/poll.gif" imageanchor="1" style="">
+<img border="0" height="200" width="30" src="http://1.bp.blogspot.com/-ARnQ1QFOfK4/T3xstL86Z_I/AAAAAAAABNM/HKKFrNnA6eY/s200/poll.gif" />
+</a>
+
+6. 寫好後, 執行 ajax_poll.htm, 完成!
 ]]></content>
   </entry>
   
