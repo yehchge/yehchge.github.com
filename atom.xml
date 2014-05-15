@@ -4,7 +4,7 @@
   <title><![CDATA[我的 Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-15T23:44:18+08:00</updated>
+  <updated>2014-05-16T00:19:59+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -12,33 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[我的第一個中文標題]]></title>
-    <link href="http://yehchge.github.com/blog/2014/05/12/this-is-first-octopress-chinese-title/"/>
-    <updated>2014-05-12T23:43:00+08:00</updated>
-    <id>http://yehchge.github.com/blog/2014/05/12/this-is-first-octopress-chinese-title</id>
-    <content type="html"><![CDATA[<p>這裡是第一篇的 OctoPress 的 部落格中文!! 哈囉, 世界!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[測試 MarkDown 語法]]></title>
-    <link href="http://yehchge.github.com/blog/2014/05/12/test-markdown/"/>
-    <updated>2014-05-12T23:40:00+08:00</updated>
-    <id>http://yehchge.github.com/blog/2014/05/12/test-markdown</id>
-    <content type="html"><![CDATA[<h1>This is second Title.</h1>
-
-<p><strong> Hello World, Octopress !! </strong></p>
-
-<ul>
-<li>第一次</li>
-<li>第二次</li>
-<li>串接</li>
-</ul>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[一段 PHP 程式碼]]></title>
@@ -60,44 +33,50 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[想在主頁顯示摘要]]></title>
+    <title type="html"><![CDATA[測試 MORE 功能]]></title>
     <link href="http://yehchge.github.com/blog/2014/05/12/more-more-more/"/>
     <updated>2014-05-12T01:05:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2014/05/12/more-more-more</id>
-    <content type="html"><![CDATA[<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
+    <content type="html"><![CDATA[<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
 
 <!-- more -->
 
 
-<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
+<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
+想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[this is test blog]]></title>
-    <link href="http://yehchge.github.com/blog/2014/05/11/this-is-test-blog/"/>
-    <updated>2014-05-11T23:54:00+08:00</updated>
-    <id>http://yehchge.github.com/blog/2014/05/11/this-is-test-blog</id>
-    <content type="html"><![CDATA[<p>this is a test blog text.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[這是一個中文標題!]]></title>
+    <title type="html"><![CDATA[假文文章]]></title>
     <link href="http://yehchge.github.com/blog/2014/05/11/this-is-chinese-title/"/>
     <updated>2014-05-11T23:47:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2014/05/11/this-is-chinese-title</id>
-    <content type="html"><![CDATA[<p>是是，不過烏老鴉的炸醬麵確也不好吃。好用來說嘴，荊棘刺入了行路人的脛踝，他快步出門，什麼，覺得自己的身子非常沉重，過鐵道時，是的，成為當然的後宮主人，為孩子的未來，諸君。庚桑楚看老子坐定了，他想，惦記著我的兒子，就絕了氣！這是庚桑楚在取掛在檐下的臘鵝。孔乙己一到店。理當感到的害怕滋味。而出關，孔乙己看著問他的人。此外還有不少趣話。這感覺真是太棒了。搖搖頭道，將一群無勢力的熱血男兒改變成一群數一數二的文化先鋒並非空口說白話的事，可以給你做菜的。我看這也敷衍得過去了，所以繞不到七八丈路。圓的雪白的月亮照著前途，她都講給我聽過，慢慢探身下去，我真不知道是走了什麼運，有三個傷，在這時候。太太沒有到姚家去。馬也不待鞭策，讓他們想起，你臉上又添上新傷疤了，蹣跚地走到鐵道邊！我從十二歲起。唲。我已經不多了，彷彿覺得異樣？額上的青筋條條綻出，我背了生書，他們推行兒童保護法。竟許有人同情，是早就廢止了朝食的，甚是仔細，蘿莉控以輕飄飄和軟綿綿打垮了眼中只有人妻的衛道人士，約莫八九歲光景。不耐煩似的走進來。話還沒說完，老婆子看見白面的炊餅，我才也覺得他的確長久沒有來了，原來還在這些地方幹這些勾當。橛著嘴走開了？更無從悔，一步一啄，不上一點鐘！果凍！拱著兩隻手極恭敬的靠在橫板上。手臂改造成電動手，更是絕頂的感官享受。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[此 Blog 停止更新, 將轉移.]]></title>
-    <link href="http://yehchge.github.com/blog/2012/08/30/blog/"/>
-    <updated>2012-08-30T18:18:00+08:00</updated>
-    <id>http://yehchge.github.com/blog/2012/08/30/blog</id>
-    <content type="html"><![CDATA[<div class='post'>
- 此 Blog 停止更新, 將轉移.   轉移至:  http://yehchge.wordpress.com/</div>
+    <content type="html"><![CDATA[<p>是是，不過烏老鴉的炸醬麵確也不好吃。好用來說嘴，荊棘刺入了行路人的脛踝，他快步出門
+，什麼，覺得自己的身子非常沉重，過鐵道時，是的，成為當然的後宮主人，為孩子的未來，
+諸君。庚桑楚看老子坐定了，他想，惦記著我的兒子，就絕了氣！這是庚桑楚在取掛在檐下的
+臘鵝。孔乙己一到店。理當感到的害怕滋味。而出關，孔乙己看著問他的人。此外還有不少趣
+話。這感覺真是太棒了。搖搖頭道，將一群無勢力的熱血男兒改變成一群數一數二的文化先鋒
+並非空口說白話的事，可以給你做菜的。我看這也敷衍得過去了，所以繞不到七八丈路。圓的
+雪白的月亮照著前途，她都講給我聽過，慢慢探身下去，我真不知道是走了什麼運，有三個傷
+，在這時候。太太沒有到姚家去。馬也不待鞭策，讓他們想起，你臉上又添上新傷疤了，蹣跚
+地走到鐵道邊！我從十二歲起。唲。我已經不多了，彷彿覺得異樣？額上的青筋條條綻出，我
+背了生書，他們推行兒童保護法。竟許有人同情，是早就廢止了朝食的，甚是仔細，蘿莉控以
+輕飄飄和軟綿綿打垮了眼中只有人妻的衛道人士，約莫八九歲光景。不耐煩似的走進來。話還
+沒說完，老婆子看見白面的炊餅，我才也覺得他的確長久沒有來了，原來還在這些地方幹這些
+勾當。橛著嘴走開了？更無從悔，一步一啄，不上一點鐘！果凍！拱著兩隻手極恭敬的靠在橫
+板上。手臂改造成電動手，更是絕頂的感官享受。</p>
 ]]></content>
   </entry>
   
@@ -106,8 +85,221 @@
     <link href="http://yehchge.github.com/blog/2012/08/23/javascript/"/>
     <updated>2012-08-23T15:10:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2012/08/23/javascript</id>
-    <content type="html"><![CDATA[<div class='post'>
-<style type="text/css"><!-- pre { font-family: monospace; color: #ffffff; background-color: #333333; } body { font-family: monospace; color: #ffffff; background-color: #333333; } .Special { color: #ffdead; } .Constant { color: #ffa0a0; } .Type { color: #bdb76b; font-weight: bold; } .Statement { color: #f0e68c; font-weight: bold; } .Identifier { color: #98fb98; }  code {      display: block; /* fixes a strange ie margin bug */     font-family: Courier New;      font-size: 8pt;      overflow:auto;      background: #f0f0f0 url(https://sites.google.com/site/yehchge/home/Code_BG.png) left top repeat-y;     border: 1px solid #ccc;     padding: 1px 1px 1px 12px;     max-height:400px;     line-height: 1.2em; } --></style> 原文：http://www.wowbox.com.tw/blog/article.asp?id=3004 <br />首先是最常規的方法：<br />程式碼: <pre><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">"para"</span><span class="Identifier"> </span><span class="Type">title</span><span class="Identifier">=</span><span class="Constant">"cssrain demo!"</span><span class="Identifier"> </span><span class="Special">onclick="</span><span class="Special">test</span>()<span class="Special">"</span><span class="Identifier"> &gt;</span>test<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="Identifier">function</span><span class="Special"> test</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">"test"</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /></pre></code></pre><br/>當某一天，我們知道JavaScript要跟HTML結構實現分離後，就會改了一種寫法：<br/></br>程式碼: <pre><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;para&quot;</span><span class="Identifier"> </span><span class="Type">title</span><span class="Identifier">=</span><span class="Constant">&quot;cssrain demo!&quot;</span><span class="Identifier">&gt;</span>test<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="Identifier">function</span><span class="Special"> test</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;test&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><span class="Statement">window</span><span class="Special">.onload = </span><span class="Identifier">function</span>()<span class="Identifier">{</span><br /><span class="Special">    </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">.onclick = test;</span><br /><span class="Identifier">}</span><br /><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /></pre></code></pre><br/>當我們工作越來越久後，有時候我們需要對某個元素綁定多個相同的事件類型：<br/><br/>程式碼: <pre><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;para&quot;</span><span class="Identifier"> </span><span class="Type">title</span><span class="Identifier">=</span><span class="Constant">&quot;cssrain demo!&quot;</span><span class="Identifier">&gt;</span>test<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="Identifier">function</span><span class="Special"> test</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;test&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span><span class="Special"> pig</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;pig&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Statement">window</span><span class="Special">.onload = </span><span class="Identifier">function</span>()<span class="Identifier">{</span><br /><span class="Special">     </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">.onclick = test;</span><br /><span class="Special">     </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">.onclick = pig;</span><br /><span class="Identifier">}</span><br /><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /></pre></code></pre><br/>如果按照上面的寫法，我們只能輸出第二個函數。<br/>這時候我們需要用到attachEvent方法：<br/><br/>程式碼: <pre><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;para&quot;</span><span class="Identifier"> </span><span class="Type">title</span><span class="Identifier">=</span><span class="Constant">&quot;cssrain demo!&quot;</span><span class="Identifier">&gt;</span>test<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="Identifier">function</span><span class="Special"> test</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;test&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span><span class="Special"> pig</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;pig&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Statement">window</span><span class="Special">.onload = </span><span class="Identifier">function</span>()<span class="Identifier">{</span><br /><span class="Special">     </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">.attachEvent</span>(<span class="Constant">&quot;onclick&quot;</span><span class="Special">,test</span>)<span class="Special">;</span><br /><span class="Special">     </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">.attachEvent</span>(<span class="Constant">&quot;onclick&quot;</span><span class="Special">,pig</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /></pre></code></pre><br/>在一段時間內，你並沒發現這段代碼有任何錯誤。<br/>某一天，一個名叫firefox的瀏覽器 闖入你的視野，當我們把這段代碼放到firefox中執行後，<br/>發現並不能正常運行。 問題就這樣，越來越多，然而作為一名JS程式設計師，這些都是必須面對的。<br/><br/>為了解決這段代碼的平台兼容性問題，我翻翻手冊，知道了firefox跟ie的區別：<br/>firefox中註冊事件使用：addEventListener方法，同時為了兼容ie，我們必須用到if &#8230; else&#8230;<br/><br/>程式碼: <pre><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;para&quot;</span><span class="Identifier"> </span><span class="Type">title</span><span class="Identifier">=</span><span class="Constant">&quot;cssrain demo!&quot;</span><span class="Identifier">&gt;</span>test<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="Identifier">function</span><span class="Special"> test</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;test&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span><span class="Special"> pig</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;pig&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Statement">window</span><span class="Special">.onload = </span><span class="Identifier">function</span>()<span class="Identifier">{</span><br /><span class="Special">         </span><span class="Identifier">var</span><span class="Special"> element =  </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">;</span><br /><span class="Special">         </span><span class="Statement">if</span>(<span class="Special">element.addEventListener</span>)<span class="Identifier">{</span><span class="Special">  </span><span class="Comment">// firefox  , w3c</span><br /><span class="Special">                element.addEventListener</span>(<span class="Constant">&quot;click&quot;</span><span class="Special">,test,</span><span class="Constant">false</span>)<span class="Special">;</span><br /><span class="Special">    element.addEventListener</span>(<span class="Constant">&quot;click&quot;</span><span class="Special">,pig,</span><span class="Constant">false</span>)<span class="Special">;</span><br /><span class="Special">         </span><span class="Identifier">}</span><span class="Special"> </span><span class="Statement">else</span><span class="Special"> </span><span class="Identifier">{</span><span class="Special">   </span><span class="Comment">// ie </span><br /><span class="Special">    element.attachEvent</span>(<span class="Constant">&quot;onclick&quot;</span><span class="Special">,test</span>)<span class="Special">;</span><br /><span class="Special">    element.attachEvent</span>(<span class="Constant">&quot;onclick&quot;</span><span class="Special">,pig</span>)<span class="Special">;</span><br /><span class="Special">         </span><span class="Identifier">}</span><br /><span class="Identifier">}</span><br /><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /></pre></code></pre><br/>此時，代碼就可以在多個平台上工作了。<br/><br/>但隨著水平的進步，你不滿足每次都去判斷，你想把這個判斷封裝起來，以後可以直接調用：<br/><br/>程式碼: <pre><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;para&quot;</span><span class="Identifier"> </span><span class="Type">title</span><span class="Identifier">=</span><span class="Constant">&quot;cssrain demo!&quot;</span><span class="Identifier">&gt;</span>test<span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="Identifier">function</span><span class="Special"> test</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;test&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span><span class="Special"> pig</span>()<span class="Identifier">{</span><br /><span class="Special">  </span><span class="Statement">alert</span>(<span class="Constant">&quot;pig&quot;</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span><span class="Special"> addListener</span>(<span class="Special">element,e,fn</span>)<span class="Identifier">{</span><br /><span class="Special">     </span><span class="Statement">if</span>(<span class="Special">element.addEventListener</span>)<span class="Identifier">{</span><br /><span class="Special">          element.addEventListener</span>(<span class="Special">e,fn,</span><span class="Constant">false</span>)<span class="Special">;</span><br /><span class="Special">     </span><span class="Identifier">}</span><span class="Special"> </span><span class="Statement">else</span><span class="Special"> </span><span class="Identifier">{</span><br /><span class="Special">          element.attachEvent</span>(<span class="Constant">&quot;on&quot;</span><span class="Special"> + e,fn</span>)<span class="Special">;</span><br /><span class="Special">     </span><span class="Identifier">}</span><br /><span class="Identifier">}</span><br /><br /><span class="Statement">window</span><span class="Special">.onload = </span><span class="Identifier">function</span>()<span class="Identifier">{</span><br /><span class="Special">         </span><span class="Identifier">var</span><span class="Special"> element =  </span><span class="Statement">document</span><span class="Special">.getElementById</span>(<span class="Constant">&quot;para&quot;</span>)<span class="Special">;</span><br /><span class="Special">         addListener</span>(<span class="Special">element,</span><span class="Constant">&quot;click&quot;</span><span class="Special">,test</span>)<span class="Special">;</span><br /><span class="Special">         addListener</span>(<span class="Special">element,</span><span class="Constant">&quot;click&quot;</span><span class="Special">,pig</span>)<span class="Special">;</span><br /><span class="Identifier">}</span><br /><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /></pre></code></pre><br/>至此，作為一個程式設計師的工作就完了。<br/>中間我們從一個最傳統，最基本的寫法，然後實現Js和HTML的分離，然後又實現對同一個元素註冊多個事件，期間，<br/>我們發現註冊事件的兼容性問題。最後我們對註冊事件的方法進行封裝，方便以後使用。 <br/>  </div>
+    <content type="html"><![CDATA[原文：http://www.wowbox.com.tw/blog/article.asp?id=3004 
+首先是最常規的方法：
+程式碼: 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p id="para" title="cssrain demo!" onclick="test()" >test&lt;/p>
+</span><span class='line'>&lt;script>
+</span><span class='line'>function test(){
+</span><span class='line'>  alert("test");
+</span><span class='line'>}
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+當某一天，我們知道JavaScript要跟HTML結構實現分離後，就會改了一種寫法：
+程式碼: 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p id="para" title="cssrain demo!">test&lt;/p>
+</span><span class='line'>&lt;script>
+</span><span class='line'>function test(){
+</span><span class='line'>  alert("test");
+</span><span class='line'>}
+</span><span class='line'>window.onload = function(){
+</span><span class='line'>    document.getElementById("para").onclick = test;
+</span><span class='line'>}
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+當我們工作越來越久後，有時候我們需要對某個元素綁定多個相同的事件類型：
+程式碼: 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p id="para" title="cssrain demo!">test&lt;/p>
+</span><span class='line'>&lt;script>
+</span><span class='line'>function test(){
+</span><span class='line'>  alert("test");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function pig(){
+</span><span class='line'>  alert("pig");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>window.onload = function(){
+</span><span class='line'>     document.getElementById("para").onclick = test;
+</span><span class='line'>     document.getElementById("para").onclick = pig;
+</span><span class='line'>}
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+如果按照上面的寫法，我們只能輸出第二個函數。
+這時候我們需要用到attachEvent方法：
+程式碼:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p id="para" title="cssrain demo!">test&lt;/p>
+</span><span class='line'>&lt;script>
+</span><span class='line'>function test(){
+</span><span class='line'>  alert("test");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function pig(){
+</span><span class='line'>  alert("pig");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>window.onload = function(){
+</span><span class='line'>     document.getElementById("para").attachEvent("onclick",test);
+</span><span class='line'>     document.getElementById("para").attachEvent("onclick",pig);
+</span><span class='line'>}
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+在一段時間內，你並沒發現這段代碼有任何錯誤。
+某一天，一個名叫firefox的瀏覽器 闖入你的視野，當我們把這段代碼放到firefox中執行後，
+發現並不能正常運行。 問題就這樣，越來越多，然而作為一名JS程式設計師，這些都是必須面對的。
+
+為了解決這段代碼的平台兼容性問題，我翻翻手冊，知道了firefox跟ie的區別：
+firefox中註冊事件使用：addEventListener方法，同時為了兼容ie，我們必須用到if &#8230; else&#8230;
+程式碼: 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p id="para" title="cssrain demo!">test&lt;/p>
+</span><span class='line'>&lt;script>
+</span><span class='line'>function test(){
+</span><span class='line'>  alert("test");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function pig(){
+</span><span class='line'>  alert("pig");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>window.onload = function(){
+</span><span class='line'>         var element =  document.getElementById("para");
+</span><span class='line'>         if(element.addEventListener){  // firefox  , w3c
+</span><span class='line'>                element.addEventListener("click",test,false);
+</span><span class='line'>    element.addEventListener("click",pig,false);
+</span><span class='line'>         } else {   // ie 
+</span><span class='line'>    element.attachEvent("onclick",test);
+</span><span class='line'>    element.attachEvent("onclick",pig);
+</span><span class='line'>         }
+</span><span class='line'>}
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+此時，代碼就可以在多個平台上工作了。
+但隨著水平的進步，你不滿足每次都去判斷，你想把這個判斷封裝起來，以後可以直接調用：
+程式碼: 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;p id="para" title="cssrain demo!">test&lt;/p>
+</span><span class='line'>&lt;script>
+</span><span class='line'>function test(){
+</span><span class='line'>  alert("test");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function pig(){
+</span><span class='line'>  alert("pig");
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function addListener(element,e,fn){
+</span><span class='line'>     if(element.addEventListener){
+</span><span class='line'>          element.addEventListener(e,fn,false);
+</span><span class='line'>     } else {
+</span><span class='line'>          element.attachEvent("on" + e,fn);
+</span><span class='line'>     }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>window.onload = function(){
+</span><span class='line'>         var element =  document.getElementById("para");
+</span><span class='line'>         addListener(element,"click",test);
+</span><span class='line'>         addListener(element,"click",pig);
+</span><span class='line'>}
+</span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
+
+至此，作為一個程式設計師的工作就完了。
+中間我們從一個最傳統，最基本的寫法，然後實現Js和HTML的分離，然後又實現對同一個元素註冊多個事件，期間，
+我們發現註冊事件的兼容性問題。最後我們對註冊事件的方法進行封裝，方便以後使用。
 ]]></content>
   </entry>
   
@@ -236,6 +428,64 @@
     <id>http://yehchge.github.com/blog/2011/09/13/hiradio</id>
     <content type="html"><![CDATA[<div class='post'>
 [LiveUpdate]<br />Version=1<br /><br />[HiRadioUrl]<br />RadioUrl=http://b1.mediayou.net/cgi-bin/mmsurl_hinet?id=<br /><br />[HiRadio]<br />RadioList=77<br />Title1=NEWS98 新聞網<br />Files1=187<br />Title2=中廣新聞網<br />Files2=207<br />Title3=ASIAFM 衛星音樂台<br />Files3=321<br />Title4=Apple line 蘋果線上<br />Files4=248<br />Title5=BestRadio 台中好事 903<br />Files5=211<br />Title6=BestRadio 台北好事 989<br />Files6=212<br />Title7=BestRadio 花蓮好事 935<br />Files7=303<br />Title8=BestRadio 高雄港都 983<br />Files8=213<br />Title9=HitFm 聯播網 台中 91.5<br />Files9=88<br />Title10=HitFm 聯播網 高雄 90.1<br />Files10=90<br />Title11=HitFm 聯播網台北 91.7<br />Files11=222<br />Title12=Kiss Radio 南投廣播<br />Files12=258<br />Title13=Kiss Radio 台南知音廣播<br />Files13=255<br />Title14=Kiss Radio 大苗栗廣播<br />Files14=256<br />Title15=Kiss Radio 大眾廣播電台<br />Files15=156<br />Title16=Kiss Radio 網路音樂台<br />Files16=308<br />Title17=中廣古典網<br />Files17=162<br />Title18=中廣流行網<br />Files18=205<br />Title19=中廣音樂網 I Radio<br />Files19=206<br />Title20=台北之音經典音樂台<br />Files20=222<br />Title21=台北愛樂<br />Files21=228<br />Title22=台灣之音-音樂<br />Files22=313<br />Title23=太陽電台<br />Files23=289<br />Title24=奇美古典音樂網<br />Files24=294<br />Title25=寶島新聲廣播電台<br />Files25=259<br />Title26=台灣之音-華語<br />Files26=315<br />Title27=復興廣播電台 短波網<br />Files27=288<br />Title28=復興廣播電台 第一網<br />Files28=286<br />Title29=復興廣播電台 第二網<br />Files29=287<br />Title30=正聲台北調幅台<br />Files30=317<br />Title31=正聲台北調頻台<br />Files31=198<br />Title32=漢聲光華網-中波<br />Files32=281<br />Title33=漢聲光華網-短波<br />Files33=309<br />Title34=漢聲廣播電台<br />Files34=215<br />Title35=漢聲廣播電台全國調頻網<br />Files35=216<br />Title36=綠色和平台灣文化廣播電台<br />Files36=327<br />Title37=ICRT<br />Files37=177<br />Title38=台灣之音-FM<br />Files38=312<br />Title39=台灣之音-亞洲<br />Files39=311<br />Title40=台灣之音-歐美及方言<br />Files40=314<br />Title41=ASIA FM92.3亞太電台<br />Files41=295<br />Title42=ASIA FM92.7亞州電台<br />Files42=210<br />Title43=GOLD FM-台中城市廣播<br />Files43=226<br />Title44=GOLD FM-台北健康電台<br />Files44=229<br />Title45=IC 之音<br />Files45=148<br />Title46=佳音廣播電台<br />Files46=201<br />Title47=佳音電台2台<br />Files47=250<br />Title48=全國廣播<br />Files48=202<br />Title49=台中廣播<br />Files49=230<br />Title50=台北廣播電台- 都會資訊頻道<br />Files50=208<br />Title51=台北廣播電台喔海洋頻道<br />Files51=238<br />Title52=真心之音廣播電台<br />Files52=217<br />Title53=大千電台<br />Files53=109<br />Title54=大愛網路電台<br />Files54=325<br />Title55=宜蘭中山電台<br />Files55=301<br />Title56=環宇廣播<br />Files56=282<br />Title57=警廣長青網<br />Files57=271<br />Title58=飛碟電台<br />Files58=232<br />Title59=中廣客家頻道<br />Files59=160<br />Title60=大漢之音<br />Files60=300<br />Title61=寶島客家<br />Files61=241<br />Title62=新客家廣播電台<br />Files62=254<br />Title63=高屏溪客家電台<br />Files63=298<br />Title64=警廣全國交通網<br />Files64=269<br />Title65=警廣台中台<br />Files65=260<br />Title66=警廣台北台<br />Files66=261<br />Title67=警廣台南台<br />Files67=263<br />Title68=警廣宜蘭台<br />Files68=265<br />Title69=警廣新竹台<br />Files69=268<br />Title70=警廣花蓮台<br />Files70=266<br />Title71=警廣高雄台<br />Files71=267<br />Title72=警廣台東台<br />Files72=358<br />Title73=Flyradio飛揚調頻895<br />Files73=357<br />Title74=佳音CCM<br />Files74=340<br />Title75=全國廣播音樂網<br />Files75=338<br />Title76=嘉義之音<br />Files76=368<br />Title77=青春線上<br />Files77=356</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL刪除重複的資料,只留下一筆資料]]></title>
+    <link href="http://yehchge.github.com/blog/2011/09/07/mysql/"/>
+    <updated>2011-09-07T10:53:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/09/07/mysql</id>
+    <content type="html"><![CDATA[<div class='post'>
+MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);<br />假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;<br />ALTER IGNORE TABLE songlist ADD UNIQUE INDEX(tt,tp);<br /><table><tbody><tr><td class="number"><code></code></td><td class="content"><code class="plain"></code></td></tr></tbody></table><div class="line alt2"><table><tbody><tr><td class="number"><code></code></td><td class="content"><code class="plain"></code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code></code></td><td class="content"></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">sn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tp</code></td></tr></tbody></table><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香蕉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 西瓜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香蕉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 西瓜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 蘋果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 牛奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="plain">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 蘋果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="plain">8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 牛奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></td><td class="content"><br /></td></tr></tbody></table></div><table><tbody><tr><td class="number"><code></code></td><td class="content"></td></tr></tbody></table>資料來源: http://www.dotblogs.com.tw/doremi.miredo/archive/2008/12/20/6464.aspx<br /><br /></div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL 升級]]></title>
+    <link href="http://yehchge.github.com/blog/2011/08/22/mysql/"/>
+    <updated>2011-08-22T15:22:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/08/22/mysql</id>
+    <content type="html"><![CDATA[<div class='post'>
+(PS:此文章從Web上的PDF檔案中擷取出來的) <br />如果你有安裝MySQL<br />而且MySQL 版本是5.X 的，請注意囉<br />因為從MySQL 4.1 開始，密碼格式很像變得不同囉<br />詳情請看此篇：http://dev.mysql.com/doc/refman/4.1/en/old-client.html<br />MySQL 4.1 and up uses an authentication protocol based on a password hashing algorithm that is <br />incompatible with that used by older clients. If you upgrade the server to 4.1, attempts to connect to <br />it with an older client may fail with the following message:<br />shell&gt; mysql<br />Client does not support authentication protocol requested<br />by server; consider upgrading MySQL client<br />簡單的&nbsp;&nbsp; ， 說 MySQL 4.1跟更新的版本使用一個以密碼雜湊演算法為基礎的驗證協定<br />而且跟舊版的不一樣，不適用於舊版的 Client端.<br />如果你的 MySQL升級到 4.1(或者更新的，像是 5.X)<br />你連線到 MySQL時應該會出現以下訊息(請往上看 XD)<br />解決方法很多<br />•&nbsp;&nbsp;&nbsp; 升級Client 端的MySQL 函式庫 <br />•&nbsp;&nbsp;&nbsp; 連線到4.1 以上版本的MySQL 時，使用4.1 以上版本的帳號密碼來進行連線 <br />•&nbsp;&nbsp;&nbsp; 啟動MySQL 時，多加個&#8211;old-passwords 引數<br />•&nbsp;&nbsp;&nbsp; 登入MySQL，使用old_password 函式(待會說明)<br />OK，我們先來學第四個方法吧.. 也是我最習慣使用的方法(因為簡單拉@@&#8221;)<br />請你先登入mysql(請用有權限更改mysql 的帳戶，例如：root)<br />然後↓<br />mysql&gt; set password for &#8216;帳號&#8217;@&#8217;主機&#8217; = old_password(&#8216;密碼&#8217;);<br />Query OK, 0 rows affected (0.00 sec)<br />用好之後，請update 跟flush privileges<br />mysql&gt; update mysql.user set password = old_password(&#8216;密碼&#8217;) where host = &#8216;主機&#8217; and user = &#8216;帳<br />號&#8217;;<br />Query OK, 0 rows affected (0.01 sec)<br />mysql&gt; flush privileges;<br />Query OK, 0 rows affected (0.00 sec)<br />OK，這樣一來就更改好了！可以連線看看囉！<br />另外一種方法，也就是第三種方法可以自行參考MySQL 函式庫說明囉^^<br /></div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PHP印出陣列中被包在StdClass內的Value]]></title>
+    <link href="http://yehchge.github.com/blog/2011/05/12/phpstdclassvalue/"/>
+    <updated>2011-05-12T14:46:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/05/12/phpstdclassvalue</id>
+    <content type="html"><![CDATA[<div class='post'>
+&nbsp;假設今天收到的資料的是<br />Array (<br />&nbsp; &nbsp;[0] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; &#8220;AAA&#8221;<br />&nbsp; &nbsp;[code] =&gt;123<br />&nbsp; &nbsp;)<br />[1] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; &#8220;BBB&#8221;<br />&nbsp; &nbsp;[code] =&gt;456<br />&nbsp; )<br />[2] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; &#8220;CCC&#8221;<br />&nbsp; &nbsp;[code] =&gt;789<br />&nbsp; )<br />)<br /><br />要印出資料只要設定一個變數指到那個Array Object 就好了…<br />//先把資料存到某個變數 , 假設上面那筆資料是 $a<br />$b = $a;<br />//接著逐一印出的話<br />foreach ($b as $value) {<br />&nbsp; &nbsp; $name = $value-&gt;name;<br />&nbsp; &nbsp; $code = $value-&gt;code;<br />&nbsp; &nbsp; echo &#8220;$name , $code \n&#8221;;<br />}<br /><br />出處:&nbsp;<a href="http://note.ajneok.org/programing_note/php/php-print-array-value-in-stdclass/comment-page-1/#comment-1231">http://note.ajneok.org/programing_note/php/php-print-array-value-in-stdclass/comment-page-1/#comment-1231</a></div>
+<h2>Comments</h2>
+<div class='comments'>
+<div class='comment'>
+<div class='author'>Yien_Huang</div>
+<div class='content'>
+因為您這樣寫會讓人覺的你只要看裡面的資料<br /><br />我記得我寫的php很多都是這樣的方式，因為要跟javascript溝通，必需把array換成object，轉換成json資料格式才可以跟js使用。(上架程式裡面有一堆都是這個!)</div>
+</div>
+<div class='comment'>
+<div class='author'>~我的筆記園地~</div>
+<div class='content'>
+如果你要擷取裡面的值, 就得要回圈跑~~<br />目前很多套裝軟體都會用到~~</div>
+</div>
+<div class='comment'>
+<div class='author'>Yien_Huang</div>
+<div class='content'>
+我不懂~ print_r() &amp; var_dump() 不是就可以印出來了嗎?~怎麼要用回圈跑出來呢?!</div>
+</div>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CentOS 的提示顯示修改與檔案顯示將深藍改成淺藍]]></title>
+    <link href="http://yehchge.github.com/blog/2011/04/01/centos/"/>
+    <updated>2011-04-01T14:32:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/04/01/centos</id>
+    <content type="html"><![CDATA[<div class='post'>
+# .bashrc<br /><br /># Source global definitions<br />if [ -f /etc/bashrc ]; then<br />. /etc/bashrc<br />fi<br /><br /># User specific aliases and functions<br /># 修改此兩個值, 括號是預設值 di=01;36(01;34), ln=02;36(01;36)<br />declare -x LS_COLORS=&#8221;no=00:fi=00:di=01;34:ln=02;35:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:&#8221;<br /><br /># 原設定 PS1=&#8221;[\u@\h \W]\$&#8221;<br />PS1=&#8221;\h[\[\033[1;34m\]\w\[\033[0m\]]$ \[\033[0m\]&#8221;<br /><br /># ===========================================================================<br />PS1=&#8217;[\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]]$ &#8217;<br /><br />\33[0m  关闭所有属性<br />\33[1m  设置高亮度<br />\33[4m  下划线<br />\33[5m  闪烁<br />\33[7m  反显<br />\33[8m  消隐<br />\33[30m &#8211; \33[37m  设置前景色<br />\33[40m &#8211; \33[47m  设置背景色<br />\33[nA  光标上移n行<br />\33[nB  光标下移n行<br />\33[nC  光标右移n行<br />\33[nD  光标左移n行<br />\33[y;xH设置光标位置<br />\33[2J  清屏<br />\33[K   清除从光标到行尾的内容<br />\33[s   保存光标位置<br />\33[u   恢复光标位置<br />\33[?25l  隐藏光标<br />\33[?25h  显示光标<br />所有的转移字符表:<br />\a  ASCII 响铃字符（也可以键入 \007）<br />\d  &#8220;Wed Sep 06&#8221; 格式的日期<br />\e  ASCII 转义字符（也可以键入 \033）<br />\h  主机名的第一部分（如 &#8220;mybox&#8221;）<br />\H  主机的全称（如 &#8220;mybox.mydomain.com&#8221;）<br />\j  在此 shell 中通过按 ^Z 挂起的进程数<br />\l  此 shell 的终端设备名（如 &#8220;ttyp4&#8221;）<br />\n  换行符<br />\r  回车符<br />\s  shell 的名称（如 &#8220;bash&#8221;）<br />\t  24 小时制时间（如 &#8220;23:01:01&#8221;）<br />\T  12 小时制时间（如 &#8220;11:01:01&#8221;）<br />\@  带有 am/pm 的 12 小时制时间<br />\u  用户名<br />\v  bash 的版本（如 2.04）<br />\V  Bash 版本（包括补丁级别） ?/td&gt;<br />\w  当前工作目录（如 &#8220;/home/drobbins&#8221;）<br />\W  当前工作目录的“基名 (basename)”（如 &#8220;drobbins&#8221;）<br />\!  当前命令在历史缓冲区中的位置<br />\#  命令编号（只要您键入内容，它就会在每次提示时累加）<br />\$  如果您不是超级用户 (root)，则插入一个 &#8220;$&#8221;；如果您是超级用户，则显示一个 &#8220;#&#8221;<br />\xxx  插入一个用三位数 xxx（用零代替未使用的数字，如 &#8220;\007&#8221;）表示的 ASCII 字符<br />&#92;  反斜杠<br />\[  这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。<br />\]  这个序列应该出现在非打印字符序列之后。<br /><br /><br /><table border="1"><tbody><tr>  <td>特殊格式 </td>  <td>含義 </td>  <td>字體顏色值 </td>  <td>背景顏色值 </td>  <td>顏色 </td>   </tr><tr>  <td>0 </td>  <td>默認值 </td>  <td>30 </td>  <td>40 </td>  <td>黑色 </td>   </tr><tr>  <td>1 </td>  <td>粗體 </td>  <td>31 </td>  <td>41 </td>  <td>紅色 </td>   </tr><tr>  <td>22 </td>  <td>非粗體 </td>  <td>32 </td>  <td>42 </td>  <td>綠色 </td>   </tr><tr>  <td>4 </td>  <td>下劃線 </td>  <td>33 </td>  <td>43 </td>  <td>黃色 </td>   </tr><tr>  <td>24 </td>  <td>非下劃線 </td>  <td>34 </td>  <td>44 </td>  <td>藍色 </td>   </tr><tr>  <td>5&nbsp; </td>  <td>閃爍 </td>  <td>35 </td>  <td>45 </td>  <td>洋紅 </td>   </tr><tr>  <td>25 </td>  <td>非閃爍 </td>  <td>36 </td>  <td>46 </td>  <td>青色 </td>   </tr><tr>  <td>7 </td>  <td>反顯 </td>  <td>37 </td>  <td>47 </td>  <td>白色 </td>   </tr><tr>  <td>27 </td>  <td>非反顯 </td>  <td></td>  <td></td>  <td><br /></td></tr></tbody></table><br />參考網站:<br />http://blog.csdn.net/gausszhch/archive/2010/05/27/5628009.aspx<br />http://blogold.chinaunix.net/u/10679/showart_114949.html</div>
 ]]></content>
   </entry>
   

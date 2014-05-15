@@ -9,7 +9,7 @@
   <meta name="author" content="Yehchge">
 
   
-  <meta name="description" content="剛剛在 c9s 的 blog 中看到要修改並刪除一個字的按鍵:ciw &#8211;>還蠻好用的將有 bomb 的字元移除,但要小心,有時後移除後存檔,檔案文字會亂掉:set nobomb轉換編碼:e ++enc=ucs-2le xxxx(檔案名稱):w ++enc=ucs-2le xxxx( &hellip;">
+  <meta name="description" content="Windows 下:視窗最大化: alt+space+x視窗最小化: alt+space+n視窗還原大小: alt+space+rVim 下:回到行的最前面: 數字0回到行的最後面: $自動換行: :set wrap不換行: :set nowrap方向鍵:左、下、上、右:h、j、k、l複製一個字 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,154 +64,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/13/vim_13/">Vim筆記(五)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-13T16:26:00+08:00" pubdate data-updated="true">Jan 13<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-剛剛在 c9s 的 blog 中看到要修改並刪除一個字的按鍵:<br />ciw &#8211;>還蠻好用的<br /><br />將有 bomb 的字元移除,但要小心,有時後移除後存檔,檔案文字會亂掉<br />:set nobomb<br /><br />轉換編碼<br />:e ++enc=ucs-2le xxxx(檔案名稱)<br />:w ++enc=ucs-2le xxxx(檔案名稱)</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/12/vim_12/">Vim筆記(四)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-12T17:44:00+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-將目前程式作縮排排版<br />gg=G<br /><br />移動到檔案頭<br />[]<br /><br />移動到檔案尾<br />][<br /><br />找文件內的關鍵字<br />在關鍵字上按 * 或是按 gd , 就會將關鍵字反白.<br /><br />搜尋多的檔案內中的關鍵字(搜尋所有php檔案,檔案裡面有test的關鍵字<br />:vimgrep /test/*.php<br /><br />用vimgrep 搜尋完後,用 :copen 開啟搜尋後結果,<br />或是用 :clist 觀看搜尋結果<br /><br />設定書籤(Markers), F5 設定此行 F6 移除此行書籤<br />:highlight SignColumn guibg=darkgrey<br />:sign define piet text=>> texthl=Search<br /><br />function! SignFixme()<br />execute(&#8220;:sign place &#8220;.line(&#8220;.&#8221;).&#8221; line=&#8221;.line(&#8220;.&#8221;).&#8221; name=piet file=&#8221;.expand(&#8220;%:p&#8221;))<br />endfunction<br />map <f5> :call SignFixme()<cr><br /><br />function! SignLines() <br />execute(&#8220;:sign unplace &#8220;.line(&#8220;.&#8221;))<br />endfunction<br />map <f6> :call SignLines()<cr><br /><br />將vim中複製的資料,存到windows的剪貼簿<br />用 shift+v , 框起需要複製的行數,<br />之後,按下 Ctrl+C, 就會複製到 windows的剪貼簿內!</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/11/vim_9655/">Vim筆記(三)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-11T19:02:00+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-Vim 全選:<br />ggVG<br /><br />消除^M:<br />:%/^M//gg (^M 為 Ctrl+Q 再按 ctrl+M)<br /><br />將兩個以上空白替換成一個空白<br />:%s/\([ ]\{2,\}\)/ /gg</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/11/vim_11/">Vim筆記(二)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-11T17:44:00+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-設定如果有出現 Error 這個字的話, 就會將這個字以紅底白字顯示<br />:match ErrorMsg /^Error/<br /><br />如果要看有哪些顏色群組可以用,可以下<br />:so $VIMRUNTIME/syntax/hitest.vim<br /><br />移除效果:<br />:match NONE<br /><br />自定顏色群組:<br />highlight MyGroup ctermbg=red guibg=red guifg=yellow term=bold</div>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -435,6 +287,154 @@ SQL Server 2000 QA 的語法：<br /> <br />SP_DATABASES 看資料庫<br /> <br 
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/sql-server-2000sql/">簡易的產生SQL SERVER 2000的資料庫SQL指令碼</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:38:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+簡易的產生SQL SERVER 2000的資料庫SQL指令碼：<br /> <br />1. 一般：全部顯示<br />2. 格式化：勾CREATE ONLYONE<br />3. 選項：資料表指令碼選項(1),(3),(4), 其餘Default .</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/blog-post_3340/">自由時報上的狗狗清便器</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:33:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_scTQfHkMTrY/S0cZJhZkDeI/AAAAAAAAApQ/M9tHmb9bqaE/s1600-h/dog.jpeg"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;width: 320px; height: 170px;" src="http://4.bp.blogspot.com/_scTQfHkMTrY/S0cZJhZkDeI/AAAAAAAAApQ/M9tHmb9bqaE/s320/dog.jpeg" border="0" alt=""id="BLOGGER_PHOTO_ID_5424331927566159330" /></a><br />自由時報上的狗狗清便器 !!<br />2006/10/10 台北</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/excel/">程式匯出Excel 時可用以下格式</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:31:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+&lt;?xml version=&#8221;1.0&#8221;?&gt;<br />&lt;?mso-application progid=&#8221;Excel.Sheet&#8221;?&gt;<br />&lt;Workbook xmlns=&#8221;urn:schemas-microsoft-com:office:spreadsheet&#8221;<br /> xmlns:o=&#8221;urn:schemas-microsoft-com:office:office&#8221;<br /> xmlns:x=&#8221;urn:schemas-microsoft-com:office:excel&#8221;<br /> xmlns:ss=&#8221;urn:schemas-microsoft-com:office:spreadsheet&#8221;<br /> xmlns:html=&#8221;http://www.w3.org/TR/REC-html40&#8221;&gt;<br /> <br /> &lt;Worksheet ss:Name=&#8221;Sheet1&#8221;&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;aaaaaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;aaaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;aaaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;1515aaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;56516aaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;a546456aaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name=&#8221;Sheet2&#8221;&gt;<br />  &lt;Table&gt;<br />   &lt;Row ss:Index=&#8221;5&#8221;&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;bbbbbb&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name=&#8221;Sheet3&#8221;&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell ss:Index=&#8221;4&#8221;&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;ccccccc&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br />&lt;/Workbook&gt;<br /> <br /> <br /> <br /> <br />以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!<br />可用於php asp.net asp vb c# &#8230;..等各種程式 !!</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/php-excel/">PHP 匯出 Excel 的方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:30:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+How to generate Excel files ??<br /><br />http://pear.php.net/package/Spreadsheet_Excel_Writer/download/All<br /><br />http://pear.php.net/package/OLE/download<br /><br />http://pear.php.net/manual/en/package.fileformats.spreadsheet-excel-writer.intro.php<br /><br />http://twpug.net/modules/newbb/viewtopic.php?post_id=6230<br /><br />http://www.wretch.cc/blog/godisverygoo</div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/7/">&larr; Older</a>
@@ -452,23 +452,23 @@ SQL Server 2000 QA 的語法：<br /> <br />SP_DATABASES 看資料庫<br /> <br 
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+        <a href="/blog/2014/05/12/more-more-more/">測試 MORE 功能</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+        <a href="/blog/2014/05/11/this-is-chinese-title/">假文文章</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/23/javascript/">Javascript 淺析註冊事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/23/php-tcpdf/">PHP 使用 TCPDF 顯示中文的關鍵</a>
       </li>
     
   </ul>

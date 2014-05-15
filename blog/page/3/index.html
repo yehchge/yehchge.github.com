@@ -9,7 +9,7 @@
   <meta name="author" content="Yehchge">
 
   
-  <meta name="description" content="MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;ALTER IGNORE TABLE songlist ADD &hellip;">
+  <meta name="description" content="MySQL大約有3種方法, 加入 /etc/my.cnf後, 再 service mysqld restart !!1. 查詢 Slow query 的 SQL 語法:log_slow_queries = /var/log/mysql/mysql-slow.loglong_query_time &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,172 +64,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/07/mysql/">MySQL刪除重複的資料,只留下一筆資料</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-07T10:53:00+08:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);<br />假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;<br />ALTER IGNORE TABLE songlist ADD UNIQUE INDEX(tt,tp);<br /><table><tbody><tr><td class="number"><code></code></td><td class="content"><code class="plain"></code></td></tr></tbody></table><div class="line alt2"><table><tbody><tr><td class="number"><code></code></td><td class="content"><code class="plain"></code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code></code></td><td class="content"></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">sn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tp</code></td></tr></tbody></table><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香蕉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 西瓜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香蕉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 西瓜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 蘋果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 牛奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="plain">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 蘋果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="plain">8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 牛奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></td><td class="content"><br /></td></tr></tbody></table></div><table><tbody><tr><td class="number"><code></code></td><td class="content"></td></tr></tbody></table>資料來源: http://www.dotblogs.com.tw/doremi.miredo/archive/2008/12/20/6464.aspx<br /><br /></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/08/22/mysql/">MySQL 升級</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-22T15:22:00+08:00" pubdate data-updated="true">Aug 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-(PS:此文章從Web上的PDF檔案中擷取出來的) <br />如果你有安裝MySQL<br />而且MySQL 版本是5.X 的，請注意囉<br />因為從MySQL 4.1 開始，密碼格式很像變得不同囉<br />詳情請看此篇：http://dev.mysql.com/doc/refman/4.1/en/old-client.html<br />MySQL 4.1 and up uses an authentication protocol based on a password hashing algorithm that is <br />incompatible with that used by older clients. If you upgrade the server to 4.1, attempts to connect to <br />it with an older client may fail with the following message:<br />shell&gt; mysql<br />Client does not support authentication protocol requested<br />by server; consider upgrading MySQL client<br />簡單的&nbsp;&nbsp; ， 說 MySQL 4.1跟更新的版本使用一個以密碼雜湊演算法為基礎的驗證協定<br />而且跟舊版的不一樣，不適用於舊版的 Client端.<br />如果你的 MySQL升級到 4.1(或者更新的，像是 5.X)<br />你連線到 MySQL時應該會出現以下訊息(請往上看 XD)<br />解決方法很多<br />•&nbsp;&nbsp;&nbsp; 升級Client 端的MySQL 函式庫 <br />•&nbsp;&nbsp;&nbsp; 連線到4.1 以上版本的MySQL 時，使用4.1 以上版本的帳號密碼來進行連線 <br />•&nbsp;&nbsp;&nbsp; 啟動MySQL 時，多加個&#8211;old-passwords 引數<br />•&nbsp;&nbsp;&nbsp; 登入MySQL，使用old_password 函式(待會說明)<br />OK，我們先來學第四個方法吧.. 也是我最習慣使用的方法(因為簡單拉@@&#8221;)<br />請你先登入mysql(請用有權限更改mysql 的帳戶，例如：root)<br />然後↓<br />mysql&gt; set password for &#8216;帳號&#8217;@&#8217;主機&#8217; = old_password(&#8216;密碼&#8217;);<br />Query OK, 0 rows affected (0.00 sec)<br />用好之後，請update 跟flush privileges<br />mysql&gt; update mysql.user set password = old_password(&#8216;密碼&#8217;) where host = &#8216;主機&#8217; and user = &#8216;帳<br />號&#8217;;<br />Query OK, 0 rows affected (0.01 sec)<br />mysql&gt; flush privileges;<br />Query OK, 0 rows affected (0.00 sec)<br />OK，這樣一來就更改好了！可以連線看看囉！<br />另外一種方法，也就是第三種方法可以自行參考MySQL 函式庫說明囉^^<br /></div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/05/12/phpstdclassvalue/">PHP印出陣列中被包在StdClass內的Value</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-12T14:46:00+08:00" pubdate data-updated="true">May 12<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-&nbsp;假設今天收到的資料的是<br />Array (<br />&nbsp; &nbsp;[0] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; &#8220;AAA&#8221;<br />&nbsp; &nbsp;[code] =&gt;123<br />&nbsp; &nbsp;)<br />[1] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; &#8220;BBB&#8221;<br />&nbsp; &nbsp;[code] =&gt;456<br />&nbsp; )<br />[2] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; &#8220;CCC&#8221;<br />&nbsp; &nbsp;[code] =&gt;789<br />&nbsp; )<br />)<br /><br />要印出資料只要設定一個變數指到那個Array Object 就好了…<br />//先把資料存到某個變數 , 假設上面那筆資料是 $a<br />$b = $a;<br />//接著逐一印出的話<br />foreach ($b as $value) {<br />&nbsp; &nbsp; $name = $value-&gt;name;<br />&nbsp; &nbsp; $code = $value-&gt;code;<br />&nbsp; &nbsp; echo &#8220;$name , $code \n&#8221;;<br />}<br /><br />出處:&nbsp;<a href="http://note.ajneok.org/programing_note/php/php-print-array-value-in-stdclass/comment-page-1/#comment-1231">http://note.ajneok.org/programing_note/php/php-print-array-value-in-stdclass/comment-page-1/#comment-1231</a></div>
-<h2>Comments</h2>
-<div class='comments'>
-<div class='comment'>
-<div class='author'>Yien_Huang</div>
-<div class='content'>
-因為您這樣寫會讓人覺的你只要看裡面的資料<br /><br />我記得我寫的php很多都是這樣的方式，因為要跟javascript溝通，必需把array換成object，轉換成json資料格式才可以跟js使用。(上架程式裡面有一堆都是這個!)</div>
-</div>
-<div class='comment'>
-<div class='author'>~我的筆記園地~</div>
-<div class='content'>
-如果你要擷取裡面的值, 就得要回圈跑~~<br />目前很多套裝軟體都會用到~~</div>
-</div>
-<div class='comment'>
-<div class='author'>Yien_Huang</div>
-<div class='content'>
-我不懂~ print_r() &amp; var_dump() 不是就可以印出來了嗎?~怎麼要用回圈跑出來呢?!</div>
-</div>
-</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/04/01/centos/">CentOS 的提示顯示修改與檔案顯示將深藍改成淺藍</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-04-01T14:32:00+08:00" pubdate data-updated="true">Apr 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-# .bashrc<br /><br /># Source global definitions<br />if [ -f /etc/bashrc ]; then<br />. /etc/bashrc<br />fi<br /><br /># User specific aliases and functions<br /># 修改此兩個值, 括號是預設值 di=01;36(01;34), ln=02;36(01;36)<br />declare -x LS_COLORS=&#8221;no=00:fi=00:di=01;34:ln=02;35:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:&#8221;<br /><br /># 原設定 PS1=&#8221;[\u@\h \W]\$&#8221;<br />PS1=&#8221;\h[\[\033[1;34m\]\w\[\033[0m\]]$ \[\033[0m\]&#8221;<br /><br /># ===========================================================================<br />PS1=&#8217;[\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]]$ &#8217;<br /><br />\33[0m  关闭所有属性<br />\33[1m  设置高亮度<br />\33[4m  下划线<br />\33[5m  闪烁<br />\33[7m  反显<br />\33[8m  消隐<br />\33[30m &#8211; \33[37m  设置前景色<br />\33[40m &#8211; \33[47m  设置背景色<br />\33[nA  光标上移n行<br />\33[nB  光标下移n行<br />\33[nC  光标右移n行<br />\33[nD  光标左移n行<br />\33[y;xH设置光标位置<br />\33[2J  清屏<br />\33[K   清除从光标到行尾的内容<br />\33[s   保存光标位置<br />\33[u   恢复光标位置<br />\33[?25l  隐藏光标<br />\33[?25h  显示光标<br />所有的转移字符表:<br />\a  ASCII 响铃字符（也可以键入 \007）<br />\d  &#8220;Wed Sep 06&#8221; 格式的日期<br />\e  ASCII 转义字符（也可以键入 \033）<br />\h  主机名的第一部分（如 &#8220;mybox&#8221;）<br />\H  主机的全称（如 &#8220;mybox.mydomain.com&#8221;）<br />\j  在此 shell 中通过按 ^Z 挂起的进程数<br />\l  此 shell 的终端设备名（如 &#8220;ttyp4&#8221;）<br />\n  换行符<br />\r  回车符<br />\s  shell 的名称（如 &#8220;bash&#8221;）<br />\t  24 小时制时间（如 &#8220;23:01:01&#8221;）<br />\T  12 小时制时间（如 &#8220;11:01:01&#8221;）<br />\@  带有 am/pm 的 12 小时制时间<br />\u  用户名<br />\v  bash 的版本（如 2.04）<br />\V  Bash 版本（包括补丁级别） ?/td&gt;<br />\w  当前工作目录（如 &#8220;/home/drobbins&#8221;）<br />\W  当前工作目录的“基名 (basename)”（如 &#8220;drobbins&#8221;）<br />\!  当前命令在历史缓冲区中的位置<br />\#  命令编号（只要您键入内容，它就会在每次提示时累加）<br />\$  如果您不是超级用户 (root)，则插入一个 &#8220;$&#8221;；如果您是超级用户，则显示一个 &#8220;#&#8221;<br />\xxx  插入一个用三位数 xxx（用零代替未使用的数字，如 &#8220;\007&#8221;）表示的 ASCII 字符<br />&#92;  反斜杠<br />\[  这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。<br />\]  这个序列应该出现在非打印字符序列之后。<br /><br /><br /><table border="1"><tbody><tr>  <td>特殊格式 </td>  <td>含義 </td>  <td>字體顏色值 </td>  <td>背景顏色值 </td>  <td>顏色 </td>   </tr><tr>  <td>0 </td>  <td>默認值 </td>  <td>30 </td>  <td>40 </td>  <td>黑色 </td>   </tr><tr>  <td>1 </td>  <td>粗體 </td>  <td>31 </td>  <td>41 </td>  <td>紅色 </td>   </tr><tr>  <td>22 </td>  <td>非粗體 </td>  <td>32 </td>  <td>42 </td>  <td>綠色 </td>   </tr><tr>  <td>4 </td>  <td>下劃線 </td>  <td>33 </td>  <td>43 </td>  <td>黃色 </td>   </tr><tr>  <td>24 </td>  <td>非下劃線 </td>  <td>34 </td>  <td>44 </td>  <td>藍色 </td>   </tr><tr>  <td>5&nbsp; </td>  <td>閃爍 </td>  <td>35 </td>  <td>45 </td>  <td>洋紅 </td>   </tr><tr>  <td>25 </td>  <td>非閃爍 </td>  <td>36 </td>  <td>46 </td>  <td>青色 </td>   </tr><tr>  <td>7 </td>  <td>反顯 </td>  <td>37 </td>  <td>47 </td>  <td>白色 </td>   </tr><tr>  <td>27 </td>  <td>非反顯 </td>  <td></td>  <td></td>  <td><br /></td></tr></tbody></table><br />參考網站:<br />http://blog.csdn.net/gausszhch/archive/2010/05/27/5628009.aspx<br />http://blogold.chinaunix.net/u/10679/showart_114949.html</div>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -461,6 +295,154 @@ CentOS 的服務版本查詢指令:<br /><br />1. 查看 Linux Kernel 版本<br 
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/15/vim-tip/">Vim Tip</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-15T15:20:00+08:00" pubdate data-updated="true">Nov 15<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+最近又將VIM拿出來把玩一下, 有些指令忘記了, 要記錄一下<br /><br />要將程式的Function折疊, 輸入 zc<br />要將折疊的程式打開, 輸入 zo<br /><br />多視窗的切換, 輸入 Ctrl+w + Ctrl+w<br /><br />複製單行, 輸入 yy<br /><br />貼上單行, 輸入 pp</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/11/12/vim-tips/">Vim Tips</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-12T14:46:00+08:00" pubdate data-updated="true">Nov 12<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+VIM 多檔編輯:<br /><br />開啟多的檔案後, 如果要看有哪些檔案, 可輸入<br />:ls<br /><br />要看下個檔案, 可輸入<br />:bn<br /><br />要看最後開的檔案, 可輸入<br />:bl<br /><br />要看指定編號的檔案, 可輸入<br />:b檔名或編號<br /><br />要把檔案從 Buffer List 移除, 可輸入<br />:bd</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/21/freebsd/">FreeBSD 修改主機日期</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-21T11:59:00+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+FreeBSD 修改主機日期<br /> # date 1008221153 // 年月日時分(ps:西元年後兩碼)</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/01/freebsd-console/">FreeBSD 的 Console 下軟體</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-01T17:33:00+08:00" pubdate data-updated="true">Oct 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+在 FreeBSD 的 Console 下, 有些軟題體蠻好用的, 軟體如下:<br /><br />Screen: 可以讓程式在背景下執行, 下次進入後程式執行後的結果<br />Vim: 文字編輯器<br />ee: 文字編輯器<br />joe: 文字編輯器<br />mc: 檔案瀏覽管理程式<br />vifm: 像vim指令般的檔案瀏覽管理程式<br />vlock: console下的電腦鎖<br />zgv: console 下觀看圖檔程式,無法在AMD的機器上執行, 且一定要在終端機前才可操作, 無法由putty連入操作</div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -478,23 +460,23 @@ CentOS 的服務版本查詢指令:<br /><br />1. 查看 Linux Kernel 版本<br 
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+        <a href="/blog/2014/05/12/more-more-more/">測試 MORE 功能</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+        <a href="/blog/2014/05/11/this-is-chinese-title/">假文文章</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/23/javascript/">Javascript 淺析註冊事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/23/php-tcpdf/">PHP 使用 TCPDF 顯示中文的關鍵</a>
       </li>
     
   </ul>

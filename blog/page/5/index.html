@@ -9,9 +9,7 @@
   <meta name="author" content="Yehchge">
 
   
-  <meta name="description" content="
-修改 Samba 的密碼指令為: smbpasswd
-">
+  <meta name="description" content="最近在研究 python 串聯 mysql 的方式, 之前一直抓 MySQL-python-1.2.3c1.tar.gz 回來安裝, 都安裝不起來,結果同事告知要去抓取 windows 下 可以執行的檔案, 所以去抓了MySQL-python-1.2.2.win32-py2.5.exe &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,162 +64,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/06/23/freebsd-samba/">FreeBSD下, 修改 Samba 的密碼</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-23T10:19:00+08:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-修改 Samba 的密碼指令為: smbpasswd</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/18/blog-post/">如何讓欄位不自動提示?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-18T12:18:00+08:00" pubdate data-updated="true">Mar 18<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-&lt;input name=&#8221;txtUserName&#8221; type=&#8221;textbox&#8221; <span style="color: red;">AUTOCOMPLETE</span> = &#8220;off&#8221; &gt;</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/03/18/vim/">Vim 詳細列出所有加入的套件</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-03-18T10:02:00+08:00" pubdate data-updated="true">Mar 18<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-Vim 詳細列出所有加入的套件：<br />:scriptnames</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/02/11/apache/">重新啟動Apache設定,又不想停止網頁的執行</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-02-11T16:11:00+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-apachectl graceful<br />apache 設定 reload 後也可保持現有連線了<br /><br />參考網頁:http://blog.2be.com.tw/2009/02/apache_4216.html</div>
-<h2>Comments</h2>
-<div class='comments'>
-<div class='comment'>
-<div class='author'>Yien_Huang</div>
-<div class='content'>
-測式留言通知方式為如何???</div>
-</div>
-</div>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -445,6 +287,154 @@ Highlight 命令(觀看Vim所有顏色的名稱)<br />:so $VIMRUNTIME/syntax/hit
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/13/vim_13/">Vim筆記(五)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-13T16:26:00+08:00" pubdate data-updated="true">Jan 13<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+剛剛在 c9s 的 blog 中看到要修改並刪除一個字的按鍵:<br />ciw &#8211;>還蠻好用的<br /><br />將有 bomb 的字元移除,但要小心,有時後移除後存檔,檔案文字會亂掉<br />:set nobomb<br /><br />轉換編碼<br />:e ++enc=ucs-2le xxxx(檔案名稱)<br />:w ++enc=ucs-2le xxxx(檔案名稱)</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/12/vim_12/">Vim筆記(四)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-12T17:44:00+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+將目前程式作縮排排版<br />gg=G<br /><br />移動到檔案頭<br />[]<br /><br />移動到檔案尾<br />][<br /><br />找文件內的關鍵字<br />在關鍵字上按 * 或是按 gd , 就會將關鍵字反白.<br /><br />搜尋多的檔案內中的關鍵字(搜尋所有php檔案,檔案裡面有test的關鍵字<br />:vimgrep /test/*.php<br /><br />用vimgrep 搜尋完後,用 :copen 開啟搜尋後結果,<br />或是用 :clist 觀看搜尋結果<br /><br />設定書籤(Markers), F5 設定此行 F6 移除此行書籤<br />:highlight SignColumn guibg=darkgrey<br />:sign define piet text=>> texthl=Search<br /><br />function! SignFixme()<br />execute(&#8220;:sign place &#8220;.line(&#8220;.&#8221;).&#8221; line=&#8221;.line(&#8220;.&#8221;).&#8221; name=piet file=&#8221;.expand(&#8220;%:p&#8221;))<br />endfunction<br />map <f5> :call SignFixme()<cr><br /><br />function! SignLines() <br />execute(&#8220;:sign unplace &#8220;.line(&#8220;.&#8221;))<br />endfunction<br />map <f6> :call SignLines()<cr><br /><br />將vim中複製的資料,存到windows的剪貼簿<br />用 shift+v , 框起需要複製的行數,<br />之後,按下 Ctrl+C, 就會複製到 windows的剪貼簿內!</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/11/vim_9655/">Vim筆記(三)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-11T19:02:00+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Vim 全選:<br />ggVG<br /><br />消除^M:<br />:%/^M//gg (^M 為 Ctrl+Q 再按 ctrl+M)<br /><br />將兩個以上空白替換成一個空白<br />:%s/\([ ]\{2,\}\)/ /gg</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/11/vim_11/">Vim筆記(二)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-11T17:44:00+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+設定如果有出現 Error 這個字的話, 就會將這個字以紅底白字顯示<br />:match ErrorMsg /^Error/<br /><br />如果要看有哪些顏色群組可以用,可以下<br />:so $VIMRUNTIME/syntax/hitest.vim<br /><br />移除效果:<br />:match NONE<br /><br />自定顏色群組:<br />highlight MyGroup ctermbg=red guibg=red guifg=yellow term=bold</div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -462,23 +452,23 @@ Highlight 命令(觀看Vim所有顏色的名稱)<br />:so $VIMRUNTIME/syntax/hit
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+        <a href="/blog/2014/05/12/more-more-more/">測試 MORE 功能</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+        <a href="/blog/2014/05/11/this-is-chinese-title/">假文文章</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/23/javascript/">Javascript 淺析註冊事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/23/php-tcpdf/">PHP 使用 TCPDF 顯示中文的關鍵</a>
       </li>
     
   </ul>

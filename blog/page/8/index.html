@@ -9,7 +9,7 @@
   <meta name="author" content="Yehchge">
 
   
-  <meta name="description" content="MySQL 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :1. Download mysql-5.0.16.tar.gz2. 建立 mysql 的群組及帳號 (使用 adduser 新增比較方便)3. 先建立要安裝的mysql 資料庫位置:/usr/local/ &hellip;">
+  <meta name="description" content="(PS:網路上找來的, 已經忘記由何處網站轉貼!! )FreeBSD Command Tools第一步我如何離線?(exit)我如何停止電腦?(shutdown -h now)我如何重新啟動電腦? (shutdown -r now)我如何在單使用者模式下停止系統? (shutdown now) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,154 +64,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/08/mysql-freebsd/">MySQL 在 FreeBSD 上安裝的步驟</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-08T19:25:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-MySQL 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :<br /><br />1. Download mysql-5.0.16.tar.gz<br />2. 建立 mysql 的群組及帳號 (使用 adduser 新增比較方便)<br />3. 先建立要安裝的mysql 資料庫位置:/usr/local/mysql 設定群組權限為mysql<br />4. su mysql<br />5. tar xzvf mysql-5.0.16.tar.gz<br />6. 先將 configure 的參設設定為一個檔案, 例如 mysql.configure.sh 在執行 /bin/sh /mysql.configure.sh ,將mysql configure,<br />(PS: 如果沒有設定成一個.sh檔案, 怕以後要修改或要查詢參數時無法查詢)<br />7. make install clean<br />8. 找到解壓縮檔案下的 /scripts/mysql_install_db , 將它執行 ./scripts/mysql_install_db<br />9. 這樣就已經安裝完畢<br /><br />要如何測試MySQL呢?<br /><br />1. 執行 /usr/local/mysqld_safe & , 看看是否可以啟動?<br />2. 啟動後打入 /usr/local/mysql/bin/mysqladmin version (檢查MySQL 的版本)<br />3. 執行 /usr/local/mysql/bin/mysqladmin variable (檢查MySQL 的參數)<br />4. 執行 /usr/local/mysql/mysqlshow (顯示資料庫)<br />5. 執行 /usr/local/mysql/bin/mysqladmin -u root -p shutdown (將MySQL 停止)<br /><br />如何設定剛剛安裝好MySQL 的 root 密碼?<br />1. /usr/local/mysql/bin/mysqladmin -u root password xxxxx (xxxxx 就是你要輸入的密碼)<br /><br />如何新增設定MySQL 的使用者?<br />1. /usr/local/mysql/bin/mysql -u root -p xxxxx<br />2. grant all privileges on *.* to &#8216;xxx&#8217;@&#8217;%&#8217; identified by &#8216;xxxxxx&#8217;; (xxx為使用者名稱 ; xxxxxx為使用者密碼 )<br />3. flush privileges;<br /><br />MySQL 權限的修改 :<br />1. update user set password=password(&#8216;xxxxx&#8217;) where Db=xxxxx and User=yyyyy;<br />2. 改完後一定要執行: flush privileges;<br /><br />如果出現 Can&#8217;t connect to local MySQL Server through socket &#8216;tmp/mysql.sock&#8217; .<br />1, ln -s /var/lib/mysql.sock /tmp/mysql.sock</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/08/freebsd_6349/">FreeBSD 更新時間</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-08T19:25:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-#ntpdate -s watch.stdtime.gov.tw<br />參考:http://blog.wu-boy.com/2008/03/14/152/</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/08/mysql/">MySQL 建立索引的方法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-08T19:24:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-1. MySQL建立索引<br />Ans: CREATE INDEX mytable_categoryid ON mytable (category_id);<br />CREATE INDEX mytable_categoryid_userid ON mytable (category_id,user_id);<br /><br />2. MySQL 要看搜尋是否有跑索引<br />Ans: 使用 Explain 命令<br /><br />3. MySQL 看執行緒命令<br />Ans: mysqladmin -u bill -p processlist<br />或是安裝MyTOP</div>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/01/08/freebsd_1686/">讓FreeBSD有彩色</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-01-08T19:24:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-setenv CLICOLOR<br />set color<br />setenv LSCOLORS ExGxFxdxCxDxDxBxBxExEx</div>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -435,6 +287,154 @@ Apache2 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :<br /><
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/freebsd-kde4/">FreeBSD 下用來上網安裝下載 KDE4 的方法</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:13:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+pkg_add -r http://ftp.ncnu.edu.tw/FreeBSD/ports/i386/packages/kde/kde4-4.1.1.tbz<br /><br />之前先用 cvsup 的方式更新後, 再使用 ports 的方式安裝KDE4, 一直都無法安裝成功,<br /><br />常常出現錯誤, 後來上IRC詢問後, 告知可以使用 PKG 的方式安裝看看~~<br /><br />安裝 KDE 的方式可以參考 :<br /><br />http://www.freebsd.org/doc/en/books/handbook/x11-wm.html<br /><br />or<br /><br />http://www.freebsd.org/doc/zh_TW/books/handbook/ports.html<br /><br />應該可以用  # pkg_add -r kde4 這樣的方式安裝, 只是還沒有試過!!</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/yahoogooglemsn/">新站如何加入Yahoo、Google及MSN等搜尋引擎</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T17:31:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+(PS：此文章轉貼自：http://tw.myblog.yahoo.com/luntailang-blog/article?mid=18&prev=19&next=13&l=a&fid=13 ) 綸太郎的無盡藏<br /><br /> <br /><br />新設立一個網站，尤其是部落格，最重要的宣傳動作，就是讓你的網站更容易被搜尋到，所以必須在各大入口網站，如「Yahoo」、「Google」及「MSN」等搜尋引擎登錄你的網址，如果你是一個商業性的部落格，灑點錢購買關鍵字廣告，或許可為，但作為一個小小的blogger格主，以綸太郎而言是不可能花錢去作這個動作的，所以當然要親力親為了，目前有哪些入口網站可以登錄的呢？<br />首先當然就是Google了，因為Google對部落格最友善，收錄的數量與速度大過Yahoo與MSN等搜尋引擎，以綸太郎的Yahoo部落格&#8212;「綸太郎的無盡藏」(http://tw.myblog.yahoo.com/luntailang-blog/) 而言，隔天Google就可以搜尋出我的網站，而Yahoo則是到第三天才有收錄，而MSN的搜尋引擎向來更新速度就像烏龜一樣慢，因為以我自己的其他網站在Google Analystic的分析結果，搜尋引擎來源以Google和Yahoo佔了90% 以上的佔有率，並不是說不要重視Msn，而是MSN比較注重商業性或是有指標性的網站，對於部落格使用者來說，或許不是那麼友善。<br />登錄網站就是要增加你的曝光率，讓網友在茫茫網海裡可以看到你的蹤影，以下搜尋引擎你都可以加入，但誠懇建議，如果你是個還在建置中的網站，沒有內容，或是只有一兩篇文，連部落格外觀都還沒搞定的就不要登錄，甚至連廣告都不要放，等稍具規模再來登錄，這樣搜尋引擎對你的收錄情形會較理想，這是綸太郎的經驗談，因為一開始收錄是收錄到其他網站對這個網站的連結，並非網站主體，所以會從其他網站的連結及內容文章開始收錄，而且以Yahoo部落格來說，我是後來才更新網址，所以收錄情形又有了變動。<br />● Google 登錄<br />在Google搜尋首頁下方有一個&#8221;Google完全手冊&#8221;，點進去就有這項服務&#8221;將您的內容提交給 Google &#8220;，選擇 新增 URL 至 Google 的索引 ，將你的網址（請輸入包含 http:// 的完整網址）填入，而網站名稱填入&#8221;說明&#8221;那欄即可，輸入驗證碼，按下新增網址即可，最快隔天就會出現，較慢的應該是一個禮拜。<br />如果你已被收錄而想要移除，可參見 &#8220;正在從 Google 的索引中移除我的內容&#8221;一文。<br />● Yahoo 登錄（需會員資格）<br />在首頁最下方，有一格是熱門分類，標題的右方就可以看到&#8221;網站登錄&#8221;這四個字，進入後點選&#8221;推薦網站給Yahoo!奇摩搜尋&#8221;，輸入url網址送出即可，記得登錄是需要有yahoo會員資格的，出現的速度比Google慢一些。<br />● MSN(Live Search)<br />在首頁上找不到可以登錄的地方，他是放在MSN LIVE的Live Search裡，如果想登錄，按下這個向 Live Search 登錄您的網站，輸入驗證碼及網址即可。<br />● yam天空（需填寫姓名、信箱）<br />在首頁左邊下方，有一格是&#8221;網站登錄&#8221;，進入後點選&#8221;如果您想新增登錄資料，請至 登錄網站&#8221;，這裡的登錄是需要填寫名字與信箱的，程序較為繁瑣，而且有一些相關規定，請看清楚再登錄，而且他有分門別類，讓你的網站在最適合的分類下出現，但以綸太郎的部落格兼具網路資訊與日本旅遊的綜合性網站，就只能選擇一種分類，對我而言是不太適合的，而且如果Yahoo及Google都有收錄的話，這裡一定也會收錄的。<br />● Google Blogger Search&#8212;Google網誌搜尋，有專門為部落格登錄的服務，Google Blog Search Ping Service，也可以登錄，只是更新速度比較慢。<br />其他如Hinet和新浪網Sina，好像沒有提供這樣的登錄服務，因為Hinet的搜索引擎來自Yahoo、Google及Live Search，而Sina則來自Google。<br />其實登錄只是一個開端，但是重要的是你要寫出有內容的文章，時常的更新，讓搜尋引擎機器人常常來找你，而且和其他網站的相互連結也是讓你的網站能見度提升的方法。<br />此篇文章大部分內容摘錄自0與1謎詭世界&#8211;如何宣傳你的網站&#8212;入口網站登錄，但這篇是去年9月寫的，一些情況都改變了，有些服務也消失了，因為自己最近也成立了新站，有感而發，把一些經驗寫下來，提供有同樣問題的網友參考。<br />後記：將此篇文章貼上FunP，果然Google對FunP是有愛好的，網站可被連結，但以網站來說變成Yahoo排名優先，想來在Google要展示頭角，推推王才是王道啊，Yahoo還是愛用自家產品，所以還是要成立分站，兩邊才不吃虧，慢慢努力吧。</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/kde4-freebsd/">KDE4 在 FreeBSD 安裝好後須如何執行 ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T17:29:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+For KDE3:<br /><br />% echo &#8220;exec startkde&#8221; > ~/.xinitrc<br /><br />For KDE4:<br /><br />% echo &#8220;exec /usr/local/kde4/bin/startkde&#8221; > ~/.xinitrc<br /><br />Now, whenever the X Window System is invoked with startx, KDE will be the desktop.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/01/08/how-to-upgrade-freebsd-63-to-70-stable/">How to Upgrade FreeBSD 6.3 to 7.0 Stable Release</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:39:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+如何升級FreeBSD 6.3 to 7.0 的方法!!<br /><br />(PS: 參考 http://www.cyberciti.biz/faq/howto-freebsd-server-upgrades/)<br /><br />來至: http://www.to2100.idv.tw/?p=4641)<br />Step # 1: Upgrade ports<br /><br /># portupgrade -faP<br /><br />Step # 2: Download updated freebsd-update-upgrade tool<br /><br /># fetch http://people.freebsd.org/~cperciva/freebsd-update-upgrade.tgz<br /># fetch http://people.freebsd.org/~cperciva/freebsd-update-upgrade.tgz.asc<br /># gpg &#8211;verify freebsd-update-upgrade.tgz.asc freebsd-update-upgrade.tgz<br /># tar -xf freebsd-update-upgrade.tgz<br />Step # 3: Start upgrade procedure<br /><br /># sh freebsd-update.sh -f freebsd-update.conf -r 7.0-RELEASE upgrade<br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># reboot<br />Step # 4: Install updated userland tools<br /><br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># portupgrade -faP<br />Step # 5: Remove all old libraries<br /><br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># reboot<br />Step # 6: Verify FreeBSD 7.0<br /><br /># uname -a<br /># tail -f /var/log/messages<br /># tail -f /path/to/other/log/files<br /># egrep -i &#8216;error|warning&#8217; /path/to/log/files<br /># sockstat -4 -l</div>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/9/">&larr; Older</a>
@@ -452,23 +452,23 @@ Apache2 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :<br /><
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+        <a href="/blog/2014/05/12/more-more-more/">測試 MORE 功能</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+        <a href="/blog/2014/05/11/this-is-chinese-title/">假文文章</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/23/javascript/">Javascript 淺析註冊事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/23/php-tcpdf/">PHP 使用 TCPDF 顯示中文的關鍵</a>
       </li>
     
   </ul>
