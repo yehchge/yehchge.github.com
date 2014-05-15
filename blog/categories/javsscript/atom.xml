@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: JavsScript | 我的 Octopress 部落格]]></title>
+  <title><![CDATA[Category: JavsScript | Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/blog/categories/javsscript/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-16T01:29:07+08:00</updated>
+  <updated>2014-05-16T05:57:16+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -48,6 +48,9 @@
 </span><span class='line'>
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<!-- more -->
+
 
 <p>當某一天，我們知道JavaScript要跟HTML結構實現分離後，就會改了一種寫法：
 程式碼:</p>

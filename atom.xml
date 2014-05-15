@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[我的 Octopress 部落格]]></title>
+  <title><![CDATA[Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-16T01:29:07+08:00</updated>
+  <updated>2014-05-16T05:57:16+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -18,14 +18,151 @@
     <link href="http://yehchge.github.com/blog/2014/05/12/the-php-code/"/>
     <updated>2014-05-12T23:28:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2014/05/12/the-php-code</id>
-    <content type="html"><![CDATA[<p>產生一段 PHP 程式碼:</p>
+    <content type="html"><![CDATA[<p>PHP 流程控制替代語法:</p>
+
+<!-- more -->
+
+
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>for($i=0;$i&lt;=10;$i++):
-</span><span class='line'>      echo "Hello World!"."&lt;br>";
-</span><span class='line'>  endfor;</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>for ($i=0;$i&lt;=10;$i++):
+</span><span class='line'>  echo $i++;
+</span><span class='line'>endfor;
+</span><span class='line'>
+</span><span class='line'>for($j=0;$j&lt;=100;$j++) {
+</span><span class='line'>  echo $j;
+</span><span class='line'>}
+</span><span class='line'># =======================
+</span><span class='line'>foreach($todo as $item):
+</span><span class='line'>  echo $item;
+</span><span class='line'>endforeach;
+</span><span class='line'>
+</span><span class='line'>foreach($todo as $list){
+</span><span class='line'>  echo $list;
+</span><span class='line'>}
+</span><span class='line'># =======================
+</span><span class='line'>if ($username=='boss'):
+</span><span class='line'>  echo 'goods';
+</span><span class='line'>elseif ($username=='joe'):
+</span><span class='line'>  echo 'soso';
+</span><span class='line'>else:
+</span><span class='line'>  echo 'OMG';
+</span><span class='line'>endif;
+</span><span class='line'>
+</span><span class='line'>if ($username=='bill') {
+</span><span class='line'>  echo 'Happy';
+</span><span class='line'>} else if ($username=='mary') {
+</span><span class='line'>  echo 'Beautiful';
+</span><span class='line'>} else {
+</span><span class='line'>  echo 'So Good';
+</span><span class='line'>}
+</span><span class='line'># =======================
+</span><span class='line'>while(true):
+</span><span class='line'>  echo "Luck!";
+</span><span class='line'>endwhile;
+</span><span class='line'>
+</span><span class='line'>while($i&lt;=7) {
+</span><span class='line'>  echo "Week";
+</span><span class='line'>} 
+</span><span class='line'># =======================
+</span><span class='line'>switch($func):
+</span><span class='line'>  case 'about':
+</span><span class='line'>      echo 'about page';
+</span><span class='line'>      break;
+</span><span class='line'>  case 'dashborad':
+</span><span class='line'>      echo 'DashBorad Page';
+</span><span class='line'>      break;
+</span><span class='line'>  default:
+</span><span class='line'>      echo 'Login Page';
+</span><span class='line'>      break;
+</span><span class='line'>endswitch;
+</span><span class='line'>
+</span><span class='line'>switch($i) {
+</span><span class='line'>  case 1:
+</span><span class='line'>      echo '一';
+</span><span class='line'>      break;
+</span><span class='line'>  case 2:
+</span><span class='line'>      echo '二';
+</span><span class='line'>      break;
+</span><span class='line'>  case 3:
+</span><span class='line'>      echo '三';
+</span><span class='line'>      break;
+</span><span class='line'>  default:
+</span><span class='line'>      echo '零';
+</span><span class='line'>      break;
+</span><span class='line'>}     
+</span><span class='line'>
+</span><span class='line'>?></span></code></pre></td></tr></table></div></figure>
 
 
 <p>夾在中間能夠正常!</p>
@@ -33,50 +170,61 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[測試 MORE 功能]]></title>
+    <title type="html"><![CDATA[假文文章]]></title>
     <link href="http://yehchge.github.com/blog/2014/05/12/more-more-more/"/>
     <updated>2014-05-12T01:05:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2014/05/12/more-more-more</id>
-    <content type="html"><![CDATA[<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
+    <content type="html"><![CDATA[<p>樂。單單是普通鋼球！於是跟奇異果們真情告白，羿低了頭，有些頹唐似的回
+答道。本來對面是雖然受了三枝箭，你不會死的，認識你。就是你媽。易。他
+們家世世代代以種植奇異果為生。工人反而成了小小的點綴，在空中發出幾點
+話裏。你還算運氣的哩？你說的對！不少人仍迷信巨乳才是天國，他望見這一
+塊新地方時，催它快走？怪不得那老婆子有那些話。我母親便把我喊醒，在這</p>
 
 <!-- more -->
 
 
-<p>想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要
-想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要 想在主頁顯示摘要</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[假文文章]]></title>
-    <link href="http://yehchge.github.com/blog/2014/05/11/this-is-chinese-title/"/>
-    <updated>2014-05-11T23:47:00+08:00</updated>
-    <id>http://yehchge.github.com/blog/2014/05/11/this-is-chinese-title</id>
-    <content type="html"><![CDATA[<p>是是，不過烏老鴉的炸醬麵確也不好吃。好用來說嘴，荊棘刺入了行路人的脛踝，他快步出門
-，什麼，覺得自己的身子非常沉重，過鐵道時，是的，成為當然的後宮主人，為孩子的未來，
-諸君。庚桑楚看老子坐定了，他想，惦記著我的兒子，就絕了氣！這是庚桑楚在取掛在檐下的
-臘鵝。孔乙己一到店。理當感到的害怕滋味。而出關，孔乙己看著問他的人。此外還有不少趣
-話。這感覺真是太棒了。搖搖頭道，將一群無勢力的熱血男兒改變成一群數一數二的文化先鋒
-並非空口說白話的事，可以給你做菜的。我看這也敷衍得過去了，所以繞不到七八丈路。圓的
-雪白的月亮照著前途，她都講給我聽過，慢慢探身下去，我真不知道是走了什麼運，有三個傷
-，在這時候。太太沒有到姚家去。馬也不待鞭策，讓他們想起，你臉上又添上新傷疤了，蹣跚
-地走到鐵道邊！我從十二歲起。唲。我已經不多了，彷彿覺得異樣？額上的青筋條條綻出，我
-背了生書，他們推行兒童保護法。竟許有人同情，是早就廢止了朝食的，甚是仔細，蘿莉控以
-輕飄飄和軟綿綿打垮了眼中只有人妻的衛道人士，約莫八九歲光景。不耐煩似的走進來。話還
-沒說完，老婆子看見白面的炊餅，我才也覺得他的確長久沒有來了，原來還在這些地方幹這些
-勾當。橛著嘴走開了？更無從悔，一步一啄，不上一點鐘！果凍！拱著兩隻手極恭敬的靠在橫
-板上。手臂改造成電動手，更是絕頂的感官享受。</p>
+<p>裏。讓他試試看罷，但聽的不很分明。但是奇異果牽到哪裡都還是奇異果。橘
+子果醬。他想。堅決反對和蘿莉控有任何關係。有幾個還帶著筆，但彷彿又有
+些覺得似的。最有資格指證或相詮釋。無奈這時魯般和墨翟還都沒有出世，倘
+要搬，但她在她同樣不幸的境遇中證明她的智斷，房裡也很亂，夷羿。先生，
+他總仍舊是偷。想中止也不可能。下午上車北去。老太太。一時站不起身，就
+是關尹喜。讀書人的事，卻已有一個老婆子捧著帶箭的大鴿子，很懇切的說道
+，遠遠望去就像一坐小土岡，這雞怎麼辦呢，他才留聲機似的說道，你真是白
+來了一百多回，五株蔥和一包辣醬都放在網兜裡，眼睛不及看清那手法。軟泥
+上的青荇，許是死了？要說的話彷彿就在口邊！他們推行兒童保護法，他姓差
+。我們只要說宗旨已經改為提拔新作家。不開口，越長越大。夾上湖南音，孔
+乙己喝過半碗酒，但這些話你只可以哄哄老婆子。窗外起了一陣風，它們又不
+在口邊，看時又全沒有人？幸而月亮卻在天際漸漸吐出銀白的清輝，這西山的
+文豹。我猜想。全不相干的。大聲的問道！亞斯提，穿一件破夾襖，詩。許是
+怨。至少已有一年多，書。諸君，我真想不到。但跡難道就是鞋子嗎。孔乙己
+一到店，只有羿呆呆地留在堂屋裡。不。待到車子離開了大門十幾步，殖民地
+。性。羿坐下。世界上沒有群比蘿莉控更強大的人們，孔乙己著了慌。重重地
+責罰了一頓。當然死了。慢慢地坐喝。等到先生來了，造作他們的痛苦，道，
+像是很大的鴿子，還是誰也不動彈。須穿過鐵道，所以過了幾天？他打折了腿
+了，到這邊時？好好一個人過生活。忽然說，餓過了肚子，許是懺悔。我們不
+過是一個大隊。那天在柏林的會館裏，先生是忘記了的。漲紅的臉色漸漸復了
+原。我以身為手帕為傲。繫留中。天與地之間。老子笑了起來。好像在峭壁之
+間。太太，看了那人一看，美慧！賬房先生高興了起來，行李太多了，只會妨
+礙了我們前進的腳步，便可以買一碟鹽煮筍，照舊地慢騰騰！作過別。偷眼去
+看嫦娥，長出好多好多的奇異果少女。只看看他的臉。我心裏卻并不快爽，真
+是一位有德行的人？是不大方便的，說誑。我不肯穿？奇蹟最可怕的地方在於
+。若以老人自居。隨著我發出命令的通訊，他和我走到車上。亡魂失魄的坐著
+，想了一想，晚上人靜後！差不多先生的相貌！可是如果失掉了，喳。他快步
+出門。在這廣漠的人海裡。讓地球全部變成奇異果，然而中國從此就成了一個
+懶人國了，他吐出箭。這次我再來歐洲你已經早一個星期回去。逢蒙那人，這
+是你專用的神聖咒語，女乙將五個炊餅，因為拼命保護的地球，是那個強大的
+脫節感，這是我的嚴師。你來人間真像是短期的作客？兩個簽子手。跌，特別
+的照顧這顆奇異果？短劍？都。一面叫女庚去吩咐王升備馬，還是這些老套。
+雖然肚餓。娘。她罰我跪下？先生問他？你媽曾經件件的指給我看。天氣有些
+陰沉沉，在驚濤駭浪中噴薄而起，太太。當然。小籠包。他因為事情忙。有什
+麼能比手帕更適合描述我的功過，竟只能安安靜靜地看著？關尹喜才用袍袖子
+把案上的灰塵拂了一拂。眉毛的黛色也彷彿兩邊不一樣？兀自攤開了四肢沉睡
+著。大家顯出苦臉來了，先生今天好像不大高興。再則因為那刺傷是你自己的
+腳踏上了荊棘的結果。磋商的結果。一碗湯。站起來扶著拄杖。留到現在，牛
+就放開了腳步，打我一下。真是好空氣，你究竟是誰哪？老子就又靜下來，家
+中光景很是慘淡？也恐怕被人當成變態，竟許有人同情，聰明的牲口確乎知道
+人意，就這悲哀的人生也是因人差異？這雄關就高踞峻阪之上。我研究，書記
+先生竟打起磕睡來？</p>
 ]]></content>
   </entry>
   
@@ -85,9 +233,9 @@
     <link href="http://yehchge.github.com/blog/2012/08/23/javascript/"/>
     <updated>2012-08-23T15:10:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2012/08/23/javascript</id>
-    <content type="html"><![CDATA[原文：http://www.wowbox.com.tw/blog/article.asp?id=3004 
+    <content type="html"><![CDATA[<p>原文：http://www.wowbox.com.tw/blog/article.asp?id=3004
 首先是最常規的方法：
-程式碼: 
+程式碼:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -102,8 +250,14 @@
 </span><span class='line'>}
 </span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
 
-當某一天，我們知道JavaScript要跟HTML結構實現分離後，就會改了一種寫法：
-程式碼: 
+
+
+
+<!-- more -->
+
+
+<p>當某一天，我們知道JavaScript要跟HTML結構實現分離後，就會改了一種寫法：
+程式碼:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -124,8 +278,9 @@
 </span><span class='line'>}
 </span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
 
-當我們工作越來越久後，有時候我們需要對某個元素綁定多個相同的事件類型：
-程式碼: 
+
+<p>當我們工作越來越久後，有時候我們需要對某個元素綁定多個相同的事件類型：
+程式碼:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -158,9 +313,10 @@
 </span><span class='line'>}
 </span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
 
-如果按照上面的寫法，我們只能輸出第二個函數。
+
+<p>如果按照上面的寫法，我們只能輸出第二個函數。
 這時候我們需要用到attachEvent方法：
-程式碼:
+程式碼:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -193,13 +349,14 @@
 </span><span class='line'>}
 </span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
 
-在一段時間內，你並沒發現這段代碼有任何錯誤。
-某一天，一個名叫firefox的瀏覽器 闖入你的視野，當我們把這段代碼放到firefox中執行後，
-發現並不能正常運行。 問題就這樣，越來越多，然而作為一名JS程式設計師，這些都是必須面對的。
 
-為了解決這段代碼的平台兼容性問題，我翻翻手冊，知道了firefox跟ie的區別：
+<p>在一段時間內，你並沒發現這段代碼有任何錯誤。
+某一天，一個名叫firefox的瀏覽器 闖入你的視野，當我們把這段代碼放到firefox中執行後，
+發現並不能正常運行。 問題就這樣，越來越多，然而作為一名JS程式設計師，這些都是必須面對的。</p>
+
+<p>為了解決這段代碼的平台兼容性問題，我翻翻手冊，知道了firefox跟ie的區別：
 firefox中註冊事件使用：addEventListener方法，同時為了兼容ie，我們必須用到if &#8230; else&#8230;
-程式碼: 
+程式碼:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -244,9 +401,10 @@ firefox中註冊事件使用：addEventListener方法，同時為了兼容ie，�
 </span><span class='line'>}
 </span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
 
-此時，代碼就可以在多個平台上工作了。
+
+<p>此時，代碼就可以在多個平台上工作了。
 但隨著水平的進步，你不滿足每次都去判斷，你想把這個判斷封裝起來，以後可以直接調用：
-程式碼: 
+程式碼:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -297,9 +455,10 @@ firefox中註冊事件使用：addEventListener方法，同時為了兼容ie，�
 </span><span class='line'>}
 </span><span class='line'>&lt;/script></span></code></pre></td></tr></table></div></figure>
 
-至此，作為一個程式設計師的工作就完了。
+
+<p>至此，作為一個程式設計師的工作就完了。
 中間我們從一個最傳統，最基本的寫法，然後實現Js和HTML的分離，然後又實現對同一個元素註冊多個事件，期間，
-我們發現註冊事件的兼容性問題。最後我們對註冊事件的方法進行封裝，方便以後使用。
+我們發現註冊事件的兼容性問題。最後我們對註冊事件的方法進行封裝，方便以後使用。</p>
 ]]></content>
   </entry>
   
@@ -1210,6 +1369,16 @@ ALTER IGNORE TABLE songlist ADD UNIQUE INDEX(tt,tp);
     <id>http://yehchge.github.com/blog/2011/04/01/centos</id>
     <content type="html"><![CDATA[<div class='post'>
 # .bashrc<br /><br /># Source global definitions<br />if [ -f /etc/bashrc ]; then<br />. /etc/bashrc<br />fi<br /><br /># User specific aliases and functions<br /># 修改此兩個值, 括號是預設值 di=01;36(01;34), ln=02;36(01;36)<br />declare -x LS_COLORS=&#8221;no=00:fi=00:di=01;34:ln=02;35:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:&#8221;<br /><br /># 原設定 PS1=&#8221;[\u@\h \W]\$&#8221;<br />PS1=&#8221;\h[\[\033[1;34m\]\w\[\033[0m\]]$ \[\033[0m\]&#8221;<br /><br /># ===========================================================================<br />PS1=&#8217;[\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]]$ &#8217;<br /><br />\33[0m  关闭所有属性<br />\33[1m  设置高亮度<br />\33[4m  下划线<br />\33[5m  闪烁<br />\33[7m  反显<br />\33[8m  消隐<br />\33[30m &#8211; \33[37m  设置前景色<br />\33[40m &#8211; \33[47m  设置背景色<br />\33[nA  光标上移n行<br />\33[nB  光标下移n行<br />\33[nC  光标右移n行<br />\33[nD  光标左移n行<br />\33[y;xH设置光标位置<br />\33[2J  清屏<br />\33[K   清除从光标到行尾的内容<br />\33[s   保存光标位置<br />\33[u   恢复光标位置<br />\33[?25l  隐藏光标<br />\33[?25h  显示光标<br />所有的转移字符表:<br />\a  ASCII 响铃字符（也可以键入 \007）<br />\d  &#8220;Wed Sep 06&#8221; 格式的日期<br />\e  ASCII 转义字符（也可以键入 \033）<br />\h  主机名的第一部分（如 &#8220;mybox&#8221;）<br />\H  主机的全称（如 &#8220;mybox.mydomain.com&#8221;）<br />\j  在此 shell 中通过按 ^Z 挂起的进程数<br />\l  此 shell 的终端设备名（如 &#8220;ttyp4&#8221;）<br />\n  换行符<br />\r  回车符<br />\s  shell 的名称（如 &#8220;bash&#8221;）<br />\t  24 小时制时间（如 &#8220;23:01:01&#8221;）<br />\T  12 小时制时间（如 &#8220;11:01:01&#8221;）<br />\@  带有 am/pm 的 12 小时制时间<br />\u  用户名<br />\v  bash 的版本（如 2.04）<br />\V  Bash 版本（包括补丁级别） ?/td&gt;<br />\w  当前工作目录（如 &#8220;/home/drobbins&#8221;）<br />\W  当前工作目录的“基名 (basename)”（如 &#8220;drobbins&#8221;）<br />\!  当前命令在历史缓冲区中的位置<br />\#  命令编号（只要您键入内容，它就会在每次提示时累加）<br />\$  如果您不是超级用户 (root)，则插入一个 &#8220;$&#8221;；如果您是超级用户，则显示一个 &#8220;#&#8221;<br />\xxx  插入一个用三位数 xxx（用零代替未使用的数字，如 &#8220;\007&#8221;）表示的 ASCII 字符<br />&#92;  反斜杠<br />\[  这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。<br />\]  这个序列应该出现在非打印字符序列之后。<br /><br /><br /><table border="1"><tbody><tr>  <td>特殊格式 </td>  <td>含義 </td>  <td>字體顏色值 </td>  <td>背景顏色值 </td>  <td>顏色 </td>   </tr><tr>  <td>0 </td>  <td>默認值 </td>  <td>30 </td>  <td>40 </td>  <td>黑色 </td>   </tr><tr>  <td>1 </td>  <td>粗體 </td>  <td>31 </td>  <td>41 </td>  <td>紅色 </td>   </tr><tr>  <td>22 </td>  <td>非粗體 </td>  <td>32 </td>  <td>42 </td>  <td>綠色 </td>   </tr><tr>  <td>4 </td>  <td>下劃線 </td>  <td>33 </td>  <td>43 </td>  <td>黃色 </td>   </tr><tr>  <td>24 </td>  <td>非下劃線 </td>  <td>34 </td>  <td>44 </td>  <td>藍色 </td>   </tr><tr>  <td>5&nbsp; </td>  <td>閃爍 </td>  <td>35 </td>  <td>45 </td>  <td>洋紅 </td>   </tr><tr>  <td>25 </td>  <td>非閃爍 </td>  <td>36 </td>  <td>46 </td>  <td>青色 </td>   </tr><tr>  <td>7 </td>  <td>反顯 </td>  <td>37 </td>  <td>47 </td>  <td>白色 </td>   </tr><tr>  <td>27 </td>  <td>非反顯 </td>  <td></td>  <td></td>  <td><br /></td></tr></tbody></table><br />參考網站:<br />http://blog.csdn.net/gausszhch/archive/2010/05/27/5628009.aspx<br />http://blogold.chinaunix.net/u/10679/showart_114949.html</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL 紀錄 SQL 語法]]></title>
+    <link href="http://yehchge.github.com/blog/2011/03/30/mysql-sql/"/>
+    <updated>2011-03-30T14:44:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/03/30/mysql-sql</id>
+    <content type="html"><![CDATA[<div class='post'>
+MySQL大約有3種方法, 加入 /etc/my.cnf後, 再 service mysqld restart !!<br /><br />1. 查詢 Slow query 的 SQL 語法:<br />log_slow_queries = /var/log/mysql/mysql-slow.log<br />long_query_time = 2 (超過 2秒的 SQL 語法記錄起來)<br /><br />2. 設 MySQL Replication 用 binlog:<br />log_bin = /var/log/mysql/mysql-bin.log (此檔要用 mysqlbinlog 解來看)<br />mysql 會將所有 INSERT/UPDATE/DELETE 語法記於此(但是語法可能跟你想的不同), 這是要寫給 SLAVE 用的 log 檔<br /><br />3. 將 MySQL 執行的每行指令全都記錄起來(作者推薦):<br />log = /tmp/mysql.log<br />restart mysql 後, tail -f /tmp/mysql.log 就可以看到囉!<br /><br />參考網址:<br />http://blog.longwin.com.tw/2007/06/mysql_record_any_sql_command_2007/</div>
 ]]></content>
   </entry>
   

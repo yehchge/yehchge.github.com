@@ -5,15 +5,58 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>一段 PHP 程式碼 - 我的 Octopress 部落格</title>
+  <title>一段 PHP 程式碼 - Octopress 部落格</title>
   <meta name="author" content="Yehchge">
 
   
-  <meta name="description" content="產生一段 PHP 程式碼: 1
+  <meta name="description" content="PHP 流程控制替代語法: 1
 2
 3
-for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能夠正常!
-">
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -28,7 +71,7 @@ for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="Octopress 部落格" type="application/atom+xml">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -39,7 +82,7 @@ for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  <h1><a href="/">Octopress 部落格</a></h1>
   
     <h2>一個靜態網站的部落格框架</h2>
   
@@ -94,14 +137,151 @@ for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能
   </header>
 
 
-<div class="entry-content"><p>產生一段 PHP 程式碼:</p>
+<div class="entry-content"><p>PHP 流程控制替代語法:</p>
+
+<!-- more -->
+
+
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>for($i=0;$i&lt;=10;$i++):
-</span><span class='line'>      echo "Hello World!"."&lt;br>";
-</span><span class='line'>  endfor;</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>for ($i=0;$i&lt;=10;$i++):
+</span><span class='line'>  echo $i++;
+</span><span class='line'>endfor;
+</span><span class='line'>
+</span><span class='line'>for($j=0;$j&lt;=100;$j++) {
+</span><span class='line'>  echo $j;
+</span><span class='line'>}
+</span><span class='line'># =======================
+</span><span class='line'>foreach($todo as $item):
+</span><span class='line'>  echo $item;
+</span><span class='line'>endforeach;
+</span><span class='line'>
+</span><span class='line'>foreach($todo as $list){
+</span><span class='line'>  echo $list;
+</span><span class='line'>}
+</span><span class='line'># =======================
+</span><span class='line'>if ($username=='boss'):
+</span><span class='line'>  echo 'goods';
+</span><span class='line'>elseif ($username=='joe'):
+</span><span class='line'>  echo 'soso';
+</span><span class='line'>else:
+</span><span class='line'>  echo 'OMG';
+</span><span class='line'>endif;
+</span><span class='line'>
+</span><span class='line'>if ($username=='bill') {
+</span><span class='line'>  echo 'Happy';
+</span><span class='line'>} else if ($username=='mary') {
+</span><span class='line'>  echo 'Beautiful';
+</span><span class='line'>} else {
+</span><span class='line'>  echo 'So Good';
+</span><span class='line'>}
+</span><span class='line'># =======================
+</span><span class='line'>while(true):
+</span><span class='line'>  echo "Luck!";
+</span><span class='line'>endwhile;
+</span><span class='line'>
+</span><span class='line'>while($i&lt;=7) {
+</span><span class='line'>  echo "Week";
+</span><span class='line'>} 
+</span><span class='line'># =======================
+</span><span class='line'>switch($func):
+</span><span class='line'>  case 'about':
+</span><span class='line'>      echo 'about page';
+</span><span class='line'>      break;
+</span><span class='line'>  case 'dashborad':
+</span><span class='line'>      echo 'DashBorad Page';
+</span><span class='line'>      break;
+</span><span class='line'>  default:
+</span><span class='line'>      echo 'Login Page';
+</span><span class='line'>      break;
+</span><span class='line'>endswitch;
+</span><span class='line'>
+</span><span class='line'>switch($i) {
+</span><span class='line'>  case 1:
+</span><span class='line'>      echo '一';
+</span><span class='line'>      break;
+</span><span class='line'>  case 2:
+</span><span class='line'>      echo '二';
+</span><span class='line'>      break;
+</span><span class='line'>  case 3:
+</span><span class='line'>      echo '三';
+</span><span class='line'>      break;
+</span><span class='line'>  default:
+</span><span class='line'>      echo '零';
+</span><span class='line'>      break;
+</span><span class='line'>}     
+</span><span class='line'>
+</span><span class='line'>?></span></code></pre></td></tr></table></div></figure>
 
 
 <p>夾在中間能夠正常!</p>
@@ -144,7 +324,7 @@ for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/05/12/more-more-more/" title="Previous Post: 測試 MORE 功能">&laquo; 測試 MORE 功能</a>
+        <a class="basic-alignment left" href="/blog/2014/05/12/more-more-more/" title="Previous Post: 假文文章">&laquo; 假文文章</a>
       
       
     </p>
@@ -164,11 +344,7 @@ for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/12/more-more-more/">測試 MORE 功能</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/05/11/this-is-chinese-title/">假文文章</a>
+        <a href="/blog/2014/05/12/more-more-more/">假文文章</a>
       </li>
     
       <li class="post">
@@ -177,6 +353,10 @@ for($i=0;$i&lt;=10;$i++): echo "Hello World!"."&lt;br>"; endfor; 夾在中間能
     
       <li class="post">
         <a href="/blog/2012/07/23/php-tcpdf/">PHP 使用 TCPDF 顯示中文的關鍵</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/25/c-compiler/">安裝 C++ Compiler 編譯環境</a>
       </li>
     
   </ul>
