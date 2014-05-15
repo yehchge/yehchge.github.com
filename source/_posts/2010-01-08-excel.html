@@ -7,5 +7,51 @@ categories:
  - xml
 ---
 
-<div class='post'>
-&lt;?xml version="1.0"?&gt;<br />&lt;?mso-application progid="Excel.Sheet"?&gt;<br />&lt;Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"<br /> xmlns:o="urn:schemas-microsoft-com:office:office"<br /> xmlns:x="urn:schemas-microsoft-com:office:excel"<br /> xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"<br /> xmlns:html="http://www.w3.org/TR/REC-html40"&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet1"&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaaaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;1515aaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;56516aaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;a546456aaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet2"&gt;<br />  &lt;Table&gt;<br />   &lt;Row ss:Index="5"&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;bbbbbb&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet3"&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell ss:Index="4"&gt;&lt;Data ss:Type="String"&gt;ccccccc&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br />&lt;/Workbook&gt;<br /> <br /> <br /> <br /> <br />以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!<br />可用於php asp.net asp vb c# .....等各種程式 !!</div>
+{% codeblock %}
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+xmlns:html="http://www.w3.org/TR/REC-html40">
+
+<Worksheet ss:Name="Sheet1">
+<Table>
+<Row>
+<Cell><Data ss:Type="String">aaaaaa</Data></Cell>
+<Cell><Data ss:Type="String">aaaaa2</Data></Cell>
+<Cell><Data ss:Type="String">aaaa33</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">1515aaa</Data></Cell>
+<Cell><Data ss:Type="String">56516aaaa2</Data></Cell>
+<Cell><Data ss:Type="String">a546456aaa33</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+
+<Worksheet ss:Name="Sheet2">
+<Table>
+<Row ss:Index="5">
+<Cell><Data ss:Type="String">bbbbbb</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+
+<Worksheet ss:Name="Sheet3">
+<Table>
+<Row>
+<Cell ss:Index="4"><Data ss:Type="String">ccccccc</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+
+</Workbook>
+
+{% endcodeblock %}
+ 
+以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!
+可用於php asp.net asp vb c# .....等各種程式 !!
+
+
