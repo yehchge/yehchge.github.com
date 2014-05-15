@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MySQL | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL 升級]]></title>
+    <link href="http://yehchge.github.com/blog/2011/08/22/mysql/"/>
+    <updated>2011-08-22T15:22:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/08/22/mysql</id>
+    <content type="html"><![CDATA[<div class='post'>
+(PS:此文章從Web上的PDF檔案中擷取出來的) <br />如果你有安裝MySQL<br />而且MySQL 版本是5.X 的，請注意囉<br />因為從MySQL 4.1 開始，密碼格式很像變得不同囉<br />詳情請看此篇：http://dev.mysql.com/doc/refman/4.1/en/old-client.html<br />MySQL 4.1 and up uses an authentication protocol based on a password hashing algorithm that is <br />incompatible with that used by older clients. If you upgrade the server to 4.1, attempts to connect to <br />it with an older client may fail with the following message:<br />shell&gt; mysql<br />Client does not support authentication protocol requested<br />by server; consider upgrading MySQL client<br />簡單的&nbsp;&nbsp; ， 說 MySQL 4.1跟更新的版本使用一個以密碼雜湊演算法為基礎的驗證協定<br />而且跟舊版的不一樣，不適用於舊版的 Client端.<br />如果你的 MySQL升級到 4.1(或者更新的，像是 5.X)<br />你連線到 MySQL時應該會出現以下訊息(請往上看 XD)<br />解決方法很多<br />•&nbsp;&nbsp;&nbsp; 升級Client 端的MySQL 函式庫 <br />•&nbsp;&nbsp;&nbsp; 連線到4.1 以上版本的MySQL 時，使用4.1 以上版本的帳號密碼來進行連線 <br />•&nbsp;&nbsp;&nbsp; 啟動MySQL 時，多加個--old-passwords 引數<br />•&nbsp;&nbsp;&nbsp; 登入MySQL，使用old_password 函式(待會說明)<br />OK，我們先來學第四個方法吧.. 也是我最習慣使用的方法(因為簡單拉@@")<br />請你先登入mysql(請用有權限更改mysql 的帳戶，例如：root)<br />然後↓<br />mysql&gt; set password for '帳號'@'主機' = old_password('密碼');<br />Query OK, 0 rows affected (0.00 sec)<br />用好之後，請update 跟flush privileges<br />mysql&gt; update mysql.user set password = old_password('密碼') where host = '主機' and user = '帳<br />號';<br />Query OK, 0 rows affected (0.01 sec)<br />mysql&gt; flush privileges;<br />Query OK, 0 rows affected (0.00 sec)<br />OK，這樣一來就更改好了！可以連線看看囉！<br />另外一種方法，也就是第三種方法可以自行參考MySQL 函式庫說明囉^^<br /></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL 紀錄 SQL 語法]]></title>
+    <link href="http://yehchge.github.com/blog/2011/03/30/mysql-sql/"/>
+    <updated>2011-03-30T14:44:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/03/30/mysql-sql</id>
+    <content type="html"><![CDATA[<div class='post'>
+MySQL大約有3種方法, 加入 /etc/my.cnf後, 再 service mysqld restart !!<br /><br />1. 查詢 Slow query 的 SQL 語法:<br />log_slow_queries = /var/log/mysql/mysql-slow.log<br />long_query_time = 2 (超過 2秒的 SQL 語法記錄起來)<br /><br />2. 設 MySQL Replication 用 binlog:<br />log_bin = /var/log/mysql/mysql-bin.log (此檔要用 mysqlbinlog 解來看)<br />mysql 會將所有 INSERT/UPDATE/DELETE 語法記於此(但是語法可能跟你想的不同), 這是要寫給 SLAVE 用的 log 檔<br /><br />3. 將 MySQL 執行的每行指令全都記錄起來(作者推薦):<br />log = /tmp/mysql.log<br />restart mysql 後, tail -f /tmp/mysql.log 就可以看到囉!<br /><br />參考網址:<br />http://blog.longwin.com.tw/2007/06/mysql_record_any_sql_command_2007/</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL 資料表格式 InnoDB 與 MyISAM 的比較]]></title>
+    <link href="http://yehchge.github.com/blog/2011/03/30/mysql-innodb-myisam/"/>
+    <updated>2011-03-30T14:34:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/03/30/mysql-innodb-myisam</id>
+    <content type="html"><![CDATA[<div class='post'>
+<b>MyISAM :</b> <br />1.效能優，預設引擎，為 Mysql最早使用的引擎<br />2.使用MyISAM將具備三種 檔案：.frm (table format)  .MYD(data file)  .MYI(index file)<br />3.所有資料是以low byte first儲存，數字型key是以high byte first儲存以利索引<br />4.支援大檔 ( &gt; 63 bit)<br />5.支援42億(2^32次方) 資料筆數，如果MySQL編譯有加入--with-big-tables 選項可支援多一倍(2^32次方 * 2)資料量<br />6.不支援事務處理，例如關聯式 資料庫<br />7.AUTO_INCREMENT 更快（至少10%），序列的值被刪除之後就不能再利用<br /><br /><b>InnoDB:</b><br />1.具備Commit, Rollback和當掉復原的事務處理能力，可保護使用者資料<br />2.可進行row-level的 鎖定同時維持nonlocking reads，以支援多人同時連線狀態<br />3.可支援FOREIGN KEY<br />4.InnoDB是專門為了大容 量資料的最大效率進行設計的，CPU效能是其他的disk-based資料庫引擎所不及的<br />5.InnoDB儲存他的表和 index在一個表空間中，此表空間可能包含幾個檔(有可能在不同disk partitions)，此點和MyISAM不同，MyISAM是一個表一個檔案，這差一點造成InnoDB表個可以非常大，即使是超過系統的file size(例如2GB)都可處理<br />6.此為Windows安裝檔的 默認值<br />7.InnoDB上可處理存儲超 過1TB的數據，可支援例如平均每秒800次插入/更新的負荷<br />8.支援關聯資料庫<br /><br /><b>InnoDB使用上的限制：</b><br />1.不要將MyISAM轉成InnoDB table<br />2.不要在NFS格式上將 InnoDB設定成data files或log file，檔案容易被鎖住<br />3.一個表不能包含超過1000 欄<br />4.內部key最大長度為 3500 bytes，MySQL限制為3072 Bytes<br />5.每筆資料最長約為8000 Bytes，變長的欄位(例如Varchar/BLOB/TEXT)需小於4000 Bytes.<br />6.即使InnoDB支援row size大於65535，也不能定義一個包含VARBINARY/VARCHAR的欄位總合大於65535 (會出現錯誤訊息)<br />7.在依些舊系統中，檔案需小於 2GB，這並不限制InnoDB的使用，但你如果需要大的tablespace則需額外進行設定<br />8.InnoDB的log file總共大小需小於4GB<br />9.最小的tablespace 大小為10MB，最大的大小為64TB，這也是table的最大值<br />10.不支援FULLTEXT<br />11.InnoDB不保留每個表 個的總數統計，也就是count(*)則必須進行index計算<br />12.在InnoDB 中，AUTO_INCREMENT欄位如果存在，則"必須"定義一個index欄位包含AUTO_INCREMENT欄；在MyISAM 中，AUTO_INCREMENT欄位"可能"為index中的一欄<br />13.DELETE FROM Table為逐筆資料刪除，非整個table刪除<br />14.在InnoDB 中，TRUNCATE Table<br /><br /><b>Memory(相同於HEAP):</b><br />1.將所有數據保存在RAM中， 可提供極快的訪問，但如果關機資料就會消失無法儲存<br />2.每一個MEMORY Table關聯一個Disk file(.frm)<br />3.常使用在 create temporary table上，連線結束後就釋放空間<br />4.預設使用hash indexes(速度非常快且對於建立臨時表格非常有效)<br />5.MEMORY不支持BLOB 或TEXT列<br />6.MEMORY使用定長的儲存 格式列<br />7.可支援 AUTO_INCREMENT<br /><br /><table border="1"><tbody><tr><th>項目</th> <th>MyIASM</th> <th>InnoDB</th> <th>Memory</th> </tr><tr align="center"> <td>空間限制</td> <td>無</td> <td>64TB</td> <td>記憶體</td> </tr><tr align="center"> <td>transaction</td> <td>x</td> <td>有</td> <td>x</td> </tr><tr align="center"> <td>大量 Insert 速度</td> <td>高</td> <td>低</td> <td>高</td> </tr><tr align="center"> <td>設置外來鍵</td> <td>x</td> <td>有</td> <td>x</td> </tr><tr align="center"> <td>鎖定層級</td> <td>資料表</td> <td>資料列</td> <td>資料表</td> </tr><tr align="center"> <td>二元樹索引</td> <td>有</td> <td>有</td> <td>不知</td> </tr><tr align="center"> <td>雜湊索引</td> <td>x</td> <td>有</td> <td>有</td> </tr><tr align="center"> <td>全文搜尋索引</td> <td>有</td> <td>x</td> <td>x</td> </tr><tr align="center"> <td>資料壓縮</td> <td>有</td> <td>x</td> <td>x</td> </tr><tr align="center"> <td>資料快取</td> <td>x</td> <td>有</td> <td>有</td> </tr><tr align="center"> <td>索引快取</td> <td>有</td> <td>有</td> <td>有</td> </tr><tr align="center"> <td>記憶體佔用</td> <td>低</td> <td>高</td> <td>中</td> </tr><tr align="center"> <td>磁碟佔用</td> <td>低</td> <td>高</td> <td>x</td></tr></tbody></table><br />參考連結:<br />http://miggo.pixnet.net/blog/post/30855147<br />http://blog.roga.tw/2008/11/mysql-資料庫儲存引擎的選用/</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DRBD & Heartbeat & mysql]]></title>
+    <link href="http://yehchge.github.com/blog/2011/03/28/drbd-heartbeat-mysql/"/>
+    <updated>2011-03-28T11:15:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/03/28/drbd-heartbeat-mysql</id>
+    <content type="html"><![CDATA[<div class='post'>
+參考網址:<br />http://wiselysong.blogspot.com/2009/01/heartbeatdrbdmysql-on-debian-etch.html<br />目前這種機制, 最好安裝在 CentOS 上面.<br />DRBD: 分散式儲存系統(在 Master 和 Slave 的機器上, 會有兩個一樣大的空間, 存在著相同的資料)<br />Heartbeat: 產生 Virtual ip, 監測 mysql 的狀態, 如果 Master 掛了, 沒辦法連線, 將會把 Master Mysql Stop 後, umount DRBD, DRBD再連到 Slave, Slave mount DRBD, Slave Mysql Start.<br />在CentOS 上面, 可以用以下語法觀看目前的狀況:<br />1. service mysqld status<br />2. service drbd status<br />3. service heartbeat status<br />如果要停止. 可以下以下語法:<br />1. service mysqld stop<br />2. service drbd stop<br />3. service heartbeat stop</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用 MinGW 編譯 C++ 紀錄]]></title>
+    <link href="http://yehchge.github.com/blog/2010/09/21/mingw-c/"/>
+    <updated>2010-09-21T18:29:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/09/21/mingw-c</id>
+    <content type="html"><![CDATA[<div class='post'>
+1. windres Lession5.rc Lession5.o<br />2. g++ -o Lession5.exe Lession5.c Lession5.o<br />3. g++ -o sample01 sample01.cpp -mwindows (-mwindows 是在windows下執行exe檔案時,不會在跳出一個Console的視窗)<br /><br />// g++ dos(使用 Notepad++ NppExec 套件的紀錄)<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART)<br /><br />// g++(使用 Notepad++ NppExec 套件的紀錄)<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) -mwindows -Wall( -Wall 會顯示程式中是否有無效的參數或函式)<br /><br />// g++ & rc & comctl32(使用 Notepad++ NppExec 套件的紀錄, 使用Window控制項)<br />C:\MinGW\bin\windres.exe $(NAME_PART).rc -o $(NAME_PART).o<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) $(NAME_PART).o "C:\Program Files\Microsoft SDKs\Windows\v7.0A\Lib\comctl32.lib" -mwindows -Wall<br /><br />// g++ & rc(使用 Notepad++ NppExec 套件的紀錄)<br />C:\MinGW\bin\windres.exe $(NAME_PART).rc -o $(NAME_PART).o<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) $(NAME_PART).o -mwindows -Wall<br /><br />// g++ & lib(使用 Notepad++ NppExec 套件的紀錄, 使用Windows Timer套件)<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) "C:\Program Files\Microsoft SDKs\Windows\v7.0A\Lib\WinMM.Lib" -mwindows<br /><br />// C++ 連結 MySQL 的方法(不使用 Visual C++ 和 .net 的方式)<br />01. 需要上網抓取 mysql-connector-c-noinstall-6.0.2-win32<br />02. 參考 http://www.programmer-club.com/showSameTitleN/mysql/911.html<br />03. 參考 http://www.openwebspider.org/documentation/how-to-link-libmysqllib-with-dev-c-or-gcc-under-windows/<br />04. 產生 libmysql.a 的方式<br />    &gt; reimp.exe &lt;FULL_PATH_OF(MySQL\lib\opt)&gt;libmysql.lib<br />    (^ This command creates: libmysql.def AND libmysql.a)<br />    &gt; dlltool.exe –input-def LIBMYSQL.def –dllname libmysql.dll –output-lib libmysql.dll<br />    (^ this creates libmysql.dll)<br />05. 將產生的 libmysql.a 拷貝到 MinGW 的 lib 下<br />06. 在程式中, 需要 include 兩個檔案<br />    #include &lt;winsock.h&gt; // SOCKET TYPE(for mysql.h)<br />    #include &lt;mysql.h&gt;<br />07. 可以使用以下程式測試連結是否成功??<br />using namespace std;<br />int main(void) {<br />    MYSQL my_connection;    //This is a SQL connection.<br />    mysql_init(&my_connection);  //initinal mysql connection<br />  <br />    if (mysql_real_connect(&my_connection, HOST, USERNAME, PASSWORD, DATABASE, 0, NULL, CLIENT_FOUND_ROWS)) {   //connect success <br />        cout &lt;&lt; "Connection Success!!\r\n";<br />        mysql_close(&my_connection); //close database connection<br />    } else {<br />        cout &lt;&lt; "Connection Fail!!\r\n";<br />    }<br />    getch();<br />    return EXIT_SUCCESS;<br />}<br /><br />08. 編譯檔案的時候, 需要在後面加上 -lmysql -lws2_32, 如下:(使用 Notepad++ NppExec 套件的紀錄)<br />    C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) -I "C:\mysql_c\include" -lmysql -lws2_32<br />例如: C:\MinGW\bin\g++.exe "C:\portable\C++\WinApp\mysqlconn.cpp" -o mysqlconn -I "C:\mysql_c\include" -lmysql -lws2_32 -mwindows</div>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: vim | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim筆記(六)]]></title>
+    <link href="http://yehchge.github.com/blog/2012/04/04/vim/"/>
+    <updated>2012-04-04T23:24:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2012/04/04/vim</id>
+    <content type="html"><![CDATA[<div class='post'>
+將整份文件內兩個以上的空白,都變成一個空白<br />:%s/\s\{2,\}/ /g</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tab Tips]]></title>
+    <link href="http://yehchge.github.com/blog/2011/10/12/vim-tab-tips/"/>
+    <updated>2011-10-12T23:39:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2011/10/12/vim-tab-tips</id>
+    <content type="html"><![CDATA[<div class='post'>
+:tab ball --&gt;將所有在 buffer 內的檔案,都放到 tab 上去<br /><br />gt --&gt; 下個 tab<br /><br />gT --&gt; 上個 tab<br /><br />Ctrl-PgDn --&gt; 下個 tab<br /><br />Ctrl-PgUp --&gt; 上個 tab<br /><br /><br /></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VIM tip]]></title>
+    <link href="http://yehchge.github.com/blog/2010/11/15/vim-tip_15/"/>
+    <updated>2010-11-15T17:00:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/11/15/vim-tip_15</id>
+    <content type="html"><![CDATA[<div class='post'>
+顯示檔案列表, 輸入 :Explore 或 :Sexplore<br /><br />自動換行模式, 有些字元顯示成＠符號, 如何顯示實際的內容呢？<br /> set display=lastline</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tip]]></title>
+    <link href="http://yehchge.github.com/blog/2010/11/15/vim-tip/"/>
+    <updated>2010-11-15T15:20:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/11/15/vim-tip</id>
+    <content type="html"><![CDATA[<div class='post'>
+最近又將VIM拿出來把玩一下, 有些指令忘記了, 要記錄一下<br /><br />要將程式的Function折疊, 輸入 zc<br />要將折疊的程式打開, 輸入 zo<br /><br />多視窗的切換, 輸入 Ctrl+w + Ctrl+w<br /><br />複製單行, 輸入 yy<br /><br />貼上單行, 輸入 pp</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Tips]]></title>
+    <link href="http://yehchge.github.com/blog/2010/11/12/vim-tips/"/>
+    <updated>2010-11-12T14:46:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/11/12/vim-tips</id>
+    <content type="html"><![CDATA[<div class='post'>
+VIM 多檔編輯:<br /><br />開啟多的檔案後, 如果要看有哪些檔案, 可輸入<br />:ls<br /><br />要看下個檔案, 可輸入<br />:bn<br /><br />要看最後開的檔案, 可輸入<br />:bl<br /><br />要看指定編號的檔案, 可輸入<br />:b檔名或編號<br /><br />要把檔案從 Buffer List 移除, 可輸入<br />:bd</div>
+
+]]></content>
+  </entry>
+  
+</feed>

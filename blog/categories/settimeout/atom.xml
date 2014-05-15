@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: setTimeout | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/settimeout/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript setTimeout 語法範例]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/javascript-settimeout/"/>
+    <updated>2010-01-08T16:08:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/javascript-settimeout</id>
+    <content type="html"><![CDATA[<div class='post'>
+以下為 JavaScript 語法的範例, 因為撰寫程式時, 卡在setTimeout的地方很久, 所以特地備註 !<br />需注意的地方:<br /><br />1.  這個是使用setTimeout 的方式撰寫, 之前錯的想法是以為, setTimeout 執行之後, 會一直的執行下去,<br />    結果不是, setTimeout 應該是只有執行一次, 如果要重新執行, 就需向以下的方式撰寫, 才可以再次執行!<br />2. setTimeout設定中, 裡面要執行的函式, 必須用 "" 引號括弧起來!<br />3. 如果 setTimeout裡面有參數, 如果是字串, 最好用 '' 單引號括弧起來!<br /><br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;/head&gt;<br />&lt;body&gt;&lt;form&gt;<br />&lt;div id="txt"&gt; &lt;/div&gt;<br />&lt;input type="button" id="btn1" value="Start count!" onClick="timedCount(i)" style="display:"&gt;<br />&lt;input type="button" id="btn2" value="Stop count!" onClick="stopCount()"&gt;<br />&lt;/form&gt;&lt;/body&gt;<br />&lt;script type="text/javascript"&gt;<br />var i=0;<br />var t;<br />function timedCount(i) {<br />   document.getElementById("btn1").disabled=true<br />   var txt=document.getElementById("txt");<br />   txt.innerHTML=i;<br />   i++;<br />   t=<span style="color: rgb(255, 0, 0);">setTimeout("timedCount("+i+")",1000);</span><br />}<br />function stopCount() {<br />   document.getElementById("btn1").disabled=false<br />   clearTimeout(t);<br />}<br />&lt;/script&gt;<br />&lt;/html&gt;</div>
+
+]]></content>
+  </entry>
+  
+</feed>

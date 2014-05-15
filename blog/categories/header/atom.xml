@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: header | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/header/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[讀取HTTP請求頭]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/http/"/>
+    <updated>2010-01-08T16:36:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/http</id>
+    <content type="html"><![CDATA[<div class='post'>
+(PS :擷取至:http://www.coolasp.com/asp_school_show.asp?fid=20071006223513&id=20020822140935)<br /><br />5.1 HTTP請求頭概述<br />　　 HTTP客戶程序（例如瀏覽器），向服務器發送請求的時候必須指明請求類型（一般是GET或者POST）。如有必要，客戶程序還可以選擇發送其他的請求頭。大多數請求頭並不是必需的，但Content-Length除外。對於POST請求來說Content-Length必須出現。<br />　　 下面是一些最常見的請求頭：<br />Accept：瀏覽器可接受的MIME類型。<br />Accept-Charset：瀏覽器可接受的字符集。<br />Accept-Encoding：瀏覽器能夠進行解碼的數據編碼方式，比如gzip。Servlet能夠向支持gzip的瀏覽器返回經gzip編碼的HTML頁面。許多情形下這可以減少5到10倍的下載時間。<br />Accept-Language：瀏覽器所希望的語言種類，當服務器能夠提供一種以上的語言版本時要用到。<br />Authorization：授權信息，通常出現在對服務器發送的WWW-Authenticate頭的應答中。<br />Connection：表示是否需要持久連接。如果Servlet看到這裏的值為“Keep-Alive”，或者看到請求使用的是HTTP 1.1（HTTP 1.1默認進行持久連接），它就可以利用持久連接的優點，當頁麵包含多個元素時（例如Applet，圖片），顯??地減少下載所需要的時間。要實現這一點，Servlet需要在應答中發送一個Content-Length頭，最簡單的實現方法是：先把內容寫入 ByteArrayOutputStream，然後在正式寫出內容之前計算它的大小。<br />Content-Length：表示請求消息正文的長度。<br />Cookie：這是最重要的請求頭信息之一，參見後面《Cookie處理》一章中的討論。<br />From：請求發送者的email地址，由一些特殊的Web客戶程序使用，瀏覽器不會用到它。<br />Host：初始URL中的主機和端口。<br />If-Modified-Since：只有當所請求的內容在指定的日期之後又經過修改才返回它，否則返回304“Not Modified”應答。<br />Pragma：指定“no-cache”值表示服務器必須返回一個刷新後的文檔，即使它是代理服務器而且已經有了頁面的本地拷貝。<br />Referer：包含一個URL，用戶從該URL代表的頁面出發訪問當前請求的頁面。<br />User-Agent：瀏覽器類型，如果Servlet返回的內容與瀏覽器類型有關則該值非常有用。<br />UA-Pixels，UA-Color，UA-OS，UA-CPU：由某些版本的IE瀏覽器所發送的非標準的請求頭，表示屏幕大小、顏色深度、操作系統和CPU類型。</div>
+
+]]></content>
+  </entry>
+  
+</feed>

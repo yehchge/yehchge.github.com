@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: class | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/class/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[python 的 Class 寫法]]></title>
+    <link href="http://yehchge.github.com/blog/2010/02/01/python-class/"/>
+    <updated>2010-02-01T17:55:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/02/01/python-class</id>
+    <content type="html"><![CDATA[<div class='post'>
+class chello:<br />def show(self):<br />return "hello world class!"<br /><br />a = chello();<br />print a.show();<br /><br />or <br /><br />class chello:<br />@property<br />def show(self):<br />return "hello world class!"<br /><br />a = chello()<br />print a.show<br /><br />or <br /><br />#!/usr/bin/python<br />class chello:<br />def show(self):<br />return "hello world class!"<br /><br />x = chello();<br />print x.show();<br /><br />or <br /><br />class chello:<br />   @classmethod<br />   def show(self):<br />      return "hello class world123!"<br /><br />a = chello()<br />print a.show()</div>
+
+]]></content>
+  </entry>
+  
+</feed>

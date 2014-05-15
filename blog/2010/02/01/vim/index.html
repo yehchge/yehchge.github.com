@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Vim 筆記(七) - 我的 Octopress 部落格</title>
+  <meta name="author" content="Yehchge">
+
+  
+  <meta name="description" content="&#8221; 設定TXT副檔名使用todolist的顏色格式au BufRead,BufNewFile *.txt setfiletype todotxt &#8221; 設定在按下Enter後可以新增一行&#8221; Insert newline without entering &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yehchge.github.com/blog/2010/02/01/vim/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  
+    <h2>一個靜態網站的部落格框架</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yehchge.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Vim 筆記(七)</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-01T11:51:00+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+&#8221; 設定TXT副檔名使用todolist的顏色格式<br />au BufRead,BufNewFile *.txt setfiletype todotxt <br /><br />&#8221; 設定在按下Enter後可以新增一行<br />&#8221; Insert newline without entering insert mode<br />map <S-Enter> O<Esc><br />map <CR> o<Esc><br /><br />&#8221; 設定按下F3可以產生日期標記<br />&#8221; To insert timestamp, press F3.<br />nmap <F3> a<C-R>=strftime(&#8220;%Y-%m-%d %a %I:%M %p&#8221;)<CR><Esc><br />imap <F3> <C-R>=strftime(&#8220;%Y-%m-%d %a %I:%M %p&#8221;)<CR><br /><br />&#8221; 設定可見的書籤<br />&#8221; 設定書籤(Markers), F5 設定此行 F6 移除此行書籤<br />:highlight SignColumn guibg=darkgrey<br />:sign define piet text=>> texthl=Search<br /><br />function! SignFixme()<br />   execute(&#8220;:sign place &#8220;.line(&#8220;.&#8221;).&#8221; line=&#8221;.line(&#8220;.&#8221;).&#8221; name=piet file=&#8221;.expand(&#8220;%:p&#8221;))<br />endfunction<br />map <F5> :call SignFixme()<CR><br /><br />function! SignLines() <br /> execute(&#8220;:sign unplace &#8220;.line(&#8220;.&#8221;))<br />endfunction<br />map <F6> :call SignLines()<CR><br /><br />&#8221; 設定移動 buffers(需配合minibufexpl.vim套件)<br />map <C-right> <ESC>:bn<CR><br />map <C-left> <ESC>:bp<CR><br /><br />&#8221; 設定關閉 swap 功能<br />:set noswf<br /><br />&#8221; 設定按 Ctrl+s 存檔<br />:nmap <C-s> :w<CR><br />:imap <C-s> <esc>:w<cr><br /><br />&#8221; 設定PHP摺疊<br />set foldmarker=}<br />set foldmethod=marker<br />set foldlevel=2 &#8221; 預設全部關閉<br />let php_folding = 1 &#8221; 這個很重要<br />set foldnestmax=3<br /><br />&#8221;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8221;<br />&#8221; tags(需要搭配ctags.exe)<br />&#8221;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8220;&#8221;&#8221;<br />let Tlist_Ctags_Cmd=&#8217;C:\vim\vim72\ctags.exe&#8217;<br />let g:showfuncctagsbin = &#8216;c:&#92;vim&#92;vim72&#92;ctags.exe&#8217;<br /><br />set tags=tags;<br />set autochdir<br />set tagrelative<br /><br />&#8221; 我的 statusline 設定<br />set ls=2 &#8220;laststatus<br />set statusline=[%n]<br />set statusline+=%<\  "cut at start set statusline+=%<%F "顯示檔案名稱 set statusline+=\ [%{(&fenc==\"\")?&enc:&fenc}, " encoding set statusline+=%{&fileformat} " file format set statusline+=%{(&bomb?\",BOM\":\"\")}] " detect bomb set statusline+=%=Lines:%L "顯示行數 set statusline+=\ [%p%%] "顯示游標所在整的檔案的百分比位置 set statusline+=\ \ Ln:%l,\ Col:%c "顯示行列位置 set statusline+=\ %([%1*%M%*%R%Y]%) "設定是否修改、是否唯讀、檔案副檔名  " 設定按 Ctrl+F3 去開關menu和toolbar map <silent> <C-F3> : if &guioptions =~# &#8216;T&#8217; <Bar><br />   \set guioptions-=T <Bar><br />   \set guioptions-=m <bar><br />        \else <Bar><br />   \set guioptions+=T <Bar><br />   \set guioptions+=m <Bar><br />        \endif<CR><br /><br />&#8220;設定tab在vim裡頭佔的空白格數<br />set tabstop=4    <br /><br />&#8221; 設定編碼<br />let $LANG=&#8221;zh_TW.UTF-8&#8221;<br />set termencoding=utf8<br />set encoding=utf-8</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yehchge</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-01T11:51:00+08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2010</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yehchge.github.com/blog/2010/02/01/vim/" data-via="" data-counturl="http://yehchge.github.com/blog/2010/02/01/vim/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/01/15/vim_15/" title="Previous Post: Vim筆記(六)">&laquo; Vim筆記(六)</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/02/01/python-class/" title="Next Post: python 的 Class 寫法">python 的 Class 寫法 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yehchge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

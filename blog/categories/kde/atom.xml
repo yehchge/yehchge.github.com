@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: KDE | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/kde/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FreeBSD 下用來上網安裝下載 KDE4 的方法]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/freebsd-kde4/"/>
+    <updated>2010-01-08T19:13:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/freebsd-kde4</id>
+    <content type="html"><![CDATA[<div class='post'>
+pkg_add -r http://ftp.ncnu.edu.tw/FreeBSD/ports/i386/packages/kde/kde4-4.1.1.tbz<br /><br />之前先用 cvsup 的方式更新後, 再使用 ports 的方式安裝KDE4, 一直都無法安裝成功,<br /><br />常常出現錯誤, 後來上IRC詢問後, 告知可以使用 PKG 的方式安裝看看~~<br /><br />安裝 KDE 的方式可以參考 :<br /><br />http://www.freebsd.org/doc/en/books/handbook/x11-wm.html<br /><br />or<br /><br />http://www.freebsd.org/doc/zh_TW/books/handbook/ports.html<br /><br />應該可以用  # pkg_add -r kde4 這樣的方式安裝, 只是還沒有試過!!</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[KDE4 在 FreeBSD 安裝好後須如何執行 ?]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/kde4-freebsd/"/>
+    <updated>2010-01-08T17:29:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/kde4-freebsd</id>
+    <content type="html"><![CDATA[<div class='post'>
+For KDE3:<br /><br />% echo "exec startkde" > ~/.xinitrc<br /><br />For KDE4:<br /><br />% echo "exec /usr/local/kde4/bin/startkde" > ~/.xinitrc<br /><br />Now, whenever the X Window System is invoked with startx, KDE will be the desktop.</div>
+
+]]></content>
+  </entry>
+  
+</feed>

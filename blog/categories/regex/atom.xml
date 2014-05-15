@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: regex | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/regex/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim筆記(六)]]></title>
+    <link href="http://yehchge.github.com/blog/2012/04/04/vim/"/>
+    <updated>2012-04-04T23:24:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2012/04/04/vim</id>
+    <content type="html"><![CDATA[<div class='post'>
+將整份文件內兩個以上的空白,都變成一個空白<br />:%s/\s\{2,\}/ /g</div>
+
+]]></content>
+  </entry>
+  
+</feed>

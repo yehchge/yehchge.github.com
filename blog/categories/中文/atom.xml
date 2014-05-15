@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 中文 | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/中文/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PHP 使用 TCPDF 顯示中文的關鍵]]></title>
+    <link href="http://yehchge.github.com/blog/2012/07/23/php-tcpdf/"/>
+    <updated>2012-07-23T16:35:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2012/07/23/php-tcpdf</id>
+    <content type="html"><![CDATA[<div class='post'>
+<br />$pdf = new TCPDF(PDF_PAFE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);<br /><br />// set font (PHP TCPDF 顯示中文字型)<br />$pdf-&gt;SetFont('cid0jp', '', 18); // 可以顯示中文(繁、簡)、日文、韓文。<br />//$pdf-&gt;SetFont('msungstdlight', '', 18, '', true); //　繁中, 但是效果不好,字會偏移<br />//$pdf-&gt;SetFont('stsongstdlight', '', 20); // 可以顯示中文, 但是效果不好,字會偏移<br />//$pdf-&gt;SetFont('dejavusans', '', 14, '', true); //　預設 utf8<br /></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[python 連結 MySQL 顯示 UTF-8 中文]]></title>
+    <link href="http://yehchge.github.com/blog/2010/02/04/python-mysql-utf-8/"/>
+    <updated>2010-02-04T12:58:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/02/04/python-mysql-utf-8</id>
+    <content type="html"><![CDATA[<div class='post'>
+最近在研究 python 串聯 mysql 的方式, 之前一直抓 MySQL-python-1.2.3c1.tar.gz <br />回來安裝, 都安裝不起來,結果同事告知要去抓取 windows 下 可以執行的檔案, 所以去抓了<br />MySQL-python-1.2.2.win32-py2.5.exe 回來安裝後, python 就可以與 mysql 連結了.<br /><br />可以連結後,想說要顯示mysql 內的utf-8字元,找了很久,找不到,後來找到要在connect中加入utf-8的參數設定,<br />如下:<br />db = MySQLdb.connect(user='username', db='mydbname', passwd='userpassword', host='127.0.0.1', charset='utf8')<br /><br />之後可以顯示utf-8的字元了, 但是卻顯示 (u'\u4efb\u7ea2') 這樣的字,結果查詢後是因為顯示rows的資料才這樣,將 print row 改成 print row[0] 就可以了.<br />之後可以顯示後,又發現沒辦法顯示utf-8的中文簡體字,所以又找了一下,要將 print row[0] 改成<br />print row[0].encode('utf8') 才可以. 所以,這是要讓它顯示 utf-8 中文的過程<br /><br />PS: 使用 python 2.5.4, mysql 5.1 <br /><br />測試程式如下:<br /><br />#encoding=utf8<br />#-*- coding: utf-8 -*-<br />import MySQLdb<br />db = MySQLdb.connect(user='xxx', db='MyDb', passwd='pwd', host='127.0.0.1', charset='utf8')<br />cursor = db.cursor()<br />#cursor.execute('set names utf8;')<br />#cursor.execute('set character set utf8;')<br />#cursor.execute('set character_set_connection=utf8;')<br />cursor.execute('SELECT u_name as name FROM user ORDER BY user_id')<br />#names = [unicode(row[0]) for row in cursor.fetchall()]<br />#print names<br />results = cursor.fetchall()<br />for row in results:<br />   x = row[0]<br />   #print "%s" % unicode(x)<br />   print x.encode('utf8') <br />db.close()</div>
+
+]]></content>
+  </entry>
+  
+</feed>

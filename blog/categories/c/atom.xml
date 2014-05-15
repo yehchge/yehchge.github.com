@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: C | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/c/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[C/C++ MinGW 中,如何 Compilier *.rc 和 *.c]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/cc-mingw-compilier-rc-c/"/>
+    <updated>2010-01-08T14:48:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/cc-mingw-compilier-rc-c</id>
+    <content type="html"><![CDATA[<div class='post'>
+ps: *.rc is resource file<br />1. 先用 *.rc 產生 *.o 檔案.<br />2. 在 Complilier C/C++時,將 *.o 加入編譯中.<br /><br />Ex:<br /><br />windres resources.rc resources.o<br />gcc -o main.exe main.c resources.o<br /><br />參考網站:<a href="http://www.programmersheaven.com/mb/Win32API/382265/382664/re-cant-get-resources-to-work-with-mingw/">這裡</a></div>
+
+]]></content>
+  </entry>
+  
+</feed>

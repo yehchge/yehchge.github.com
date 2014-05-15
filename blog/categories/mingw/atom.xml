@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MinGW | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/mingw/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[安裝 C++ Compiler 編譯環境]]></title>
+    <link href="http://yehchge.github.com/blog/2012/04/25/c-compiler/"/>
+    <updated>2012-04-25T11:57:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2012/04/25/c-compiler</id>
+    <content type="html"><![CDATA[<div class='post'>
+<style type="text/css"><!-- pre { font-family: monospace; color: #ffffff; background-color: #333333; } .Special { color: #ffdead; } .Underlined { color: #80a0ff; text-decoration: underline; } .Constant { color: #ffa0a0; } .Type { color: #bdb76b; font-weight: bold; } .PreProc { color: #cd5c5c; } .Statement { color: #f0e68c; font-weight: bold; } .Identifier { color: #98fb98; }  code {      display: block; /* fixes a strange ie margin bug */     font-family: Courier New;      font-size: 8pt;      overflow:auto;      background: #f0f0f0 url(https://sites.google.com/site/yehchge/home/Code_BG.png) left top repeat-y;     border: 1px solid #ccc;     padding: 1px 1px 1px 12px;     max-height:400px;     line-height: 1.2em; } --></style> <br />G++ Compiler windows 安裝環境:<br /><br />1. 至 MinGW 網站, 選擇 Download -&gt; Installer -&gt; mingw-get-inst -&gt; mingw-get-inst-20120421<br />2. 下載 mingw-get-inst-20120421.exe<br />3. 執行 mingw-get-inst-20120421.exe, 選擇 Download latest repository catalogues<br />4. Select Components 選項中, 加選 C++ Compiler<br />5. 安裝完後, 新增 hello.cpp 檔案, 輸入以下程式:<br /><br /><code><pre><br /><br /><span class="Comment">// hello.cpp</span><br /><br /><span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span> <span class="Comment">// Basic input and output library</span><br /><br /><span class="Type">int</span> main() {<br />    std::cout &lt;&lt; <span class="Constant">&quot;Hello World</span><span class="Special">\n</span><span class="Constant">&quot;</span>;<br />    <span class="Statement">return</span> <span class="Constant">0</span>; <span class="Comment">// Return to the operating system</span><br />}<br /><br /></pre></code><br /><br />6. 執行 C:\MinGW\bin\g++.exe hello.cpp -o hello<br />&nbsp; &nbsp;出現: cc1plus.exe - 找不到元件, 這個應用程式無法啟動，因為找不到 libgmp-10.dll，<br />&nbsp; &nbsp;重新安裝應用程式可能可以解決這個問題。<br /><br />7. 如果出現步驟 6 的狀況, 請再到 MinGW 網站, 下載 mingw-get-inst-20111118.exe 檔案.<br />&nbsp; &nbsp;下載完後, 重新安裝, 應該就會發現 C:\MinGW\bin 下面有 libgmp-10.dll 的檔案.<br /><br />8. 設定環境變數 path, 我的電腦 -&gt; 按滑鼠右鍵 -&gt; 內容 -&gt; 進階 -&gt; 環境變數 -&gt; 系統變數 -&gt; Path -&gt; 編輯<br />&nbsp; &nbsp;-&gt; 在最後分號處, 加入 C:\MinGW\bin;<br /><br />9. 如果要編譯 Windows 的程式, 可以執行如下指令:<br />&nbsp; &nbsp;C:\MinGW\bin\g++.exe sample01.cpp -o sample01 -mwindows -Wall<br /><br /></div>
+
+
+<h2>Comments</h2>
+
+
+<div class='comments'>
+<div class='comment'>
+<div class='author'>健力宝</div>
+<div class='content'>
+感谢您的文章解决了我的问题。<br /><br />谢谢！</div>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用 MinGW 編譯 C++ 紀錄]]></title>
+    <link href="http://yehchge.github.com/blog/2010/09/21/mingw-c/"/>
+    <updated>2010-09-21T18:29:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/09/21/mingw-c</id>
+    <content type="html"><![CDATA[<div class='post'>
+1. windres Lession5.rc Lession5.o<br />2. g++ -o Lession5.exe Lession5.c Lession5.o<br />3. g++ -o sample01 sample01.cpp -mwindows (-mwindows 是在windows下執行exe檔案時,不會在跳出一個Console的視窗)<br /><br />// g++ dos(使用 Notepad++ NppExec 套件的紀錄)<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART)<br /><br />// g++(使用 Notepad++ NppExec 套件的紀錄)<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) -mwindows -Wall( -Wall 會顯示程式中是否有無效的參數或函式)<br /><br />// g++ & rc & comctl32(使用 Notepad++ NppExec 套件的紀錄, 使用Window控制項)<br />C:\MinGW\bin\windres.exe $(NAME_PART).rc -o $(NAME_PART).o<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) $(NAME_PART).o "C:\Program Files\Microsoft SDKs\Windows\v7.0A\Lib\comctl32.lib" -mwindows -Wall<br /><br />// g++ & rc(使用 Notepad++ NppExec 套件的紀錄)<br />C:\MinGW\bin\windres.exe $(NAME_PART).rc -o $(NAME_PART).o<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) $(NAME_PART).o -mwindows -Wall<br /><br />// g++ & lib(使用 Notepad++ NppExec 套件的紀錄, 使用Windows Timer套件)<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) "C:\Program Files\Microsoft SDKs\Windows\v7.0A\Lib\WinMM.Lib" -mwindows<br /><br />// C++ 連結 MySQL 的方法(不使用 Visual C++ 和 .net 的方式)<br />01. 需要上網抓取 mysql-connector-c-noinstall-6.0.2-win32<br />02. 參考 http://www.programmer-club.com/showSameTitleN/mysql/911.html<br />03. 參考 http://www.openwebspider.org/documentation/how-to-link-libmysqllib-with-dev-c-or-gcc-under-windows/<br />04. 產生 libmysql.a 的方式<br />    &gt; reimp.exe &lt;FULL_PATH_OF(MySQL\lib\opt)&gt;libmysql.lib<br />    (^ This command creates: libmysql.def AND libmysql.a)<br />    &gt; dlltool.exe –input-def LIBMYSQL.def –dllname libmysql.dll –output-lib libmysql.dll<br />    (^ this creates libmysql.dll)<br />05. 將產生的 libmysql.a 拷貝到 MinGW 的 lib 下<br />06. 在程式中, 需要 include 兩個檔案<br />    #include &lt;winsock.h&gt; // SOCKET TYPE(for mysql.h)<br />    #include &lt;mysql.h&gt;<br />07. 可以使用以下程式測試連結是否成功??<br />using namespace std;<br />int main(void) {<br />    MYSQL my_connection;    //This is a SQL connection.<br />    mysql_init(&my_connection);  //initinal mysql connection<br />  <br />    if (mysql_real_connect(&my_connection, HOST, USERNAME, PASSWORD, DATABASE, 0, NULL, CLIENT_FOUND_ROWS)) {   //connect success <br />        cout &lt;&lt; "Connection Success!!\r\n";<br />        mysql_close(&my_connection); //close database connection<br />    } else {<br />        cout &lt;&lt; "Connection Fail!!\r\n";<br />    }<br />    getch();<br />    return EXIT_SUCCESS;<br />}<br /><br />08. 編譯檔案的時候, 需要在後面加上 -lmysql -lws2_32, 如下:(使用 Notepad++ NppExec 套件的紀錄)<br />    C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART) -I "C:\mysql_c\include" -lmysql -lws2_32<br />例如: C:\MinGW\bin\g++.exe "C:\portable\C++\WinApp\mysqlconn.cpp" -o mysqlconn -I "C:\mysql_c\include" -lmysql -lws2_32 -mwindows</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用 MinGW + Notepad++ 來寫 C++]]></title>
+    <link href="http://yehchge.github.com/blog/2010/09/21/mingw-notepad-c/"/>
+    <updated>2010-09-21T17:43:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/09/21/mingw-notepad-c</id>
+    <content type="html"><![CDATA[<div class='post'>
+1. 下載 Notepad++<br />2. 下載 Notepad++ plugin -- NppExec<br />3. 下載 MinGW-5.1.6.exe,安裝起來<br /><br />4. 使用 Notepad++ 新增檔案<br />// hello.cpp<br />#include <iostream> // cout<br />#include "conio.h" // getch<br />#include <tchar.h> // TCHAR<br /><br />using namespace std;<br /><br />int _tmain(int argc, _TCHAR* argv[])<br />{<br />&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; "Hello World!\n";<br />&nbsp;&nbsp;&nbsp; getch();<br />&nbsp;&nbsp;&nbsp; return 0;<br />}</tchar.h></iostream><br /><br />5. 使用 NppExec套件, 輸入<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART)<br /><br />6. 執行後, 即會 Complier 成 exe 檔案 !!</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MinGW安裝方式]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/mingw/"/>
+    <updated>2010-01-08T14:53:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/mingw</id>
+    <content type="html"><![CDATA[<div class='post'>
+MinGW安裝方式:<br />1. 先至 <a href="http://sourceforge.net/projects/mingw/files/">MingGW</a> 下載 MinGW-5.1.4.exe<br />2. 安裝時除了core 必安裝外, 最好在安裝c++套件<br />3. 設定 windows 的 path , 加上 C:\MinGW\bin<br />4. 在 C:\MinGW\ 下, 產生 win_hello.c 檔案<br />內容如下:<br />#include <windows.h> <br />int WINAPI WinMain (HINSTANCE hInstance, <br />    HINSTANCE hPrevInstance, <br />    PSTR szCmdLine, <br />   int iCmdShow) <br />{ <br />   MessageBox (NULL, "Hello", "Hello Demo", MB_OK); <br />    return (0); <br />} <br /> <br />5. 執行 cmd, 在console 下執行 :<br />C:\MinGW>g++ -o win_hello win_hello.c -mwindows<br /> <br />6. 完成後, 如果沒有任何錯誤, 就會產生一個簡單的exe程式了~~ 祝順利~~</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[C/C++ MinGW 中,如何 Compilier *.rc 和 *.c]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/cc-mingw-compilier-rc-c/"/>
+    <updated>2010-01-08T14:48:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/cc-mingw-compilier-rc-c</id>
+    <content type="html"><![CDATA[<div class='post'>
+ps: *.rc is resource file<br />1. 先用 *.rc 產生 *.o 檔案.<br />2. 在 Complilier C/C++時,將 *.o 加入編譯中.<br /><br />Ex:<br /><br />windres resources.rc resources.o<br />gcc -o main.exe main.c resources.o<br /><br />參考網站:<a href="http://www.programmersheaven.com/mb/Win32API/382265/382664/re-cant-get-resources-to-work-with-mingw/">這裡</a></div>
+
+]]></content>
+  </entry>
+  
+</feed>

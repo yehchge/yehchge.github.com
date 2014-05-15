@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: samba | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/samba/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FreeBSD下, 修改 Samba 的密碼]]></title>
+    <link href="http://yehchge.github.com/blog/2010/06/23/freebsd-samba/"/>
+    <updated>2010-06-23T10:19:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/06/23/freebsd-samba</id>
+    <content type="html"><![CDATA[<div class='post'>
+修改 Samba 的密碼指令為: smbpasswd</div>
+
+]]></content>
+  </entry>
+  
+</feed>

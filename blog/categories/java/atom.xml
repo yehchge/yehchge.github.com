@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Java | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JAVA參數大全System.getProperty]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/javasystemgetproperty/"/>
+    <updated>2010-01-08T19:29:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/javasystemgetproperty</id>
+    <content type="html"><![CDATA[<div class='post'>
+貼於: http://blog.chinaui.com/user1/Gavin2008/200607/2646.html<br />System.getProperty()参数大全                  <br /><br />java.version<br /> Java Runtime Environment version<br />java.vendor  Java Runtime Environment vendor<br />java.vendor.url  Java vendor URL<br />java.home  Java installation directory<br />java.vm.specification.version  Java Virtual Machine specification version<br />java.vm.specification.vendor  Java Virtual Machine specification vendor<br />java.vm.specification.name  Java Virtual Machine specification name<br />java.vm.version  Java Virtual Machine implementation version<br />java.vm.vendor  Java Virtual Machine implementation vendor<br />java.vm.name  Java Virtual Machine implementation name<br />java.specification.version  Java Runtime Environment specification version<br />java.specification.vendor  Java Runtime Environment specification vendor<br />java.specification.name  Java Runtime Environment specification name<br />java.class.version  Java class format version number<br />java.class.path  Java class path<br />java.library.path  List of paths to search when loading libraries<br />java.io.tmpdir  Default temp file path<br />java.compiler  Name of JIT compiler to use<br />java.ext.dirs  Path of extension directory or directories<br />os.name  Operating system name<br />os.arch  Operating system architecture<br />os.version  Operating system version<br />file.separator  File separator ("/" on UNIX)<br />path.separator  Path separator (":" on UNIX)<br />line.separator  Line separator ("\n" on UNIX)<br />user.name  User's account name<br />user.home  User's home directory<br />user.dir  User's current working directory</div>
+
+]]></content>
+  </entry>
+  
+</feed>

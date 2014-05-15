@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ssh | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/ssh/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[不用輸入密碼,直接用ssh 登入]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/ssh/"/>
+    <updated>2010-01-08T15:51:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/ssh</id>
+    <content type="html"><![CDATA[<div class='post'>
+製做一個 public key 讓遠端的機器信任登入，直接連入就可以，而不用再輸入帳號和密碼，以方便自動化的工作可以讓管理員有效率的完成目標。<br /><br />製作 public &amp; private keys<br />利用 ssh-keygen 來產生公用和私有鑰匙，並將 public key 放到遠端機器使其信任本機登入。<br /><br />[root@fc3 /home]# ssh-keygen -t dsa<br />Generating public/private dsa key pair.<br />Enter file in which to save the key (/root/.ssh/id_dsa):<br />Created directory '/root/.ssh'.<br />Enter passphrase (empty for no passphrase): <span style="color: rgb(255, 0, 0);">不需要輸入</span><br />Enter same passphrase again:<span style="color: rgb(255, 0, 0);">不需要輸入</span><br />Your identification has been saved in /root/.ssh/id_dsa.<br />Your public key has been saved in /root/.ssh/id_dsa.pub.<br />The key fingerprint is:<br />5c:3e:9a:77:5f:91:24:7c:06:af:19:7c:68:52:a1:a8 root@fc3<br /><br />然後進入cd /root/.ssh，可看到兩個檔案id_dsa與id_dsa.pub<br /><br />將id_dsa.pub公鑰附加在遠端腦，注意使用者，以此為例是讓root無需輸入密碼，就必須將此id_dsa.pub內容附加到 /root/.ssh/authorized_key中。 root<------->root<br /><br />先將id_dsa.pub傳輸至遠端電腦:scp id_dsa.pub root@xxxx.xxx.xxx.xxx:/root/id_dsa.pub<br /><br />附加到root的authorized_keys<br /><br />cat /root/id_dsa.pub >> /root/.ssh/authorized_keys 既可直接登入無需數入密碼。<br /><br />引用于 http://blog.yam.com/dahu/article/2502152</div>
+
+]]></content>
+  </entry>
+  
+</feed>

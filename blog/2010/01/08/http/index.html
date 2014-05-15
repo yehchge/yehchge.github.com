@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>讀取HTTP請求頭 - 我的 Octopress 部落格</title>
+  <meta name="author" content="Yehchge">
+
+  
+  <meta name="description" content="(PS :擷取至:http://www.coolasp.com/asp_school_show.asp?fid=20071006223513&id=20020822140935)5.1 HTTP請求頭概述　　 HTTP客戶程序（例如瀏覽器），向服務器發送請求的時候必須指明請求類型（ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yehchge.github.com/blog/2010/01/08/http/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  
+    <h2>一個靜態網站的部落格框架</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yehchge.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">讀取HTTP請求頭</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:36:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+(PS :擷取至:http://www.coolasp.com/asp_school_show.asp?fid=20071006223513&id=20020822140935)<br /><br />5.1 HTTP請求頭概述<br />　　 HTTP客戶程序（例如瀏覽器），向服務器發送請求的時候必須指明請求類型（一般是GET或者POST）。如有必要，客戶程序還可以選擇發送其他的請求頭。大多數請求頭並不是必需的，但Content-Length除外。對於POST請求來說Content-Length必須出現。<br />　　 下面是一些最常見的請求頭：<br />Accept：瀏覽器可接受的MIME類型。<br />Accept-Charset：瀏覽器可接受的字符集。<br />Accept-Encoding：瀏覽器能夠進行解碼的數據編碼方式，比如gzip。Servlet能夠向支持gzip的瀏覽器返回經gzip編碼的HTML頁面。許多情形下這可以減少5到10倍的下載時間。<br />Accept-Language：瀏覽器所希望的語言種類，當服務器能夠提供一種以上的語言版本時要用到。<br />Authorization：授權信息，通常出現在對服務器發送的WWW-Authenticate頭的應答中。<br />Connection：表示是否需要持久連接。如果Servlet看到這裏的值為“Keep-Alive”，或者看到請求使用的是HTTP 1.1（HTTP 1.1默認進行持久連接），它就可以利用持久連接的優點，當頁麵包含多個元素時（例如Applet，圖片），顯??地減少下載所需要的時間。要實現這一點，Servlet需要在應答中發送一個Content-Length頭，最簡單的實現方法是：先把內容寫入 ByteArrayOutputStream，然後在正式寫出內容之前計算它的大小。<br />Content-Length：表示請求消息正文的長度。<br />Cookie：這是最重要的請求頭信息之一，參見後面《Cookie處理》一章中的討論。<br />From：請求發送者的email地址，由一些特殊的Web客戶程序使用，瀏覽器不會用到它。<br />Host：初始URL中的主機和端口。<br />If-Modified-Since：只有當所請求的內容在指定的日期之後又經過修改才返回它，否則返回304“Not Modified”應答。<br />Pragma：指定“no-cache”值表示服務器必須返回一個刷新後的文檔，即使它是代理服務器而且已經有了頁面的本地拷貝。<br />Referer：包含一個URL，用戶從該URL代表的頁面出發訪問當前請求的頁面。<br />User-Agent：瀏覽器類型，如果Servlet返回的內容與瀏覽器類型有關則該值非常有用。<br />UA-Pixels，UA-Color，UA-OS，UA-CPU：由某些版本的IE瀏覽器所發送的非標準的請求頭，表示屏幕大小、顏色深度、操作系統和CPU類型。</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yehchge</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:36:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/header/'>header</a>, <a class='category' href='/blog/categories/http/'>http</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yehchge.github.com/blog/2010/01/08/http/" data-via="" data-counturl="http://yehchge.github.com/blog/2010/01/08/http/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/01/08/make-buildworld-cvsup-or-csup-tag/" title="Previous Post: make buildworld 和 CVSUP or CSUP 的 TAG">&laquo; make buildworld 和 CVSUP or CSUP 的 TAG</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/01/08/php-freebsd/" title="Next Post: PHP 在 FreeBSD 上的安裝步驟">PHP 在 FreeBSD 上的安裝步驟 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yehchge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

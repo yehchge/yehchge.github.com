@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: joomla | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/joomla/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PHP 使用 TCPDF 顯示中文的關鍵]]></title>
+    <link href="http://yehchge.github.com/blog/2012/07/23/php-tcpdf/"/>
+    <updated>2012-07-23T16:35:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2012/07/23/php-tcpdf</id>
+    <content type="html"><![CDATA[<div class='post'>
+<br />$pdf = new TCPDF(PDF_PAFE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);<br /><br />// set font (PHP TCPDF 顯示中文字型)<br />$pdf-&gt;SetFont('cid0jp', '', 18); // 可以顯示中文(繁、簡)、日文、韓文。<br />//$pdf-&gt;SetFont('msungstdlight', '', 18, '', true); //　繁中, 但是效果不好,字會偏移<br />//$pdf-&gt;SetFont('stsongstdlight', '', 20); // 可以顯示中文, 但是效果不好,字會偏移<br />//$pdf-&gt;SetFont('dejavusans', '', 14, '', true); //　預設 utf8<br /></div>
+
+]]></content>
+  </entry>
+  
+</feed>

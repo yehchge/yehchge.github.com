@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>準備重新安裝FreeBSD 前的備份工作 - 我的 Octopress 部落格</title>
+  <meta name="author" content="Yehchge">
+
+  
+  <meta name="description" content="1. 根目錄下的 .cshrc :set prompt = &#8220;%B%n@%m %/] # &#8221;setenv LC_ALL zh_TW.UTF-8setenv LANG zh_TW.UTF-8setenv CLICOLORset COLORsetenv LSCOLORS &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yehchge.github.com/blog/2010/01/08/freebsd/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  
+    <h2>一個靜態網站的部落格框架</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yehchge.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">準備重新安裝FreeBSD 前的備份工作</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:33:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+1. 根目錄下的 .cshrc :<br /><br />set prompt = &#8220;%B%n@%m %/] # &#8221;<br />setenv LC_ALL zh_TW.UTF-8<br />setenv LANG zh_TW.UTF-8<br />setenv CLICOLOR<br />set COLOR<br />setenv LSCOLORS ExGxFxdxCxDxDxBxBxExEx<br /><br /> <br /><br />2. ACPI的問題解決檔案:<br /><br />檔案:ACPI-DSDT.asl<br /><br />處理步驟:<br /><br />i. iasl ACPI-DSDT.asl<br /><br />ii. cp DSDT.aml /boot/DSDT.aml<br /><br />iii. ee /boot/loader.conf <br /><br />iiii. 加入 acpi_dsdt_load=&#8221;YES&#8221;<br /><br />              acpi_dsdt_name=&#8221;/boot/DSDT.aml&#8221;<br /><br /> <br /><br />3. /etc/resolv.conf<br /><br />##nameserver 172.16.1.224<br />nameserver 172.16.1.4<br />#nameserver 168.95.1.1<br />#nameserver 139.175.55.244<br /><br />4. /etc/rc.conf<br /><br /># &#8211; sysinstall generated deltas &#8211; # Sun Oct 26 22:24:59 2008<br /># added by xorg-libraries port<br />keymap=&#8221;us.iso&#8221;<br />local_startup=&#8221;/usr/local/etc/rc.d&#8221;<br />usbd_enable=&#8221;YES&#8221;<br /># &#8211; sysinstall generated deltas &#8211; # Sun Oct 26 22:35:53 2008<br />#ifconfig_bge0=&#8221;inet 192.168.11.5  netmask 255.255.255.0&#8221;<br />#defaultrouter=&#8221;192.168.11.1&#8221;<br />ifconfig_bge0=&#8221;inet 172.16.1.184 netmask 255.255.255.0&#8221;<br />defaultrouter=&#8221;172.16.1.251&#8221;<br />hostname=&#8221;web.myFreeBSD.com.tw&#8221;<br />iwi_enable=&#8221;YES&#8221;<br />ipw_enable=&#8221;YES&#8221;<br />ifconfig_iwi0=&#8221;DHCP&#8221;<br />wlans_iwi0=&#8221;wlan0&#8221;<br />#ifconfig_bge0=&#8221;DHCP&#8221;<br />sshd_enable=&#8221;YES&#8221;<br /># &#8211; sysinstall generated deltas &#8211; # Wed Nov  5 18:50:11 2008<br />saver=&#8221;daemon&#8221;<br /><br />5. /boot/load.conf<br /><br />if_ath_load=&#8221;YES&#8221;<br />if_wi_load=&#8221;YES&#8221;<br />if_ipw_load=&#8221;YES&#8221;<br />wlan_wep_load=&#8221;YES&#8221;<br />wlan_ccmp_load=&#8221;YES&#8221;<br />wlan_tkip_load=&#8221;YES&#8221;<br /><br />6. /etc/make.conf<br /><br />X11BASE=${LOCALBASE}<br />MASTER_SITE_BACKUP?=    \<br />     ftp://freebsd.csie.ncu.edu.tw/distfiles/${DIST_SUBDIR}/\<br />     ftp://freebsd.csie.nctu.edu.tw/pub/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp7.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp10.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp2.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp3.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp4.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp5.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp8.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp9.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp11.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp12.tw.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR}/\<br />     ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${DIST_SUBDIR}/<br />MASTER_SITE_OVERRIDE?= ${MASTER_SITE_BACKUP}<br />MASTER_SORT_REGEX=      .tw/ .tw. .edu/ .edu.<br />ENABLE_SUIDPERL = true<br />SUP_UPDATE=     yes<br />SUP=            /usr/bin/csup<br />SUPFLAGS=       -g -L 2<br />SUPHOST=        cvsup12.tw.FreeBSD.org<br />#SUPFILE=        /usr/share/examples/cvsup/standard-supfile<br />SUPFILE=        /usr/share/examples/cvsup/stable-supfile<br />PORTSSUPFILE=   /usr/share/examples/cvsup/ports-supfile<br />DOCSUPFILE=     /usr/share/examples/cvsup/doc-supfile<br /> <br /># added by use.perl 2008-11-06 18:11:49<br />PERL_VER=5.8.8<br />PERL_VERSION=5.8.8<br /><br />7. /root/ports-supfile 相同於 /usr/share/examples/cvsup/ports-supfile<br /><br />(ps:以便於 csup -g -L 2 /root/ports-supfile<br /><br />&#8230;&#8230;省略<br /><br /># Defaults that apply to all the collections<br />#<br /># IMPORTANT: Change the next line to use one of the CVSup mirror sites<br /># listed at http://www.freebsd.org/doc/handbook/mirrors.html.<br />*default host=cvsup.tw.freebsd.org<br />#default host=csup.freebsd.org<br />*default base=/usr<br />*default prefix=/usr<br />*default release=cvs tag=.<br />*default delete use-rel-suffix<br /># If you seem to be limited by CPU rather than network or disk bandwidth, try<br /># commenting out the following line.  (Normally, today&#8217;s CPUs are fast enough<br /># that you want to run compression.)<br />*default compress<br /><br />&#8230;&#8230;省略<br /><br /> <br /><br />8. 其他備註:<br /><br />FreeBSD 大更新 6.x -> 7.x 時, 一定要執行 mergemaster<br /><br />FreeBSD 刪除使用者: rmuser<br /><br />FreeBSD 新增使用者: adduser<br /><br />FreeBSD 新增群組: /etc/group or pw groupadd xxxx</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yehchge</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:33:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/freebsd/'>FreeBSD</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yehchge.github.com/blog/2010/01/08/freebsd/" data-via="" data-counturl="http://yehchge.github.com/blog/2010/01/08/freebsd/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/01/08/javascript-settimeout/" title="Previous Post: JavaScript setTimeout 語法範例">&laquo; JavaScript setTimeout 語法範例</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/01/08/make-buildworld-cvsup-or-csup-tag/" title="Next Post: make buildworld 和 CVSUP or CSUP 的 TAG">make buildworld 和 CVSUP or CSUP 的 TAG &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yehchge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

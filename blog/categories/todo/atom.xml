@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: todo | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/todo/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim筆記(六)]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/15/vim_15/"/>
+    <updated>2010-01-15T19:12:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/15/vim_15</id>
+    <content type="html"><![CDATA[<div class='post'>
+Highlight 命令(觀看Vim所有顏色的名稱)<br />:so $VIMRUNTIME/syntax/hitest.vim<br /><br />試用了幾個想用Vim 打一些平常的紀錄,<br />像task,也像todolist, 也像yaml ,<br />所以上網找了一些格式的顏色,但是沒有看到比較好的,<br />找到了 todolist.vim ,感覺還不錯, txt.vim 也不錯<br />還有 yaml.vim , 不知道有沒有比較好的...還在找尋中.......<br /><br />設定為<br />:set ft=todolsit<br />:set ft=yaml<br />:set ft=txt<br />這些syntax 可以到 vim 的 script 內下載!!</div>
+
+]]></content>
+  </entry>
+  
+</feed>

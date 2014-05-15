@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CentOS 的提示顯示修改與檔案顯示將深藍改成淺藍 - 我的 Octopress 部落格</title>
+  <meta name="author" content="Yehchge">
+
+  
+  <meta name="description" content="# .bashrc# Source global definitionsif [ -f /etc/bashrc ]; then. /etc/bashrcfi# User specific aliases and functions# 修改此兩個值, 括號是預設值 di=01;36(01;34 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yehchge.github.com/blog/2011/04/01/centos/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  
+    <h2>一個靜態網站的部落格框架</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yehchge.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">CentOS 的提示顯示修改與檔案顯示將深藍改成淺藍</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-01T14:32:00+08:00" pubdate data-updated="true">Apr 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+# .bashrc<br /><br /># Source global definitions<br />if [ -f /etc/bashrc ]; then<br />. /etc/bashrc<br />fi<br /><br /># User specific aliases and functions<br /># 修改此兩個值, 括號是預設值 di=01;36(01;34), ln=02;36(01;36)<br />declare -x LS_COLORS=&#8221;no=00:fi=00:di=01;34:ln=02;35:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:&#8221;<br /><br /># 原設定 PS1=&#8221;[\u@\h \W]\$&#8221;<br />PS1=&#8221;\h[\[\033[1;34m\]\w\[\033[0m\]]$ \[\033[0m\]&#8221;<br /><br /># ===========================================================================<br />PS1=&#8217;[\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]]$ &#8217;<br /><br />\33[0m  关闭所有属性<br />\33[1m  设置高亮度<br />\33[4m  下划线<br />\33[5m  闪烁<br />\33[7m  反显<br />\33[8m  消隐<br />\33[30m &#8211; \33[37m  设置前景色<br />\33[40m &#8211; \33[47m  设置背景色<br />\33[nA  光标上移n行<br />\33[nB  光标下移n行<br />\33[nC  光标右移n行<br />\33[nD  光标左移n行<br />\33[y;xH设置光标位置<br />\33[2J  清屏<br />\33[K   清除从光标到行尾的内容<br />\33[s   保存光标位置<br />\33[u   恢复光标位置<br />\33[?25l  隐藏光标<br />\33[?25h  显示光标<br />所有的转移字符表:<br />\a  ASCII 响铃字符（也可以键入 \007）<br />\d  &#8220;Wed Sep 06&#8221; 格式的日期<br />\e  ASCII 转义字符（也可以键入 \033）<br />\h  主机名的第一部分（如 &#8220;mybox&#8221;）<br />\H  主机的全称（如 &#8220;mybox.mydomain.com&#8221;）<br />\j  在此 shell 中通过按 ^Z 挂起的进程数<br />\l  此 shell 的终端设备名（如 &#8220;ttyp4&#8221;）<br />\n  换行符<br />\r  回车符<br />\s  shell 的名称（如 &#8220;bash&#8221;）<br />\t  24 小时制时间（如 &#8220;23:01:01&#8221;）<br />\T  12 小时制时间（如 &#8220;11:01:01&#8221;）<br />\@  带有 am/pm 的 12 小时制时间<br />\u  用户名<br />\v  bash 的版本（如 2.04）<br />\V  Bash 版本（包括补丁级别） ?/td&gt;<br />\w  当前工作目录（如 &#8220;/home/drobbins&#8221;）<br />\W  当前工作目录的“基名 (basename)”（如 &#8220;drobbins&#8221;）<br />\!  当前命令在历史缓冲区中的位置<br />\#  命令编号（只要您键入内容，它就会在每次提示时累加）<br />\$  如果您不是超级用户 (root)，则插入一个 &#8220;$&#8221;；如果您是超级用户，则显示一个 &#8220;#&#8221;<br />\xxx  插入一个用三位数 xxx（用零代替未使用的数字，如 &#8220;\007&#8221;）表示的 ASCII 字符<br />&#92;  反斜杠<br />\[  这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。<br />\]  这个序列应该出现在非打印字符序列之后。<br /><br /><br /><table border="1"><tbody><tr>  <td>特殊格式 </td>  <td>含義 </td>  <td>字體顏色值 </td>  <td>背景顏色值 </td>  <td>顏色 </td>   </tr><tr>  <td>0 </td>  <td>默認值 </td>  <td>30 </td>  <td>40 </td>  <td>黑色 </td>   </tr><tr>  <td>1 </td>  <td>粗體 </td>  <td>31 </td>  <td>41 </td>  <td>紅色 </td>   </tr><tr>  <td>22 </td>  <td>非粗體 </td>  <td>32 </td>  <td>42 </td>  <td>綠色 </td>   </tr><tr>  <td>4 </td>  <td>下劃線 </td>  <td>33 </td>  <td>43 </td>  <td>黃色 </td>   </tr><tr>  <td>24 </td>  <td>非下劃線 </td>  <td>34 </td>  <td>44 </td>  <td>藍色 </td>   </tr><tr>  <td>5&nbsp; </td>  <td>閃爍 </td>  <td>35 </td>  <td>45 </td>  <td>洋紅 </td>   </tr><tr>  <td>25 </td>  <td>非閃爍 </td>  <td>36 </td>  <td>46 </td>  <td>青色 </td>   </tr><tr>  <td>7 </td>  <td>反顯 </td>  <td>37 </td>  <td>47 </td>  <td>白色 </td>   </tr><tr>  <td>27 </td>  <td>非反顯 </td>  <td></td>  <td></td>  <td><br /></td></tr></tbody></table><br />參考網站:<br />http://blog.csdn.net/gausszhch/archive/2010/05/27/5628009.aspx<br />http://blogold.chinaunix.net/u/10679/showart_114949.html</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yehchge</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-01T14:32:00+08:00" pubdate data-updated="true">Apr 1<span>st</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/centos/'>CentOS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yehchge.github.com/blog/2011/04/01/centos/" data-via="" data-counturl="http://yehchge.github.com/blog/2011/04/01/centos/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/03/30/mysql-sql/" title="Previous Post: MySQL 紀錄 SQL 語法">&laquo; MySQL 紀錄 SQL 語法</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/05/12/phpstdclassvalue/" title="Next Post: PHP印出陣列中被包在StdClass內的Value">PHP印出陣列中被包在StdClass內的Value &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yehchge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

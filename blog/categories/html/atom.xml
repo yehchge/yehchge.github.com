@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: html | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/html/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[如何讓欄位不自動提示?]]></title>
+    <link href="http://yehchge.github.com/blog/2010/03/18/blog-post/"/>
+    <updated>2010-03-18T12:18:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/03/18/blog-post</id>
+    <content type="html"><![CDATA[<div class='post'>
+&lt;input name="txtUserName" type="textbox" <span style="color: red;">AUTOCOMPLETE</span> = "off" &gt;</div>
+
+]]></content>
+  </entry>
+  
+</feed>

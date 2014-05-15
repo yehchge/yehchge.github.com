@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>PHP实现文件安全下载 - 我的 Octopress 部落格</title>
+  <meta name="author" content="Yehchge">
+
+  
+  <meta name="description" content="PHP实现文件安全下载你一定会笑我&#8221;下载文件&#8221;如此简单都值得说？当然并不是想象那么简单。例如你希望客户要填完一份表格，才可以下载某一文件，你第一个想法一定是用 &#8220;Redirect&#8221;的方法，先检查表格是否已经填写完毕和完整，然后就将网址指到该文件， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yehchge.github.com/blog/2010/01/08/php/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  
+    <h2>一個靜態網站的部落格框架</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yehchge.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">PHP实现文件安全下载</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:41:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+PHP实现文件安全下载<br />你一定会笑我&#8221;下载文件&#8221;如此简单都值得说？当然并不是想象那么简单。例如你希望客户要填完一份表格，才可以下载某一文件，你第一个想法一定是用 &#8220;Redirect&#8221;的方法，先检查表格是否已经填写完毕和完整，然后就将网址指到该文件，这样客户才能下载，但如果你想做一个关于&#8221;网上购物&#8221;的电子商务网站，考虑安全问题，你不想用户直接复制网址下载该文件，笔者建议你使用PHP直接读取该实际文件然后下载的方法去做。程序如下：<br /><br />$file_name = &#8220;info_check.exe&#8221;;<br />$file_dir = &#8220;/public/www/download/&#8221;;<br />if (!file_exists($file_dir . $file_name)) { //检查文件是否存在<br />echo &#8220;文件找不到&#8221;;<br />exit;<br />} else {<br />$file = fopen($file_dir . $file_name,&#8221;r&#8221;); // 打开文件<br />// 输入文件标签<br />Header(&#8220;Content-type: application/octet-stream&#8221;);<br />Header(&#8220;Accept-Ranges: bytes&#8221;);<br />Header(&#8220;Accept-Length: &#8220;.filesize($file_dir . $file_name));<br />Header(&#8220;Content-Disposition: attachment; filename=&#8221; . $file_name);<br />// 输出文件内容<br />echo fread($file,filesize($file_dir . $file_name));<br />fclose($file);<br />exit;}<br /><br />而如果文件路径是&#8221;http&#8221; 或者 &#8220;ftp&#8221; 网址的话，则源代码会有少许改变，程序如下：<br /><br />$file_name = &#8220;info_check.exe&#8221;;<br />$file_dir = &#8220;http://www.easycn.net/&#8221;;<br />$file = @ fopen($file_dir . $file_name,&#8221;r&#8221;);<br />if (!$file) {<br />echo &#8220;文件找不到&#8221;;<br />} else {<br />Header(&#8220;Content-type: application/octet-stream&#8221;);<br />Header(&#8220;Content-Disposition: attachment; filename=&#8221; . $file_name);<br />while (!feof ($file)) {<br />echo fread($file,50000);<br />}<br />fclose ($file);<br />}</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yehchge</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T19:41:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/php/'>php</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yehchge.github.com/blog/2010/01/08/php/" data-via="" data-counturl="http://yehchge.github.com/blog/2010/01/08/php/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/01/08/sql-server-qa/" title="Previous Post: Sql Server QA的語法">&laquo; Sql Server QA的語法</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/01/08/php_08/" title="Next Post: php 中的訊息顯示">php 中的訊息顯示 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yehchge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

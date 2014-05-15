@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ports | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/ports/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FreeBSD 更新 Ports Tree]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/freebsd-ports-tree/"/>
+    <updated>2010-01-08T19:21:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/freebsd-ports-tree</id>
+    <content type="html"><![CDATA[<div class='post'>
+cvsup -g -L 2 /root/ports-supfile<br /><br />/root/ports-supfile 的內容:<br /><br /># $FreeBSD: src/share/examples/cvsup/ports-supfile,v 1.33.2.3 2007/09/10 17:29:34 gabor Exp $<br />#<br /># This file contains all of the "CVSup collections" that make up the<br /># FreeBSD-current ports collection.<br />#<br /># CVSup (CVS Update Protocol) allows you to download the latest CVS<br /># tree (or any branch of development therefrom) to your system easily<br /># and efficiently (far more so than with sup, which CVSup is aimed<br /># at replacing).  If you're running CVSup interactively, and are<br /># currently using an X display server, you should run CVSup as follows<br /># to keep your CVS tree up-to-date:<br />#<br />#       cvsup ports-supfile<br />#<br /># If not running X, or invoking cvsup from a non-interactive script, then<br /># run it as follows:<br />#<br />#       cvsup -g -L 2 ports-supfile<br />#<br /># You may wish to change some of the settings in this file to better<br /># suit your system:<br />#<br /># host=CHANGE_THIS.FreeBSD.org<br />#               This specifies the server host which will supply the<br />#               file updates.  You must change it to one of the CVSup<br />#               mirror sites listed in the FreeBSD Handbook at<br />#               http://www.freebsd.org/doc/handbook/mirrors.html.<br />#               You can override this setting on the command line<br />#               with cvsup's "-h host" option.<br />#<br /># base=/var/db<br />#               This specifies the root where CVSup will store information<br />#               about the collections you have transferred to your system.<br />#               A setting of "/var/db" will generate this information in<br />#               /var/db/sup.  You can override the "base" setting on the<br />#               command line with cvsup's "-b base" option.  This directory<br />#               must exist in order to run CVSup.<br />#<br /># prefix=/usr<br />#               This specifies where to place the requested files.  A<br />#               setting of "/usr" will place all of the files requested<br />#               in "/usr/ports" (e.g., "/usr/ports/devel", "/usr/ports/lang").<br />#               The prefix directory must exist in order to run CVSup.<br /><br /># Defaults that apply to all the collections<br /><br />#<br /># IMPORTANT: Change the next line to use one of the CVSup mirror sites<br /># listed at http://www.freebsd.org/doc/handbook/mirrors.html.<br /><span style="color: rgb(255, 0, 0);">*default host=cvsup.tw.freebsd.org</span><br /><span style="color: rgb(255, 0, 0);">*default base=/usr</span><br /><span style="color: rgb(255, 0, 0);">*default prefix=/usr</span><br /><span style="color: rgb(255, 0, 0);">*default release=cvs tag=.</span><br /><span style="color: rgb(255, 0, 0);">*default delete use-rel-suffix</span><br /><br /># If you seem to be limited by CPU rather than network or disk bandwidth, try<br /># commenting out the following line.  (Normally, today's CPUs are fast enough<br /># that you want to run compression.)<br />*default compress<br /><br />## Ports Collection.<br />#<br /># The easiest way to get the ports tree is to use the "ports-all"<br /># mega-collection.  It includes all of the individual "ports-*"<br /># collections,<br />ports-all<br /><br /># These are the individual collections that make up "ports-all".  If you<br /># use these, be sure to comment out "ports-all" above.<br />#<br /># Be sure to ALWAYS cvsup the ports-base collection if you use any of the<br /># other individual collections below. ports-base is a mandatory collection<br /># for the ports collection, and your ports may not build correctly if it<br /># is not kept up to date.<br />#ports-base<br />#ports-accessibility<br />#ports-arabic<br />#ports-archivers<br />#ports-astro<br />......... (略)</div>
+
+]]></content>
+  </entry>
+  
+</feed>

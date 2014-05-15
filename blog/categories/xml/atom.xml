@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: xml | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/xml/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[程式匯出Excel 時可用以下格式]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/excel/"/>
+    <updated>2010-01-08T19:31:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/excel</id>
+    <content type="html"><![CDATA[<div class='post'>
+&lt;?xml version="1.0"?&gt;<br />&lt;?mso-application progid="Excel.Sheet"?&gt;<br />&lt;Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"<br /> xmlns:o="urn:schemas-microsoft-com:office:office"<br /> xmlns:x="urn:schemas-microsoft-com:office:excel"<br /> xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"<br /> xmlns:html="http://www.w3.org/TR/REC-html40"&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet1"&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaaaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;1515aaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;56516aaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;a546456aaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet2"&gt;<br />  &lt;Table&gt;<br />   &lt;Row ss:Index="5"&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;bbbbbb&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet3"&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell ss:Index="4"&gt;&lt;Data ss:Type="String"&gt;ccccccc&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br />&lt;/Workbook&gt;<br /> <br /> <br /> <br /> <br />以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!<br />可用於php asp.net asp vb c# .....等各種程式 !!</div>
+
+]]></content>
+  </entry>
+  
+</feed>

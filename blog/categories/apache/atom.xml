@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Apache | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/apache/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[重新啟動Apache設定,又不想停止網頁的執行]]></title>
+    <link href="http://yehchge.github.com/blog/2010/02/11/apache/"/>
+    <updated>2010-02-11T16:11:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/02/11/apache</id>
+    <content type="html"><![CDATA[<div class='post'>
+apachectl graceful<br />apache 設定 reload 後也可保持現有連線了<br /><br />參考網頁:http://blog.2be.com.tw/2009/02/apache_4216.html</div>
+
+
+<h2>Comments</h2>
+
+
+<div class='comments'>
+<div class='comment'>
+<div class='author'>Yien_Huang</div>
+<div class='content'>
+測式留言通知方式為如何???</div>
+</div>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apache 在 FreeBSD 上的安裝步驟]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/apache-freebsd/"/>
+    <updated>2010-01-08T19:20:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/apache-freebsd</id>
+    <content type="html"><![CDATA[<div class='post'>
+Apache2 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :<br /><br /> <br /><br />1. Download httpd-2.2.10.tar.gz<br /><br />2. tar xzvf httpd-2.2.10.tar.gz<br /><br />3. cd httpd-2.2.10<br /><br />4. /bin/sh ../httpd.configure.sh (先將要configure 的餐數設定為一個檔案)<br /><br />5. make install<br /><br />安裝完畢後, 執行<br /><br />/usr/local/apache2/bin/apachectl start<br /><br />Apache 即會啟動, 如果要停止, 執行<br /><br />/usr/local/apache2/bin/apachectl stop<br /><br />即會停止, 如果開始後想再次啟動,執行<br /><br />/usr/local/apache2/bin/apachectl restart<br /><br />即可再次啟動<br /><br />以下列出為參考其他人使用的Apache configure 的參數設定:<br /><br />#!/bin/bash<br />./configure --prefix=/usr/local/apache2 --infodir=/usr/local/apache2/info --mandir=/usr/local/apache2/man --enable-so --enable-MODULE=shared --enable-ssl --enable-mods-shared=most</div>
+
+]]></content>
+  </entry>
+  
+</feed>

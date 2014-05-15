@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: SVN | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/svn/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Subversion 在 FreeBSD 上的設定]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/subversion-freebsd/"/>
+    <updated>2010-01-08T15:49:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/subversion-freebsd</id>
+    <content type="html"><![CDATA[<div class='post'>
+安裝 Apache<br /><br /> 1. cd /usr/ports/www/apache22<br /> 2. make WITH_AUTH_MODULES=yes WITH_DAV_MODULES=yes WITH_SSL_MODULES=yes WITH_BERKELEYDB=db42 install clean<br /> 3. # SVN 會使用到 bdb4, 所以 apache 在此要一起裝起來<br /><br />安裝 Subversion<br /><br /> 1. cd /usr/ports/devel/subversion<br /> 2. make -DWITH_SVNSERVE_WRAPPER -DWITH_MOD_DAV_SVN -DWITH_APACHE2_APR install clean<br /> 3. 讓 svn 支援 apache22 的 DAV_MODULES<br /><br />設定 SVN 基本環境目錄<br /><br /> 1. mkdir -p /home/www/svn/repository/PROJECT_NAME # 路徑自行決定後再更改即可.<br /> 2. mkdir -p /home/www/etc # 來放 svn 所需要的設定檔<br /> 3. svnadmin create /home/www/svn/repository/PROJECT_NAME # svn 初始化<br /> 4. chown -R www:www /home/www/svn/repository/PROJECT_NAME<br /> 5. chown -R www:www /home/www/etc<br /><br />設定 Apache2<br /><br />LoadModule dav_svn_module libexec/apache22/mod_dav_svn.so<br />LoadModule authz_svn_module libexec/apache22/mod_authz_svn.so<br /><br /><directory><br /># AllowOverride None<br /># Order deny,allow<br /># Deny from all<br />AllowOverride All<br />Order allow,deny<br />Allow from All<br /></directory><br /><br />設定 virtual host and SVN<br /><br /><virtualhost 80=""><br />DocumentRoot /home/www/svn/repository<br />ServerName VIRTUAL_HOSTNAME<br />ErrorLog /var/log/httpd/svn.VIRTUAL_HOSTNAME-error_log<br />CustomLog /var/log/httpd/svn.VIRTUAL_HOSTNAME-access_log combined<br /><location svn=""><br />DAV svn<br /># 注意, 這邊要用 SVNParentPath(不能放在 config 的後面…不然會一直出現error……………)<br />SVNParentPath /home/www/svn/repository<br /># Satisfy Any<br />AuthType Basic<br />AuthName “Svn repository”<br /><span style="color: rgb(255, 0, 0);">AuthUserFile /home/www/etc/svn-auth-file</span><br /><span style="color: rgb(255, 0, 0);">AuthzSVNAccessFile /home/www/etc/svn-access-fil</span><span style="color: rgb(255, 0, 0);">e</span><br />Require valid-user<br /></location><br /></virtualhost><br />建立帳號<br /><br /> 1. htpasswd -c /home/www/etc/svn-auth-file USER1 # 建立存取帳號<br /> 2. htpasswd /home/www/etc/svn-auth-file USER2 # 第二個以後的帳號記得不要 -c<br /><br />建立 SVN 權限控制檔案<br /><br />  * vim /home/www/etc/svn-access-file<br /><br />  [/]<br />  * =<br /><br />  [PROJECT_NAME:/]<br />  USER1 = rw<br />  USER2 = r<br /><br />設定開機自動啟動 Apache<br /><br />apache22_enable=”YES”<br /><br />應該就好了……<br /><br />http://example.com/svn/PROJECT_NAME/ =====> <span style="color: rgb(255, 0, 0);">我就是卡在這裡很久</span><br /><br />就可以看到svn 了………….<br /><br />以上幾乎都是抄…Tsung 大的..<br />只做了少部份修改……………….<br /><br />出處:<br />http://blog.jiayun.org/1_jiayun/archive/119_e_wink_oeoe_subversion__tortoisesvn_i.html<br />http://plog.longwin.com.tw/my_note-unix/2007/07/18/freebsd_build_svn_2007<br /><br />參考:<br />http://blog.jiayun.org/1_jiayun/archive/119_e_wink_oeoe_subversion__tortoisesvn_i.html<br />http://liangkuo.blogspot.com/2007/03/svn-subversion-tortoisesvn.html<br />http://plog.longwin.com.tw/programming/2007/11/02/svn_add_all_new_file_script_2007<br />http://i18n-zh.googlecode.com/svn/www/svnbook-1.4/svn.serverconfig.httpd.html<br />http://blog.miniasp.com/category/Subversion.aspx<br />http://huan-lin.blogspot.com/2009/04/introduction-to-version-control-system.html<br />http://www.juee.com.tw/bartender/svn-present/svn-share-forder.htm<br />http://plog.longwin.com.tw/my_note-programming/2007/07/10/svn_tutorial_2007/page/3</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ViewVC SVN Web介面安裝 (for FreeBSD)]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/viewvc-svn-web-for-freebsd/"/>
+    <updated>2010-01-08T14:45:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/viewvc-svn-web-for-freebsd</id>
+    <content type="html"><![CDATA[<div class='post'>
+1. cd /usr/ports/devel/viewvc<br />2. make install clean<br />3. 設定 /usr/local/viewvc/viewvc.conf<br /><br />註解: #cvs_roots = cvs: /home/cvsroot<br /><br />註解: #svn_roots = svn: /home/svnrepos<br /><br />更新:  root_parents = /data/sites/svn/repository : svn<br /><br />註解: #default_root = cvs<br /><br />更新: address = <a href=mailto:xxxx@gmail.com>Bill</a><br /><br />#修改: languages = zh-tw<br /><br />#註解: #rcs_dir =<br /><br />#註解: #cvsnt =<br />Technorati 的標籤：ViewVC,SVN,FreeBSD<br /><br />#更新: svn = /usr/local/bin<br /><br />#更新: diff = /usr/bin/diff<br />3. 修改 /etc/rc.conf<br /><br />加入: viewvc_enable="YES"<br />4. 修改 /usr/local/etc/apache22/extra/httpd-vhosts.conf<br /><br />加入:<br /><br /><VirtualHost *:80><br />     ServerAdmin xxxxx@gmail.com<br />     DocumentRoot /usr/local/viewvc/bin/cgi<br />     ServerName viewvc.xxxx.net<br />     Alias /viewvc "/usr/local/viewvc/bin/cgi/"<br />     <Directory "/usr/local/viewvc/bin/cgi"><br />        Options NONE +ExecCGI<br />        DirectoryIndex  /viewvc/viewvc.cgi<br />        Order allow,deny<br />        Allow from all<br />     </Directory><br /></VirtualHost><br />5. 重新啟動Apache<br />6. 安裝 python2.6<br /><br />cd /usr/ports/lang/python26<br /><br />make install clean<br />7. 安裝 mod_python3<br /><br />cd /usr/ports/www/mod_python3<br /><br />make install clean<br />8. 修改 httpd.conf<br /><br />cd /usr/local/etc/apache22<br /><br />ee httpd.conf<br /><br />加入: LoadModule python_module libexec/apache22/mod_python.so<br /><br />AddHandler python-program .py<br /><br />移除#號: AddHandler cgi-script .cgi<br />9. 重新啟動 Apache 即完成!</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[安裝測試機上的 SVN]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/svn/"/>
+    <updated>2010-01-08T13:29:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/svn</id>
+    <content type="html"><![CDATA[<div class='post'>
+1. 安裝 APR<br /><br />cd /usr/ports/devel/apr<br />make instll clean<br /><br />2. 安裝 SVN<br /><br />cd /usr/ports/devel/subversion<br />make install clean<br /><br /><br />3. 在測試機上, 用 svn checkout http://svn.xxx.xxx/svn/project_name 將程式 checkout 進來<br /><br />4. 當程式更新完後, 在該專案內執行 svn up ,就可以將程式更新到測試機 !<br /><br /><br />PS:<br />Question: 出現 svn: Can't convert string from 'UTF-8' to native encoding<br /><br />Answer:<br />1. setenv LC_CTYPE zh_TW.UTF-8<br />2. locale</div>
+
+]]></content>
+  </entry>
+  
+</feed>

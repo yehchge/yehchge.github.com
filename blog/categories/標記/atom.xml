@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 標記 | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/標記/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim筆記(四)]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/12/vim_12/"/>
+    <updated>2010-01-12T17:44:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/12/vim_12</id>
+    <content type="html"><![CDATA[<div class='post'>
+將目前程式作縮排排版<br />gg=G<br /><br />移動到檔案頭<br />[]<br /><br />移動到檔案尾<br />][<br /><br />找文件內的關鍵字<br />在關鍵字上按 * 或是按 gd , 就會將關鍵字反白.<br /><br />搜尋多的檔案內中的關鍵字(搜尋所有php檔案,檔案裡面有test的關鍵字<br />:vimgrep /test/*.php<br /><br />用vimgrep 搜尋完後,用 :copen 開啟搜尋後結果,<br />或是用 :clist 觀看搜尋結果<br /><br />設定書籤(Markers), F5 設定此行 F6 移除此行書籤<br />:highlight SignColumn guibg=darkgrey<br />:sign define piet text=>> texthl=Search<br /><br />function! SignFixme()<br />execute(":sign place ".line(".")." line=".line(".")." name=piet file=".expand("%:p"))<br />endfunction<br />map <f5> :call SignFixme()<cr><br /><br />function! SignLines() <br />execute(":sign unplace ".line("."))<br />endfunction<br />map <f6> :call SignLines()<cr><br /><br />將vim中複製的資料,存到windows的剪貼簿<br />用 shift+v , 框起需要複製的行數,<br />之後,按下 Ctrl+C, 就會複製到 windows的剪貼簿內!</div>
+
+]]></content>
+  </entry>
+  
+</feed>

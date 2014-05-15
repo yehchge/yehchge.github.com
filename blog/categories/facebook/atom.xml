@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: facebook | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/facebook/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[刪除 Facebook 的帳號]]></title>
+    <link href="http://yehchge.github.com/blog/2010/07/29/facebook/"/>
+    <updated>2010-07-29T23:25:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/07/29/facebook</id>
+    <content type="html"><![CDATA[<div class='post'>
+要如何刪除 Facebook 的帳號呢??<br /><br />1. 用要刪除的帳號登入 !<br />2. 進入以下網址 : https://ssl.facebook.com/help/contact.php?show_form=delete_account<br /><br />3. 輸入密碼及驗證碼後, 就會刪除了, 如果14天內再登入, 就不會刪除了!</div>
+
+]]></content>
+  </entry>
+  
+</feed>

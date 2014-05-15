@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How To Upgrade FreeBSD 6.3 to 7.0 Stable Release - 我的 Octopress 部落格</title>
+  <meta name="author" content="Yehchge">
+
+  
+  <meta name="description" content="如何升級FreeBSD 6.3 to 7.0 的方法!!(PS: 參考 http://www.cyberciti.biz/faq/howto-freebsd-server-upgrades/)來至: http://www.to2100.idv.tw/?p=4641)Step # 1: &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://yehchge.github.com/blog/2010/01/08/how-to-upgrade-freebsd-63-to-70-stable/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="我的 Octopress 部落格" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">我的 Octopress 部落格</a></h1>
+  
+    <h2>一個靜態網站的部落格框架</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:yehchge.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">How to Upgrade FreeBSD 6.3 to 7.0 Stable Release</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:39:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+如何升級FreeBSD 6.3 to 7.0 的方法!!<br /><br />(PS: 參考 http://www.cyberciti.biz/faq/howto-freebsd-server-upgrades/)<br /><br />來至: http://www.to2100.idv.tw/?p=4641)<br />Step # 1: Upgrade ports<br /><br /># portupgrade -faP<br /><br />Step # 2: Download updated freebsd-update-upgrade tool<br /><br /># fetch http://people.freebsd.org/~cperciva/freebsd-update-upgrade.tgz<br /># fetch http://people.freebsd.org/~cperciva/freebsd-update-upgrade.tgz.asc<br /># gpg &#8211;verify freebsd-update-upgrade.tgz.asc freebsd-update-upgrade.tgz<br /># tar -xf freebsd-update-upgrade.tgz<br />Step # 3: Start upgrade procedure<br /><br /># sh freebsd-update.sh -f freebsd-update.conf -r 7.0-RELEASE upgrade<br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># reboot<br />Step # 4: Install updated userland tools<br /><br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># portupgrade -faP<br />Step # 5: Remove all old libraries<br /><br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># reboot<br />Step # 6: Verify FreeBSD 7.0<br /><br /># uname -a<br /># tail -f /var/log/messages<br /># tail -f /path/to/other/log/files<br /># egrep -i &#8216;error|warning&#8217; /path/to/log/files<br /># sockstat -4 -l</div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yehchge</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-08T16:39:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/freebsd/'>FreeBSD</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yehchge.github.com/blog/2010/01/08/how-to-upgrade-freebsd-63-to-70-stable/" data-via="" data-counturl="http://yehchge.github.com/blog/2010/01/08/how-to-upgrade-freebsd-63-to-70-stable/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2010/01/08/freebsd-6x/" title="Previous Post: 更新 FreeBSD 6.x 版本的方式">&laquo; 更新 FreeBSD 6.x 版本的方式</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2010/01/08/kde4-freebsd/" title="Next Post: KDE4 在 FreeBSD 安裝好後須如何執行 ?">KDE4 在 FreeBSD 安裝好後須如何執行 ? &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/this-is-first-octopress-chinese-title/">我的第一個中文標題</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/test-markdown/">測試 MarkDown 語法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/the-php-code/">一段 PHP 程式碼</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/12/more-more-more/">想在主頁顯示摘要</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/11/this-is-test-blog/">this is test blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Yehchge -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

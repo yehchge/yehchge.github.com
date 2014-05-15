@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: date | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/date/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[FreeBSD 修改主機日期]]></title>
+    <link href="http://yehchge.github.com/blog/2010/10/21/freebsd/"/>
+    <updated>2010-10-21T11:59:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/10/21/freebsd</id>
+    <content type="html"><![CDATA[<div class='post'>
+FreeBSD 修改主機日期<br /> # date 1008221153 // 年月日時分(ps:西元年後兩碼)</div>
+
+]]></content>
+  </entry>
+  
+</feed>

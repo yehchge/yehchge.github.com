@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CheckBox | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/checkbox/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript Checkbox 全選與全不選的範例(方便)]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/javascript-checkbox/"/>
+    <updated>2010-01-08T15:56:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/javascript-checkbox</id>
+    <content type="html"><![CDATA[<div class='post'>
+&lt;SCRIPT LANGUAGE="JavaScript"&gt;<br />&lt;!--<br />// 更改表單中的選取狀態<br />// stype   : 要改變的值, "Y":全部選取 "N":全部取消 "A":反向選取<br />function SelectAll( stype ) {<br />   for (var i=0;i&lt;document.forms[0].elements.length;i++){<br />      var e=document.forms[0].elements[i];<br />      switch ( stype ) {          <br />          case 'Y':   e.checked=true;         break;<br />          case 'N':   e.checked=false;      break;<br />          case 'A':   e.checked=!e.checked;   break;<br />          default :   e.checked=!e.checked;   break;<br />      }<br />   }<br />}<br />--&gt;<br />&lt;/SCRIPT&gt;<br />=====================================================================<br />使用方式:<br />&lt;input type=button value="反向選取" onclick="SelectAll('A')"&gt;<br />&lt;input type=button value="全部選取" onclick="SelectAll('Y')"&gt;<br />&lt;input type=button value="全部取消" onclick="SelectAll('N')"&gt; <br /><br />此引用於: http://dob.tnc.edu.tw/themes/old/showPage.php?s=2901&t=6</div>
+
+]]></content>
+  </entry>
+  
+</feed>

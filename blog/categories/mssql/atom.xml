@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MSSQL | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/mssql/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sql Server QA的語法]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/sql-server-qa/"/>
+    <updated>2010-01-08T19:40:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/sql-server-qa</id>
+    <content type="html"><![CDATA[<div class='post'>
+SQL Server 2000 QA 的語法：<br /> <br />SP_DATABASES 看資料庫<br /> <br />SP_TABLES 看資料表<br /> <br />DOS下進入QA 的方法：<br /> <br />ISQL -Usa -Sxxxxxxxx</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[簡易的產生SQL SERVER 2000的資料庫SQL指令碼]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/sql-server-2000sql/"/>
+    <updated>2010-01-08T19:38:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/sql-server-2000sql</id>
+    <content type="html"><![CDATA[<div class='post'>
+簡易的產生SQL SERVER 2000的資料庫SQL指令碼：<br /> <br />1. 一般：全部顯示<br />2. 格式化：勾CREATE ONLYONE<br />3. 選項：資料表指令碼選項(1),(3),(4), 其餘Default .</div>
+
+]]></content>
+  </entry>
+  
+</feed>

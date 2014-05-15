@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ViewVC | 我的 Octopress 部落格]]></title>
+  <link href="http://yehchge.github.com/blog/categories/viewvc/atom.xml" rel="self"/>
+  <link href="http://yehchge.github.com/"/>
+  <updated>2014-05-15T23:44:18+08:00</updated>
+  <id>http://yehchge.github.com/</id>
+  <author>
+    <name><![CDATA[Yehchge]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ViewVC SVN Web介面安裝 (for FreeBSD)]]></title>
+    <link href="http://yehchge.github.com/blog/2010/01/08/viewvc-svn-web-for-freebsd/"/>
+    <updated>2010-01-08T14:45:00+08:00</updated>
+    <id>http://yehchge.github.com/blog/2010/01/08/viewvc-svn-web-for-freebsd</id>
+    <content type="html"><![CDATA[<div class='post'>
+1. cd /usr/ports/devel/viewvc<br />2. make install clean<br />3. 設定 /usr/local/viewvc/viewvc.conf<br /><br />註解: #cvs_roots = cvs: /home/cvsroot<br /><br />註解: #svn_roots = svn: /home/svnrepos<br /><br />更新:  root_parents = /data/sites/svn/repository : svn<br /><br />註解: #default_root = cvs<br /><br />更新: address = <a href=mailto:xxxx@gmail.com>Bill</a><br /><br />#修改: languages = zh-tw<br /><br />#註解: #rcs_dir =<br /><br />#註解: #cvsnt =<br />Technorati 的標籤：ViewVC,SVN,FreeBSD<br /><br />#更新: svn = /usr/local/bin<br /><br />#更新: diff = /usr/bin/diff<br />3. 修改 /etc/rc.conf<br /><br />加入: viewvc_enable="YES"<br />4. 修改 /usr/local/etc/apache22/extra/httpd-vhosts.conf<br /><br />加入:<br /><br /><VirtualHost *:80><br />     ServerAdmin xxxxx@gmail.com<br />     DocumentRoot /usr/local/viewvc/bin/cgi<br />     ServerName viewvc.xxxx.net<br />     Alias /viewvc "/usr/local/viewvc/bin/cgi/"<br />     <Directory "/usr/local/viewvc/bin/cgi"><br />        Options NONE +ExecCGI<br />        DirectoryIndex  /viewvc/viewvc.cgi<br />        Order allow,deny<br />        Allow from all<br />     </Directory><br /></VirtualHost><br />5. 重新啟動Apache<br />6. 安裝 python2.6<br /><br />cd /usr/ports/lang/python26<br /><br />make install clean<br />7. 安裝 mod_python3<br /><br />cd /usr/ports/www/mod_python3<br /><br />make install clean<br />8. 修改 httpd.conf<br /><br />cd /usr/local/etc/apache22<br /><br />ee httpd.conf<br /><br />加入: LoadModule python_module libexec/apache22/mod_python.so<br /><br />AddHandler python-program .py<br /><br />移除#號: AddHandler cgi-script .cgi<br />9. 重新啟動 Apache 即完成!</div>
+
+]]></content>
+  </entry>
+  
+</feed>
