@@ -4,7 +4,7 @@
   <title><![CDATA[我的 Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-16T00:52:22+08:00</updated>
+  <updated>2014-05-16T01:03:24+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -850,8 +850,252 @@ Comments
     <link href="http://yehchge.github.com/blog/2012/04/03/ajax-suggest-1/"/>
     <updated>2012-04-03T01:01:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2012/04/03/ajax-suggest-1</id>
-    <content type="html"><![CDATA[<div class='post'>
-<style type="text/css"><!-- pre { font-family: monospace; color: #ffffff; background-color: #333333; } .Special { color: #ffdead; } .Underlined { color: #80a0ff; text-decoration: underline; } .Constant { color: #ffa0a0; } .Type { color: #bdb76b; font-weight: bold; } .PreProc { color: #cd5c5c; } .Statement { color: #f0e68c; font-weight: bold; } .Identifier { color: #98fb98; }  code {      display: block; /* fixes a strange ie margin bug */     font-family: Courier New;      font-size: 8pt;      overflow:auto;      background: #f0f0f0 url(https://sites.google.com/site/yehchge/home/Code_BG.png) left top repeat-y;     border: 1px solid #ccc;     padding: 1px 1px 1px 12px;     max-height:400px;     line-height: 1.2em; } --></style> Ajax Suggest 建議的範例: <br /><br />1. HTML Code(clienthint.htm):<br /><code><pre><br /><span class="Identifier">&lt;</span><span class="Statement">html</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;</span><span class="Statement">head</span><span class="Identifier">&gt;</span><br /><span class="PreProc">    </span><span class="Identifier">&lt;</span><span class="Statement">script</span><span class="Identifier"> </span><span class="Type">src</span><span class="Identifier">=</span><span class="Constant">&quot;clienthint.js&quot;</span><span class="Identifier">&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">script</span><span class="Identifier">&gt;</span><br /><span class="PreProc">  </span><span class="Identifier">&lt;/</span><span class="Statement">head</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;</span><span class="Statement">body</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">h3</span><span class="Identifier">&gt;&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;<a href="http://www.w3school.com.cn/php/php_ajax_suggest.asp">http://www.w3school.com.cn/php/php_ajax_suggest.asp</a>&quot;</span><span class="Identifier">&gt;</span><span class="Underlined">Ajax Suggest</span><span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;&lt;/</span><span class="Statement">h3</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">form</span><span class="Identifier">&gt;</span><br />      First Name: <span class="Identifier">&lt;</span><span class="Statement">input</span><span class="Identifier"> </span><span class="Type">type</span><span class="Identifier">=</span><span class="Constant">&quot;text&quot;</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;txt1&quot;</span><span class="Identifier"> </span><span class="Special">onkeyup=&quot;</span><span class="Special">showHint</span>(<span class="Identifier">this</span><span class="Special">.value</span>)<span class="Special">&quot;</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;/</span><span class="Statement">form</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">p</span><span class="Identifier">&gt;</span>Suggestions: <span class="Identifier">&lt;</span><span class="Statement">span</span><span class="Identifier"> </span><span class="Type">id</span><span class="Identifier">=</span><span class="Constant">&quot;txtHint&quot;</span><span class="Identifier"> /&gt;</span><span class="Identifier">&lt;/</span><span class="Statement">p</span><span class="Identifier">&gt;</span><br />    <span class="Identifier">&lt;</span><span class="Statement">a</span><span class="Identifier"> </span><span class="Type">href</span><span class="Identifier">=</span><span class="Constant">&quot;index.htm&quot;</span><span class="Identifier">&gt;</span><span class="Underlined">Home</span><span class="Identifier">&lt;/</span><span class="Statement">a</span><span class="Identifier">&gt;</span><br />  <span class="Identifier">&lt;/</span><span class="Statement">body</span><span class="Identifier">&gt;</span><br /><span class="Identifier">&lt;/</span><span class="Statement">html</span><span class="Identifier">&gt;</span><br /></pre></code><br /><br />2. Javascript Code(clienthint.js): <br/><code><pre><br /><span class="Identifier">var</span> xmlHttp;<br /><span class="Identifier">function</span> showHint(str) <span class="Identifier">{</span><br />  <span class="Statement">if</span> (str.length==0) <span class="Identifier">{</span><br />    <span class="Statement">document</span>.getElementById(<span class="Constant">&quot;txtHint&quot;</span>).innerHTML=<span class="Constant">&quot;&quot;</span>;<br />    <span class="Statement">return</span>;<br />  <span class="Identifier">}</span><br />  xmlHttp=GetXmlHttpObject()<br />  <span class="Statement">if</span> (xmlHttp==<span class="Statement">null</span>) <span class="Identifier">{</span><br />    <span class="Statement">alert</span> (<span class="Constant">&quot;Browser does not support HTTP Request&quot;</span>);<br />    <span class="Statement">return</span>;<br />  <span class="Identifier">}</span><br />  <span class="Identifier">var</span> url=<span class="Constant">&quot;clienthint.php&quot;</span>;<br />  url=url+<span class="Constant">&quot;?q=&quot;</span>+str;<br />  url=url+<span class="Constant">&quot;&amp;sid=&quot;</span>+Math.random();<br />  xmlHttp.onreadystatechange=stateChanged;<br />  xmlHttp.open(<span class="Constant">&quot;GET&quot;</span>,url,<span class="Constant">true</span>);<br />  xmlHttp.send(<span class="Statement">null</span>);<br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span> stateChanged() <span class="Identifier">{</span><br />  <span class="Statement">if</span> (xmlHttp.readyState==4 || xmlHttp.readyState==<span class="Constant">&quot;complete&quot;</span>) <span class="Identifier">{</span><br />    <span class="Statement">document</span>.getElementById(<span class="Constant">&quot;txtHint&quot;</span>).innerHTML=xmlHttp.responseText<br />  <span class="Identifier">}</span><br /><span class="Identifier">}</span><br /><br /><span class="Identifier">function</span> GetXmlHttpObject() <span class="Identifier">{</span><br />  <span class="Identifier">var</span> xmlHttp=<span class="Statement">null</span>;<br />  <span class="Statement">try</span> <span class="Identifier">{</span><br />    <span class="Comment">// Firefox, Opera 8.0+, Safari</span><br />    xmlHttp=<span class="Statement">new</span> XMLHttpRequest();<br />  <span class="Identifier">}</span> <span class="Statement">catch</span> (e) <span class="Identifier">{</span><br />    <span class="Comment">// Internet Explorer</span><br />    <span class="Statement">try</span> <span class="Identifier">{</span><br />      xmlHttp=<span class="Statement">new</span> ActiveXObject(<span class="Constant">&quot;Msxml2.XMLHTTP&quot;</span>);<br />    <span class="Identifier">}</span> <span class="Statement">catch</span> (e) <span class="Identifier">{</span><br />      xmlHttp=<span class="Statement">new</span> ActiveXObject(<span class="Constant">&quot;Microsoft.XMLHTTP&quot;</span>);<br />    <span class="Identifier">}</span><br />  <span class="Identifier">}</span><br />  <span class="Statement">return</span> xmlHttp;<br /><span class="Identifier">}</span><br /></pre></code><br /><br />3. PHP Code(clienthint.php): <br/><code><pre><br /><span class="Special">&lt;?php</span><br /><br /><span class="Comment">// Fill up array with names</span><br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Anna</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Brittany</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Cinderella</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Diana</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Eva</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Eric</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Fiona</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Gunda</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Hege</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Inga</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Johanna</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Kitty</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Linda</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Nina</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Ophelia</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Petunia</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Amanda</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Raquel</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Cindy</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Doris</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Eve</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Evita</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Sunniva</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Tove</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Unni</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Violet</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Liza</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Elizabeth</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Ellen</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Wenche</span>&quot;;<br /><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[]</span><span class="Statement">=</span>&quot;<span class="Constant">Vicky</span>&quot;;<br /><br /><span class="Comment">//get the q parameter from URL</span><br /><span class="Statement">$</span><span class="Identifier">q</span><span class="Statement">=</span><span class="Statement">$</span><span class="Identifier">_GET</span><span class="Special">[</span>&quot;<span class="Constant">q</span>&quot;<span class="Special">]</span>;<br /><br /><span class="Comment">//lookup all hints from array if length of q&gt;0</span><br /><span class="Statement">if</span> <span class="Special">(</span><span class="Identifier">strlen</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">q</span><span class="Special">)</span> <span class="Statement">&gt;</span> <span class="Constant">0</span><span class="Special">)</span> <span class="Special">{</span><br />  <span class="Statement">$</span><span class="Identifier">hint</span><span class="Statement">=</span>&quot;&quot;;<br />  <span class="Statement">for</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">i</span><span class="Statement">=</span><span class="Constant">0</span>; <span class="Statement">$</span><span class="Identifier">i</span><span class="Statement">&lt;</span><span class="Identifier">count</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">)</span>; <span class="Statement">$</span><span class="Identifier">i</span><span class="Statement">++</span><span class="Special">)</span> <span class="Special">{</span><br />    <span class="Statement">if</span> <span class="Special">(</span><span class="Identifier">strtolower</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">q</span><span class="Special">)</span><span class="Statement">==</span><span class="Identifier">strtolower</span><span class="Special">(</span><span class="Identifier">substr</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[</span><span class="Statement">$</span><span class="Identifier">i</span><span class="Special">]</span>,<span class="Constant">0</span>,<span class="Identifier">strlen</span><span class="Special">(</span><span class="Statement">$</span><span class="Identifier">q</span><span class="Special">))))</span> <span class="Special">{</span><br />      <span class="Statement">if</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">hint</span><span class="Statement">==</span>&quot;&quot;<span class="Special">)</span> <span class="Special">{</span><br />        <span class="Statement">$</span><span class="Identifier">hint</span><span class="Statement">=</span><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[</span><span class="Statement">$</span><span class="Identifier">i</span><span class="Special">]</span>;<br />      <span class="Special">}</span> <span class="Statement">else</span> <span class="Special">{</span><br />        <span class="Statement">$</span><span class="Identifier">hint</span><span class="Statement">=</span><span class="Statement">$</span><span class="Identifier">hint</span><span class="Statement">.</span>&quot;<span class="Constant"> , </span>&quot;<span class="Statement">.</span><span class="Statement">$</span><span class="Identifier">a</span><span class="Special">[</span><span class="Statement">$</span><span class="Identifier">i</span><span class="Special">]</span>;<br />      <span class="Special">}</span><br />    <span class="Special">}</span><br />  <span class="Special">}</span><br /><span class="Special">}</span><br /><br /><span class="Comment">//Set output to &quot;no suggestion&quot; if no hint were found</span><br /><span class="Comment">//or to the correct values</span><br /><span class="Statement">if</span> <span class="Special">(</span><span class="Statement">$</span><span class="Identifier">hint</span> <span class="Statement">==</span> &quot;&quot;<span class="Special">)</span> <span class="Special">{</span><br />  <span class="Statement">$</span><span class="Identifier">response</span><span class="Statement">=</span>&quot;<span class="Constant">no suggestion</span>&quot;;<br /><span class="Special">}</span> <span class="Statement">else</span> <span class="Special">{</span><br />  <span class="Statement">$</span><span class="Identifier">response</span><span class="Statement">=</span><span class="Statement">$</span><span class="Identifier">hint</span>;<br /><span class="Special">}</span><br /><br /><span class="Comment">//output the response</span><br /><span class="PreProc">echo</span> <span class="Statement">$</span><span class="Identifier">response</span>;<br /><span class="Special">?&gt;</span><br /></pre></code> <br /><br />4. 寫好後, 執行 clienthint.htm , 完成!</div>
+    <content type="html"><![CDATA[Ajax Suggest 建議的範例: 
+
+1. HTML Code(clienthint.htm):
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;html>
+</span><span class='line'>  &lt;head>
+</span><span class='line'>    &lt;script src="clienthint.js">&lt;/script>
+</span><span class='line'>  &lt;/head>
+</span><span class='line'>  &lt;body>
+</span><span class='line'>    &lt;h3>&lt;a href="http://www.w3school.com.cn/php/php_ajax_suggest.asp">Ajax Suggest&lt;/a>&lt;/h3>
+</span><span class='line'>    &lt;form>
+</span><span class='line'>      First Name: &lt;input type="text" id="txt1" onkeyup="showHint(this.value)">
+</span><span class='line'>    &lt;/form>
+</span><span class='line'>    &lt;p>Suggestions: &lt;span id="txtHint" />&lt;/p>
+</span><span class='line'>    &lt;a href="index.htm">Home&lt;/a>
+</span><span class='line'>  &lt;/body>
+</span><span class='line'>&lt;/html></span></code></pre></td></tr></table></div></figure>
+
+2. Javascript Code(clienthint.js): 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var xmlHttp;
+</span><span class='line'>function showHint(str) {
+</span><span class='line'>  if (str.length==0) {
+</span><span class='line'>    document.getElementById("txtHint").innerHTML="";
+</span><span class='line'>    return;
+</span><span class='line'>  }
+</span><span class='line'>  xmlHttp=GetXmlHttpObject()
+</span><span class='line'>  if (xmlHttp==null) {
+</span><span class='line'>    alert ("Browser does not support HTTP Request");
+</span><span class='line'>    return;
+</span><span class='line'>  }
+</span><span class='line'>  var url="clienthint.php";
+</span><span class='line'>  url=url+"?q="+str;
+</span><span class='line'>  url=url+"&sid="+Math.random();
+</span><span class='line'>  xmlHttp.onreadystatechange=stateChanged;
+</span><span class='line'>  xmlHttp.open("GET",url,true);
+</span><span class='line'>  xmlHttp.send(null);
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function stateChanged() {
+</span><span class='line'>  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") {
+</span><span class='line'>    document.getElementById("txtHint").innerHTML=xmlHttp.responseText
+</span><span class='line'>  }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>function GetXmlHttpObject() {
+</span><span class='line'>  var xmlHttp=null;
+</span><span class='line'>  try {
+</span><span class='line'>    // Firefox, Opera 8.0+, Safari
+</span><span class='line'>    xmlHttp=new XMLHttpRequest();
+</span><span class='line'>  } catch (e) {
+</span><span class='line'>    // Internet Explorer
+</span><span class='line'>    try {
+</span><span class='line'>      xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+</span><span class='line'>    } catch (e) {
+</span><span class='line'>      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+</span><span class='line'>    }
+</span><span class='line'>  }
+</span><span class='line'>  return xmlHttp;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+3. PHP Code(clienthint.php): 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>
+</span><span class='line'>// Fill up array with names
+</span><span class='line'>$a[]="Anna";
+</span><span class='line'>$a[]="Brittany";
+</span><span class='line'>$a[]="Cinderella";
+</span><span class='line'>$a[]="Diana";
+</span><span class='line'>$a[]="Eva";
+</span><span class='line'>$a[]="Eric";
+</span><span class='line'>$a[]="Fiona";
+</span><span class='line'>$a[]="Gunda";
+</span><span class='line'>$a[]="Hege";
+</span><span class='line'>$a[]="Inga";
+</span><span class='line'>$a[]="Johanna";
+</span><span class='line'>$a[]="Kitty";
+</span><span class='line'>$a[]="Linda";
+</span><span class='line'>$a[]="Nina";
+</span><span class='line'>$a[]="Ophelia";
+</span><span class='line'>$a[]="Petunia";
+</span><span class='line'>$a[]="Amanda";
+</span><span class='line'>$a[]="Raquel";
+</span><span class='line'>$a[]="Cindy";
+</span><span class='line'>$a[]="Doris";
+</span><span class='line'>$a[]="Eve";
+</span><span class='line'>$a[]="Evita";
+</span><span class='line'>$a[]="Sunniva";
+</span><span class='line'>$a[]="Tove";
+</span><span class='line'>$a[]="Unni";
+</span><span class='line'>$a[]="Violet";
+</span><span class='line'>$a[]="Liza";
+</span><span class='line'>$a[]="Elizabeth";
+</span><span class='line'>$a[]="Ellen";
+</span><span class='line'>$a[]="Wenche";
+</span><span class='line'>$a[]="Vicky";
+</span><span class='line'>
+</span><span class='line'>//get the q parameter from URL
+</span><span class='line'>$q=$_GET["q"];
+</span><span class='line'>
+</span><span class='line'>//lookup all hints from array if length of q>0
+</span><span class='line'>if (strlen($q) > 0) {
+</span><span class='line'>  $hint="";
+</span><span class='line'>  for($i=0; $i&lt;count($a); $i++) {
+</span><span class='line'>    if (strtolower($q)==strtolower(substr($a[$i],0,strlen($q)))) {
+</span><span class='line'>      if ($hint=="") {
+</span><span class='line'>        $hint=$a[$i];
+</span><span class='line'>      } else {
+</span><span class='line'>        $hint=$hint." , ".$a[$i];
+</span><span class='line'>      }
+</span><span class='line'>    }
+</span><span class='line'>  }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>//Set output to "no suggestion" if no hint were found
+</span><span class='line'>//or to the correct values
+</span><span class='line'>if ($hint == "") {
+</span><span class='line'>  $response="no suggestion";
+</span><span class='line'>} else {
+</span><span class='line'>  $response=$hint;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>//output the response
+</span><span class='line'>echo $response;
+</span><span class='line'>?></span></code></pre></td></tr></table></div></figure>
+
+4. 寫好後, 執行 clienthint.htm , 完成!
+
+
 ]]></content>
   </entry>
   
@@ -904,15 +1148,15 @@ Comments
 假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;
 ALTER IGNORE TABLE songlist ADD UNIQUE INDEX(tt,tp);
 
-1	sn              dt                  tt               tp
-2	1      2008-02-26 17:01:00         香蕉              加樂福
-3	2      2008-02-26 17:01:00         西瓜              金銀倒
-4	3      2008-02-26 17:01:00         香蕉              加樂福
-5	4      2008-02-26 17:01:00         西瓜              金銀倒
-6	5      2008-02-26 17:02:00         蘋果              加樂福
-7	6      2008-02-26 17:02:00         牛奶              金銀倒
-8	7      2008-02-26 17:02:00         蘋果              加樂福
-9	8      2008-02-26 17:02:00         牛奶              金銀倒
+1	|	sn	|	dt	|	tt	|	tp
+2	|	1	|	2008-02-26 17:01:00	|	香蕉	|	加樂福
+3	|	2	|	2008-02-26 17:01:00	|	西瓜	|	金銀倒
+4	|	3	|	2008-02-26 17:01:00	|	香蕉	|	加樂福
+5	|	4	|	2008-02-26 17:01:00	|	西瓜	|	金銀倒
+6	|	5	|	2008-02-26 17:02:00	|	蘋果	|	加樂福
+7	|	6	|	2008-02-26 17:02:00	|	牛奶	|	金銀倒
+8	|	7	|	2008-02-26 17:02:00	|	蘋果	|	加樂福
+9	|	8	|	2008-02-26 17:02:00	|	牛奶	|	金銀倒
 	
 資料來源: http://www.dotblogs.com.tw/doremi.miredo/archive/2008/12/20/6464.aspx
 
