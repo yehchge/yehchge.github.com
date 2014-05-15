@@ -18,7 +18,7 @@ function test(){
 }
 </script>
 {% endcodeblock %}
-
+<!-- more -->
 當某一天，我們知道JavaScript要跟HTML結構實現分離後，就會改了一種寫法：
 程式碼: 
 
