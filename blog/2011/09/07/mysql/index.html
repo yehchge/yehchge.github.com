@@ -9,7 +9,9 @@
   <meta name="author" content="Yehchge">
 
   
-  <meta name="description" content="MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;ALTER IGNORE TABLE songlist ADD &hellip;">
+  <meta name="description" content="MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);
+假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;
+ALTER IGNORE TABLE songlist ADD &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,8 +92,22 @@
   </header>
 
 
-<div class="entry-content"><div class='post'>
-MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);<br />假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;<br />ALTER IGNORE TABLE songlist ADD UNIQUE INDEX(tt,tp);<br /><table><tbody><tr><td class="number"><code></code></td><td class="content"><code class="plain"></code></td></tr></tbody></table><div class="line alt2"><table><tbody><tr><td class="number"><code></code></td><td class="content"><code class="plain"></code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code></code></td><td class="content"></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="plain">sn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tp</code></td></tr></tbody></table><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="plain">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香蕉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="plain">2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 西瓜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="plain">3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 香蕉&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="plain">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:01:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 西瓜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="plain">5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 蘋果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 牛奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="plain">7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 蘋果&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 加樂福</code></td></tr></tbody></table></div><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="plain">8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2008-02-26 17:02:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 牛奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 金銀倒</code></td></tr></tbody></table></td><td class="content"><br /></td></tr></tbody></table></div><table><tbody><tr><td class="number"><code></code></td><td class="content"></td></tr></tbody></table>資料來源: http://www.dotblogs.com.tw/doremi.miredo/archive/2008/12/20/6464.aspx<br /><br /></div>
+<div class="entry-content">MYSQL語法 ALTER IGNORE TABLE 資料表 ADD UNIQUE INDEX(欄位1,欄位2);
+假設我這Table name 是songlist，欄位1是tt，欄位2是tp，SQL語法組合起來如下&#8230;
+ALTER IGNORE TABLE songlist ADD UNIQUE INDEX(tt,tp);
+
+1	sn              dt                  tt               tp
+2	1      2008-02-26 17:01:00         香蕉              加樂福
+3	2      2008-02-26 17:01:00         西瓜              金銀倒
+4	3      2008-02-26 17:01:00         香蕉              加樂福
+5	4      2008-02-26 17:01:00         西瓜              金銀倒
+6	5      2008-02-26 17:02:00         蘋果              加樂福
+7	6      2008-02-26 17:02:00         牛奶              金銀倒
+8	7      2008-02-26 17:02:00         蘋果              加樂福
+9	8      2008-02-26 17:02:00         牛奶              金銀倒
+	
+資料來源: http://www.dotblogs.com.tw/doremi.miredo/archive/2008/12/20/6464.aspx
+
 </div>
 
 
