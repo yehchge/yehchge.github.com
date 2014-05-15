@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Vim筆記(二)"
+date: 2010-01-11T17:44:00+08:00
+categories:
+ - vim
+---
+
+<div class='post'>
+設定如果有出現 Error 這個字的話, 就會將這個字以紅底白字顯示<br />:match ErrorMsg /^Error/<br /><br />如果要看有哪些顏色群組可以用,可以下<br />:so $VIMRUNTIME/syntax/hitest.vim<br /><br />移除效果:<br />:match NONE<br /><br />自定顏色群組:<br />highlight MyGroup ctermbg=red guibg=red guifg=yellow term=bold</div>

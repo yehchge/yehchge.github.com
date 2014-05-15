@@ -1,0 +1,11 @@
+---
+layout: post
+title: "方便的好工具:SCREEN(可讓程式在背景執行)"
+date: 2010-01-08T15:21:00+08:00
+categories:
+ - screen
+ - FreeBSD
+---
+
+<div class='post'>
+方便好工具：screen<br />介紹：<br />　　ssh到本機後，運用該軟體可以中途離開，但保持程式繼續執行，爾後登入可以繼續回到離開程式。<br />特色：<br />　　遠端登入安裝，可以不必等待安裝完畢才離開連線，可運用screen讓連線中斷，等下次連線在查看安裝進度。<br />安裝：<br /># cd /usr/ports/misc/screen<br /># make install clean<br />指令：<br />//進入screen程式<br /># screen<br />//以下^A表示同按"Ctrl + A"鍵<br /># ^A c //Create，開出新的 window<br /># ^A n //Next，切換到下個 window<br /># ^A p //Previous，前一個 window<br /># ^A ^A //在兩個 window 間切換<br /># ^A w //Windows，列出已開啟的 windows 有那些<br /># ^A 0...9 //切換到第 0..9 個 window<br /># ^A t //Time，顯示目前的時間，與系統的 load<br /># ^A K //kill window，強制關掉目前的 window<br /># ^A ? //Help，顯示簡單說明<br /># ^A d //detach，將目前的 screen session (可能含有多個 windows) 丟到背景執行<br />當按了 ^A d 把 screen session detach 掉後，會回到還沒進 screen 時的狀態，此時在 screen session ?每個 window 內跑的 process (無論是前景/背景)都在繼續執行，即使 logout 也不影響。<br /># screen -ls //顯示所有的 screen sessions<br /># screen -r [keyword] //挑個 screen session 回來 (撿回來)<br /><br />更多說明請參考原作者發文：<br />http://www.freebsd.org.hk/html/bsd/9/3/3.html<br /><br />本篇參考: http://mybsdnote.blogspot.com/2006/04/screen.html</div>

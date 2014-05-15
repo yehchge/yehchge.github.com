@@ -1,0 +1,11 @@
+---
+layout: post
+title: "MySQL 在 FreeBSD 上安裝的步驟"
+date: 2010-01-08T19:25:00+08:00
+categories:
+ - MySQL
+ - FreeBSD
+---
+
+<div class='post'>
+MySQL 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :<br /><br />1. Download mysql-5.0.16.tar.gz<br />2. 建立 mysql 的群組及帳號 (使用 adduser 新增比較方便)<br />3. 先建立要安裝的mysql 資料庫位置:/usr/local/mysql 設定群組權限為mysql<br />4. su mysql<br />5. tar xzvf mysql-5.0.16.tar.gz<br />6. 先將 configure 的參設設定為一個檔案, 例如 mysql.configure.sh 在執行 /bin/sh /mysql.configure.sh ,將mysql configure,<br />(PS: 如果沒有設定成一個.sh檔案, 怕以後要修改或要查詢參數時無法查詢)<br />7. make install clean<br />8. 找到解壓縮檔案下的 /scripts/mysql_install_db , 將它執行 ./scripts/mysql_install_db<br />9. 這樣就已經安裝完畢<br /><br />要如何測試MySQL呢?<br /><br />1. 執行 /usr/local/mysqld_safe & , 看看是否可以啟動?<br />2. 啟動後打入 /usr/local/mysql/bin/mysqladmin version (檢查MySQL 的版本)<br />3. 執行 /usr/local/mysql/bin/mysqladmin variable (檢查MySQL 的參數)<br />4. 執行 /usr/local/mysql/mysqlshow (顯示資料庫)<br />5. 執行 /usr/local/mysql/bin/mysqladmin -u root -p shutdown (將MySQL 停止)<br /><br />如何設定剛剛安裝好MySQL 的 root 密碼?<br />1. /usr/local/mysql/bin/mysqladmin -u root password xxxxx (xxxxx 就是你要輸入的密碼)<br /><br />如何新增設定MySQL 的使用者?<br />1. /usr/local/mysql/bin/mysql -u root -p xxxxx<br />2. grant all privileges on *.* to 'xxx'@'%' identified by 'xxxxxx'; (xxx為使用者名稱 ; xxxxxx為使用者密碼 )<br />3. flush privileges;<br /><br />MySQL 權限的修改 :<br />1. update user set password=password('xxxxx') where Db=xxxxx and User=yyyyy;<br />2. 改完後一定要執行: flush privileges;<br /><br />如果出現 Can't connect to local MySQL Server through socket 'tmp/mysql.sock' .<br />1, ln -s /var/lib/mysql.sock /tmp/mysql.sock</div>

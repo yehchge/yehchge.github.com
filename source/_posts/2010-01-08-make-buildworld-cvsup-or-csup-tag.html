@@ -1,0 +1,12 @@
+---
+layout: post
+title: "make buildworld 和 CVSUP or CSUP 的 TAG"
+date: 2010-01-08T16:35:00+08:00
+categories:
+ - cvsup
+ - FreeBSD
+ - csup
+---
+
+<div class='post'>
+在執行 cvsup 或 csup 前, 都會先編輯 /usr/share/examples/cvsup/stable-supfile<br /><br />其中有個 *default host=CHANGE_THIS.FreeBSD.org 可以改為<br /><br />*default host=cvsup.tw.FreeBSD.org , 這是修改 CVSup 的服務主機網址,<br /><br />要如何知道有哪些CVSup 的服務主機可以使用呢?<br /><br />可以參考 http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html#CVSUP-MIRRORS<br /><br />這個網站!<br /><br /> <br /><br />其中有一個 *default release=cvs tag=RELENG_7 這個TAG中, 要如何知道有哪些TAG可以使用呢?<br /><br />可以參考 http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvs-tags.html<br /><br />這個網站!<br /><br /> <br /><br />編譯前最好先執行時間對時<br /><br />ntpdate -s watch.stdtime.gov.tw<br /><br /> <br /><br />make buildworld 會將一些編譯新的核心時會需要使用到的工具先編譯好,<br /><br />所以要執行 make buildkernel 之前, 應該先執行 make buildworld<br /><br />(PS:參考網站:http://mail.lsps.tp.edu.tw/~gsyan/freebsd2001/make-world.html )</div>

@@ -1,0 +1,12 @@
+---
+layout: post
+title: "C/C++ MinGW 中,如何 Compilier *.rc 和 *.c"
+date: 2010-01-08T14:48:00+08:00
+categories:
+ - C
+ - Compiler
+ - MinGW
+---
+
+<div class='post'>
+ps: *.rc is resource file<br />1. 先用 *.rc 產生 *.o 檔案.<br />2. 在 Complilier C/C++時,將 *.o 加入編譯中.<br /><br />Ex:<br /><br />windres resources.rc resources.o<br />gcc -o main.exe main.c resources.o<br /><br />參考網站:<a href="http://www.programmersheaven.com/mb/Win32API/382265/382664/re-cant-get-resources-to-work-with-mingw/">這裡</a></div>

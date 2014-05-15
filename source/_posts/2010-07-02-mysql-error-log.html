@@ -1,0 +1,12 @@
+---
+layout: post
+title: "MySQL Error log"
+date: 2010-07-02T14:09:00+08:00
+categories:
+ - MySQL
+ - log
+ - error
+---
+
+<div class='post'>
+<pre>設定可以觀看 mysql 的 error log 檔案  </pre><pre>mkdir /var/log/mysql<br />chown mysql:mysql /var/log/mysql<br />chmod 750 /var/log/mysql</pre><pre></pre>The best choice is to define the error log, in both the [mysqld_safe]  and [mysqld] section of your servers my.cnf<br />[mysqld_safe]<br />&nbsp;&nbsp;&nbsp;&nbsp; log-error=/var/log/mysql/error.log<br />[mysqld] <br />&nbsp;&nbsp;&nbsp;&nbsp; log-error=/var/log/mysql/error.log<br /><br />轉貼自:http://ronaldbradford.com/blog/monitoring-mysql-the-error-log-2009-09-16/</div>

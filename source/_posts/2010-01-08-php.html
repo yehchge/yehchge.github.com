@@ -1,0 +1,10 @@
+---
+layout: post
+title: "PHP实现文件安全下载"
+date: 2010-01-08T19:41:00+08:00
+categories:
+ - php
+---
+
+<div class='post'>
+PHP实现文件安全下载<br />你一定会笑我"下载文件"如此简单都值得说？当然并不是想象那么简单。例如你希望客户要填完一份表格，才可以下载某一文件，你第一个想法一定是用 "Redirect"的方法，先检查表格是否已经填写完毕和完整，然后就将网址指到该文件，这样客户才能下载，但如果你想做一个关于"网上购物"的电子商务网站，考虑安全问题，你不想用户直接复制网址下载该文件，笔者建议你使用PHP直接读取该实际文件然后下载的方法去做。程序如下：<br /><br />$file_name = "info_check.exe";<br />$file_dir = "/public/www/download/";<br />if (!file_exists($file_dir . $file_name)) { //检查文件是否存在<br />echo "文件找不到";<br />exit;<br />} else {<br />$file = fopen($file_dir . $file_name,"r"); // 打开文件<br />// 输入文件标签<br />Header("Content-type: application/octet-stream");<br />Header("Accept-Ranges: bytes");<br />Header("Accept-Length: ".filesize($file_dir . $file_name));<br />Header("Content-Disposition: attachment; filename=" . $file_name);<br />// 输出文件内容<br />echo fread($file,filesize($file_dir . $file_name));<br />fclose($file);<br />exit;}<br /><br />而如果文件路径是"http" 或者 "ftp" 网址的话，则源代码会有少许改变，程序如下：<br /><br />$file_name = "info_check.exe";<br />$file_dir = "http://www.easycn.net/";<br />$file = @ fopen($file_dir . $file_name,"r");<br />if (!$file) {<br />echo "文件找不到";<br />} else {<br />Header("Content-type: application/octet-stream");<br />Header("Content-Disposition: attachment; filename=" . $file_name);<br />while (!feof ($file)) {<br />echo fread($file,50000);<br />}<br />fclose ($file);<br />}</div>

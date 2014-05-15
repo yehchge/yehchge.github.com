@@ -1,0 +1,11 @@
+---
+layout: post
+title: "PHP: Curl POST a file"
+date: 2010-01-08T14:55:00+08:00
+categories:
+ - curl
+ - php
+---
+
+<div class='post'>
+I'm trying to post a<br />word doc file to a remote server using cURL. I've tried posting ot to a local folder (code attached) but I don't get the file at the recieved page. All the FILES data is there but what use is a local path to a remote server?<br /><br />Array<br />(<br />  [file] => Array<br />      (<br />          [name] => php1431.tmp<br />          [type] => application/octet-stream<br />          [tmp_name] => C:\WINDOWS\TEMP\php1432.tmp<br />          [error] => 0<br />          [size] => 26112<br />      )<br /><br />)<br /><br />"@$fullfilepath"<br />  );       <br /><br />  $ch = curl_init();<br />  curl_setopt($ch, CURLOPT_VERBOSE, 1);<br />  curl_setopt($ch, CURLOPT_URL, $upload_url);<br />  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);<br />  curl_setopt($ch, CURLOPT_POSTFIELDS, $params);<br />  $response = curl_exec($ch);<br />  curl_close($ch);<br /><br />  //echo $response;<br />}<br /><br />?><br /><br /><br />&lt;form enctype="multipart/form-data" action="&lt;?=$_SERVER['SCRIPT_NAME']?&gt;" method="POST"&gt; <br />&lt;input type="hidden" name="MAX_FILE_SIZE" value="100000" /&gt; <br />Choose a file to upload: &lt;input name="userfile" type="file" /&gt;&lt;br /&gt; <br />&lt;input type="submit" value="Upload File" /&gt; <br />&lt;/form&gt;</div>

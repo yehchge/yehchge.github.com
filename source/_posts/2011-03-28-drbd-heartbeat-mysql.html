@@ -1,0 +1,13 @@
+---
+layout: post
+title: "DRBD & Heartbeat & mysql"
+date: 2011-03-28T11:15:00+08:00
+categories:
+ - MySQL
+ - CentOS
+ - Heartbeat
+ - DRBD
+---
+
+<div class='post'>
+參考網址:<br />http://wiselysong.blogspot.com/2009/01/heartbeatdrbdmysql-on-debian-etch.html<br />目前這種機制, 最好安裝在 CentOS 上面.<br />DRBD: 分散式儲存系統(在 Master 和 Slave 的機器上, 會有兩個一樣大的空間, 存在著相同的資料)<br />Heartbeat: 產生 Virtual ip, 監測 mysql 的狀態, 如果 Master 掛了, 沒辦法連線, 將會把 Master Mysql Stop 後, umount DRBD, DRBD再連到 Slave, Slave mount DRBD, Slave Mysql Start.<br />在CentOS 上面, 可以用以下語法觀看目前的狀況:<br />1. service mysqld status<br />2. service drbd status<br />3. service heartbeat status<br />如果要停止. 可以下以下語法:<br />1. service mysqld stop<br />2. service drbd stop<br />3. service heartbeat stop</div>

@@ -1,0 +1,10 @@
+---
+layout: post
+title: "MySQL 升級"
+date: 2011-08-22T15:22:00+08:00
+categories:
+ - MySQL
+---
+
+<div class='post'>
+(PS:此文章從Web上的PDF檔案中擷取出來的) <br />如果你有安裝MySQL<br />而且MySQL 版本是5.X 的，請注意囉<br />因為從MySQL 4.1 開始，密碼格式很像變得不同囉<br />詳情請看此篇：http://dev.mysql.com/doc/refman/4.1/en/old-client.html<br />MySQL 4.1 and up uses an authentication protocol based on a password hashing algorithm that is <br />incompatible with that used by older clients. If you upgrade the server to 4.1, attempts to connect to <br />it with an older client may fail with the following message:<br />shell&gt; mysql<br />Client does not support authentication protocol requested<br />by server; consider upgrading MySQL client<br />簡單的&nbsp;&nbsp; ， 說 MySQL 4.1跟更新的版本使用一個以密碼雜湊演算法為基礎的驗證協定<br />而且跟舊版的不一樣，不適用於舊版的 Client端.<br />如果你的 MySQL升級到 4.1(或者更新的，像是 5.X)<br />你連線到 MySQL時應該會出現以下訊息(請往上看 XD)<br />解決方法很多<br />•&nbsp;&nbsp;&nbsp; 升級Client 端的MySQL 函式庫 <br />•&nbsp;&nbsp;&nbsp; 連線到4.1 以上版本的MySQL 時，使用4.1 以上版本的帳號密碼來進行連線 <br />•&nbsp;&nbsp;&nbsp; 啟動MySQL 時，多加個--old-passwords 引數<br />•&nbsp;&nbsp;&nbsp; 登入MySQL，使用old_password 函式(待會說明)<br />OK，我們先來學第四個方法吧.. 也是我最習慣使用的方法(因為簡單拉@@")<br />請你先登入mysql(請用有權限更改mysql 的帳戶，例如：root)<br />然後↓<br />mysql&gt; set password for '帳號'@'主機' = old_password('密碼');<br />Query OK, 0 rows affected (0.00 sec)<br />用好之後，請update 跟flush privileges<br />mysql&gt; update mysql.user set password = old_password('密碼') where host = '主機' and user = '帳<br />號';<br />Query OK, 0 rows affected (0.01 sec)<br />mysql&gt; flush privileges;<br />Query OK, 0 rows affected (0.00 sec)<br />OK，這樣一來就更改好了！可以連線看看囉！<br />另外一種方法，也就是第三種方法可以自行參考MySQL 函式庫說明囉^^<br /></div>

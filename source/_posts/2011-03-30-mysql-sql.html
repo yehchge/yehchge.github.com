@@ -1,0 +1,11 @@
+---
+layout: post
+title: "MySQL 紀錄 SQL 語法"
+date: 2011-03-30T14:44:00+08:00
+categories:
+ - MySQL
+ - log
+---
+
+<div class='post'>
+MySQL大約有3種方法, 加入 /etc/my.cnf後, 再 service mysqld restart !!<br /><br />1. 查詢 Slow query 的 SQL 語法:<br />log_slow_queries = /var/log/mysql/mysql-slow.log<br />long_query_time = 2 (超過 2秒的 SQL 語法記錄起來)<br /><br />2. 設 MySQL Replication 用 binlog:<br />log_bin = /var/log/mysql/mysql-bin.log (此檔要用 mysqlbinlog 解來看)<br />mysql 會將所有 INSERT/UPDATE/DELETE 語法記於此(但是語法可能跟你想的不同), 這是要寫給 SLAVE 用的 log 檔<br /><br />3. 將 MySQL 執行的每行指令全都記錄起來(作者推薦):<br />log = /tmp/mysql.log<br />restart mysql 後, tail -f /tmp/mysql.log 就可以看到囉!<br /><br />參考網址:<br />http://blog.longwin.com.tw/2007/06/mysql_record_any_sql_command_2007/</div>

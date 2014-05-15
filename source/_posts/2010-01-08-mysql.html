@@ -1,0 +1,10 @@
+---
+layout: post
+title: "MySQL 建立索引的方法"
+date: 2010-01-08T19:24:00+08:00
+categories:
+ - MySQL
+---
+
+<div class='post'>
+1. MySQL建立索引<br />Ans: CREATE INDEX mytable_categoryid ON mytable (category_id);<br />CREATE INDEX mytable_categoryid_userid ON mytable (category_id,user_id);<br /><br />2. MySQL 要看搜尋是否有跑索引<br />Ans: 使用 Explain 命令<br /><br />3. MySQL 看執行緒命令<br />Ans: mysqladmin -u bill -p processlist<br />或是安裝MyTOP</div>

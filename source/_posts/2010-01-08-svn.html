@@ -1,0 +1,11 @@
+---
+layout: post
+title: "安裝測試機上的 SVN"
+date: 2010-01-08T13:29:00+08:00
+categories:
+ - FreeBSD
+ - SVN
+---
+
+<div class='post'>
+1. 安裝 APR<br /><br />cd /usr/ports/devel/apr<br />make instll clean<br /><br />2. 安裝 SVN<br /><br />cd /usr/ports/devel/subversion<br />make install clean<br /><br /><br />3. 在測試機上, 用 svn checkout http://svn.xxx.xxx/svn/project_name 將程式 checkout 進來<br /><br />4. 當程式更新完後, 在該專案內執行 svn up ,就可以將程式更新到測試機 !<br /><br /><br />PS:<br />Question: 出現 svn: Can't convert string from 'UTF-8' to native encoding<br /><br />Answer:<br />1. setenv LC_CTYPE zh_TW.UTF-8<br />2. locale</div>

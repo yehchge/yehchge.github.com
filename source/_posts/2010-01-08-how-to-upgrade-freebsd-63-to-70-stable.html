@@ -1,0 +1,10 @@
+---
+layout: post
+title: "How To Upgrade FreeBSD 6.3 to 7.0 Stable Release"
+date: 2010-01-08T16:39:00+08:00
+categories:
+ - FreeBSD
+---
+
+<div class='post'>
+如何升級FreeBSD 6.3 to 7.0 的方法!!<br /><br />(PS: 參考 http://www.cyberciti.biz/faq/howto-freebsd-server-upgrades/)<br /><br />來至: http://www.to2100.idv.tw/?p=4641)<br />Step # 1: Upgrade ports<br /><br /># portupgrade -faP<br /><br />Step # 2: Download updated freebsd-update-upgrade tool<br /><br /># fetch http://people.freebsd.org/~cperciva/freebsd-update-upgrade.tgz<br /># fetch http://people.freebsd.org/~cperciva/freebsd-update-upgrade.tgz.asc<br /># gpg --verify freebsd-update-upgrade.tgz.asc freebsd-update-upgrade.tgz<br /># tar -xf freebsd-update-upgrade.tgz<br />Step # 3: Start upgrade procedure<br /><br /># sh freebsd-update.sh -f freebsd-update.conf -r 7.0-RELEASE upgrade<br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># reboot<br />Step # 4: Install updated userland tools<br /><br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># portupgrade -faP<br />Step # 5: Remove all old libraries<br /><br /># sh freebsd-update.sh -f freebsd-update.conf install<br /># reboot<br />Step # 6: Verify FreeBSD 7.0<br /><br /># uname -a<br /># tail -f /var/log/messages<br /># tail -f /path/to/other/log/files<br /># egrep -i 'error|warning' /path/to/log/files<br /># sockstat -4 -l</div>

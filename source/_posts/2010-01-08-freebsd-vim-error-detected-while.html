@@ -1,0 +1,11 @@
+---
+layout: post
+title: "解決 freebsd 使用 vim 出現 Error detected while processing的問題"
+date: 2010-01-08T15:54:00+08:00
+categories:
+ - FreeBSD
+ - vim
+---
+
+<div class='post'>
+在 FreeBSD 下使用 vim 時, 進入後執行 :syntax on 時, 出現錯誤如下：<br /><br />Error detected while processing /usr/local/share/vim/vim72/syntax/php.vim:<br />line  479:<br />E10: \ should be followed by /, ? or &<br />line  482:<br />E10: \ should be followed by /, ? or &<br />line  488:<br />E10: \ should be followed by /, ? or &<br />line  489:<br />E10: \ should be followed by /, ? or &<br />line  490:<br />E10: \ should be followed by /, ? or &<br /><br />上網查詢後，發現是vim 無法在 ~ 下自行產生 .vimrc 所造成的,<br /><br />所以必須要手動產生,<br /><br />執行 $touch ~/.vimrc <br /><br />$touch ~/.vimrc<br /><br />引用于 http://www.hao32.com/unix-linux/140.html</div>

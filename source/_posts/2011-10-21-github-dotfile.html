@@ -1,0 +1,8 @@
+---
+layout: post
+title: "由 github 將 dotfile 專案抓回來"
+date: 2011-10-21T18:12:00+08:00
+---
+
+<div class='post'>
+先安裝 git core (在 ubuntu 底下)：<br />＃sudo apt-get install git-core<br /><br />將專案 clone 回來(https的網址, 請參考專案的網址)<br /># git clone https://userproject@github.com/userproject/dotfile.git<br /><br />將 dotfile 內的資料, 指到指定的資料夾內<br />#cd ~/dotfile<br />#ln -fs `pwd`/vim ~/.vim<br />#ln -fs `pwd`/vimrc ~/.vimrc<br /><br />參考網站:<br />http://huan-lin.blogspot.com/2011/05/git-basic-workflow.html<br />http://c9s.blogspot.com/2009/11/git-dotfiles.html<br />http://gavaee.wordpress.com/2011/10/11/git-安裝及使用/<br /><br />http://help.github.com/linux-set-up-git/<br />http://antbsd.twbbs.org/~ant/wordpress/?p=3044<br /><br />===========================================================<br /><br />如果在電腦上新增一個專案, 可用以下方式：<br />mkdir ~/dotfile<br />cd ~/dotfile<br />以下是要放入的檔案<br />mv ~/.vim vim<br />mv ~/.vimrc vimrc<br />git config --global user.name "user real name"<br />git config --global user.email "user email"<br />git init<br />touch README<br />git add README&nbsp;&nbsp; # 如果只有幾個檔案, 可以此方式<br />git add .&nbsp; ＃如果此資料夾下檔案都要, 使用此方式<br />git commit -m "commit description ..."<br />(https的網址, 請參考專案網址) <br />git push https://userproject@github.com/userproject/dotfile.git<br /><br /><br /><br /><br /><br /><br /><br /></div>

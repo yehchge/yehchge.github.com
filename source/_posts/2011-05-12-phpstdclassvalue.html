@@ -1,0 +1,29 @@
+---
+layout: post
+title: "PHP印出陣列中被包在StdClass內的Value"
+date: 2011-05-12T14:46:00+08:00
+categories:
+ - stdClass
+ - php
+---
+
+<div class='post'>
+&nbsp;假設今天收到的資料的是<br />Array (<br />&nbsp; &nbsp;[0] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; "AAA"<br />&nbsp; &nbsp;[code] =&gt;123<br />&nbsp; &nbsp;)<br />[1] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; "BBB"<br />&nbsp; &nbsp;[code] =&gt;456<br />&nbsp; )<br />[2] =&gt; stdClass Object (<br />&nbsp; &nbsp;[name] =&gt; "CCC"<br />&nbsp; &nbsp;[code] =&gt;789<br />&nbsp; )<br />)<br /><br />要印出資料只要設定一個變數指到那個Array Object 就好了…<br />//先把資料存到某個變數 , 假設上面那筆資料是 $a<br />$b = $a;<br />//接著逐一印出的話<br />foreach ($b as $value) {<br />&nbsp; &nbsp; $name = $value-&gt;name;<br />&nbsp; &nbsp; $code = $value-&gt;code;<br />&nbsp; &nbsp; echo "$name , $code \n";<br />}<br /><br />出處:&nbsp;<a href="http://note.ajneok.org/programing_note/php/php-print-array-value-in-stdclass/comment-page-1/#comment-1231">http://note.ajneok.org/programing_note/php/php-print-array-value-in-stdclass/comment-page-1/#comment-1231</a></div>
+<h2>Comments</h2>
+<div class='comments'>
+<div class='comment'>
+<div class='author'>Yien_Huang</div>
+<div class='content'>
+因為您這樣寫會讓人覺的你只要看裡面的資料<br /><br />我記得我寫的php很多都是這樣的方式，因為要跟javascript溝通，必需把array換成object，轉換成json資料格式才可以跟js使用。(上架程式裡面有一堆都是這個!)</div>
+</div>
+<div class='comment'>
+<div class='author'>~我的筆記園地~</div>
+<div class='content'>
+如果你要擷取裡面的值, 就得要回圈跑~~<br />目前很多套裝軟體都會用到~~</div>
+</div>
+<div class='comment'>
+<div class='author'>Yien_Huang</div>
+<div class='content'>
+我不懂~ print_r() &amp; var_dump() 不是就可以印出來了嗎?~怎麼要用回圈跑出來呢?!</div>
+</div>
+</div>

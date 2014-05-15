@@ -1,0 +1,11 @@
+---
+layout: post
+title: "KDE4 在 FreeBSD 安裝好後須如何執行 ?"
+date: 2010-01-08T17:29:00+08:00
+categories:
+ - KDE
+ - FreeBSD
+---
+
+<div class='post'>
+For KDE3:<br /><br />% echo "exec startkde" > ~/.xinitrc<br /><br />For KDE4:<br /><br />% echo "exec /usr/local/kde4/bin/startkde" > ~/.xinitrc<br /><br />Now, whenever the X Window System is invoked with startx, KDE will be the desktop.</div>

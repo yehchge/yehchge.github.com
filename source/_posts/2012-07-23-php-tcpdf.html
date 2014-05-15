@@ -1,0 +1,14 @@
+---
+layout: post
+title: "PHP 使用 TCPDF 顯示中文的關鍵"
+date: 2012-07-23T16:35:00+08:00
+categories:
+ - 中文
+ - joomla
+ - tcpdf
+ - pdf
+ - php
+---
+
+<div class='post'>
+<br />$pdf = new TCPDF(PDF_PAFE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);<br /><br />// set font (PHP TCPDF 顯示中文字型)<br />$pdf-&gt;SetFont('cid0jp', '', 18); // 可以顯示中文(繁、簡)、日文、韓文。<br />//$pdf-&gt;SetFont('msungstdlight', '', 18, '', true); //　繁中, 但是效果不好,字會偏移<br />//$pdf-&gt;SetFont('stsongstdlight', '', 20); // 可以顯示中文, 但是效果不好,字會偏移<br />//$pdf-&gt;SetFont('dejavusans', '', 14, '', true); //　預設 utf8<br /></div>

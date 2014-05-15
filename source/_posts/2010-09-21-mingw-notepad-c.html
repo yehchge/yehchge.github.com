@@ -1,0 +1,12 @@
+---
+layout: post
+title: "使用 MinGW + Notepad++ 來寫 C++"
+date: 2010-09-21T17:43:00+08:00
+categories:
+ - MinGW
+ - notepad++
+ - C++
+---
+
+<div class='post'>
+1. 下載 Notepad++<br />2. 下載 Notepad++ plugin -- NppExec<br />3. 下載 MinGW-5.1.6.exe,安裝起來<br /><br />4. 使用 Notepad++ 新增檔案<br />// hello.cpp<br />#include <iostream> // cout<br />#include "conio.h" // getch<br />#include <tchar.h> // TCHAR<br /><br />using namespace std;<br /><br />int _tmain(int argc, _TCHAR* argv[])<br />{<br />&nbsp;&nbsp;&nbsp; std::cout &lt;&lt; "Hello World!\n";<br />&nbsp;&nbsp;&nbsp; getch();<br />&nbsp;&nbsp;&nbsp; return 0;<br />}</tchar.h></iostream><br /><br />5. 使用 NppExec套件, 輸入<br />C:\MinGW\bin\g++.exe "$(FULL_CURRENT_PATH)" -o $(NAME_PART)<br /><br />6. 執行後, 即會 Complier 成 exe 檔案 !!</div>

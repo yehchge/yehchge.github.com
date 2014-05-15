@@ -1,0 +1,10 @@
+---
+layout: post
+title: "MinGW安裝方式"
+date: 2010-01-08T14:53:00+08:00
+categories:
+ - MinGW
+---
+
+<div class='post'>
+MinGW安裝方式:<br />1. 先至 <a href="http://sourceforge.net/projects/mingw/files/">MingGW</a> 下載 MinGW-5.1.4.exe<br />2. 安裝時除了core 必安裝外, 最好在安裝c++套件<br />3. 設定 windows 的 path , 加上 C:\MinGW\bin<br />4. 在 C:\MinGW\ 下, 產生 win_hello.c 檔案<br />內容如下:<br />#include <windows.h> <br />int WINAPI WinMain (HINSTANCE hInstance, <br />    HINSTANCE hPrevInstance, <br />    PSTR szCmdLine, <br />   int iCmdShow) <br />{ <br />   MessageBox (NULL, "Hello", "Hello Demo", MB_OK); <br />    return (0); <br />} <br /> <br />5. 執行 cmd, 在console 下執行 :<br />C:\MinGW>g++ -o win_hello win_hello.c -mwindows<br /> <br />6. 完成後, 如果沒有任何錯誤, 就會產生一個簡單的exe程式了~~ 祝順利~~</div>

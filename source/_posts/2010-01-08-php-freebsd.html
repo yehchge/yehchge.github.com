@@ -1,0 +1,11 @@
+---
+layout: post
+title: "PHP 在 FreeBSD 上的安裝步驟"
+date: 2010-01-08T16:37:00+08:00
+categories:
+ - FreeBSD
+ - php
+---
+
+<div class='post'>
+PHP 在 FreeBSD 上安裝的步驟: (使用 Configure 方式安裝) :<br /><br />1. Download php-5.2.6.tar.gz<br /><br />2. tar xzvf php-5.2.6.tar.gz<br /><br />3. cd php-5.2.6<br /><br />4. /bin/sh ../php.configure.sh (php.configure.sh 要先將configure的參數先設定好)<br /><br />5. make install<br /><br />6. cp php.ini-dist /usr/local/php/lib/php.ini<br /><br />7. 設定 /usr/local/php/lib/php.ini<br /><br />(1) include_path=".:/usr/local/php"<br /><br />(2) register_globals=off<br /><br />(3) short_open_tag = On<br /><br />8. 設定 httpd.conf<br /><br />(1) LoadModule php5_module libexec/libphp5.so<br /><br />(2) AddType application/x-httpd-php .php<br /><br />(3) DirectoryIndex 後面加上 index.php<br /><br />9. 重新啟動 Apache Server <br /><br />/usr/local/apache2/bin/apachectl restart<br /><br />(PS: DSO版(*.so)檔案, 放在 /usr/local/apache2/modules<br /><br />10. 測試 php<br /><br />/usr/local/php/bin/php -i<br /><br />如果有出現php的參數設定,就表示成功了~~<br /><br /> <br /><br />以下列出為參考其他人使用的PHP configure 的參數設定: (php.configure.sh)<br /><br />#!/bin/bash<br />./configure --prefix=/usr/local/php --mandir=/usr/local/php/man --infodir=/usr/local/php/info --with-apxs2=/usr/local/apache2/bin/apxs --with-mysql=/usr/local/mysql  --with-curl=/usr/lib --with-zlib-dir=/usr/lib --with-freetype-dir=/usr/lib  --enable-zend-multibyte --enable-ftp --enable-mbstring --with-iconv --enable-gd-native-ttf --with-openssl --with-mysql --with-zlib --with-gd --enable-mbstring --enable-libxml --with-regex=php<br /><br /> <br /><br />(PS:apxs 為 Apache configure 時要有下 --enable-module=so 的參數)<br /><br />其他參數如:<br /><br />--enable-fastcgi<br /><br />--enable-mssql<br /><br />--enable-pgsql<br /><br />--enable-sqlite-utf8</div>
