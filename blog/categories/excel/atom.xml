@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Excel | 我的 Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/blog/categories/excel/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-16T01:12:22+08:00</updated>
+  <updated>2014-05-16T01:23:57+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -18,9 +18,111 @@
     <link href="http://yehchge.github.com/blog/2010/01/08/excel/"/>
     <updated>2010-01-08T19:31:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2010/01/08/excel</id>
-    <content type="html"><![CDATA[<div class='post'>
-&lt;?xml version="1.0"?&gt;<br />&lt;?mso-application progid="Excel.Sheet"?&gt;<br />&lt;Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"<br /> xmlns:o="urn:schemas-microsoft-com:office:office"<br /> xmlns:x="urn:schemas-microsoft-com:office:excel"<br /> xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"<br /> xmlns:html="http://www.w3.org/TR/REC-html40"&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet1"&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaaaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;aaaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;1515aaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;56516aaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type="String"&gt;a546456aaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet2"&gt;<br />  &lt;Table&gt;<br />   &lt;Row ss:Index="5"&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type="String"&gt;bbbbbb&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name="Sheet3"&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell ss:Index="4"&gt;&lt;Data ss:Type="String"&gt;ccccccc&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br />&lt;/Workbook&gt;<br /> <br /> <br /> <br /> <br />以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!<br />可用於php asp.net asp vb c# .....等各種程式 !!</div>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0"?>
+</span><span class='line'>&lt;?mso-application progid="Excel.Sheet"?>
+</span><span class='line'>&lt;Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+</span><span class='line'>xmlns:o="urn:schemas-microsoft-com:office:office"
+</span><span class='line'>xmlns:x="urn:schemas-microsoft-com:office:excel"
+</span><span class='line'>xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+</span><span class='line'>xmlns:html="http://www.w3.org/TR/REC-html40">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;Worksheet ss:Name="Sheet1">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;Table>
+</span><span class='line'>&lt;Row>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">aaaaaa&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">aaaaa2&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">aaaa33&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;Row>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">1515aaa&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">56516aaaa2&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">a546456aaa33&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;/Table>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;/Worksheet>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;Worksheet ss:Name="Sheet2">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;Table>
+</span><span class='line'>&lt;Row ss:Index="5">
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">bbbbbb&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;/Table>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;/Worksheet>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;Worksheet ss:Name="Sheet3">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;Table>
+</span><span class='line'>&lt;Row>
+</span><span class='line'>&lt;Cell ss:Index="4">&lt;Data ss:Type="String">ccccccc&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;/Table>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;/Worksheet>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;/Workbook>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
+<p>以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!
+可用於php asp.net asp vb c# .....等各種程式 !!</p>
 ]]></content>
   </entry>
   

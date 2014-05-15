@@ -389,8 +389,91 @@ SQL Server 2000 QA 的語法：<br /> <br />SP_DATABASES 看資料庫<br /> <br 
   </header>
 
 
-  <div class="entry-content"><div class='post'>
-&lt;?xml version=&#8221;1.0&#8221;?&gt;<br />&lt;?mso-application progid=&#8221;Excel.Sheet&#8221;?&gt;<br />&lt;Workbook xmlns=&#8221;urn:schemas-microsoft-com:office:spreadsheet&#8221;<br /> xmlns:o=&#8221;urn:schemas-microsoft-com:office:office&#8221;<br /> xmlns:x=&#8221;urn:schemas-microsoft-com:office:excel&#8221;<br /> xmlns:ss=&#8221;urn:schemas-microsoft-com:office:spreadsheet&#8221;<br /> xmlns:html=&#8221;http://www.w3.org/TR/REC-html40&#8221;&gt;<br /> <br /> &lt;Worksheet ss:Name=&#8221;Sheet1&#8221;&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;aaaaaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;aaaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;aaaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />   &lt;Row&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;1515aaa&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;56516aaaa2&lt;/Data&gt;&lt;/Cell&gt;<br /> &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;a546456aaa33&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name=&#8221;Sheet2&#8221;&gt;<br />  &lt;Table&gt;<br />   &lt;Row ss:Index=&#8221;5&#8221;&gt;<br />    &lt;Cell&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;bbbbbb&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br /> &lt;Worksheet ss:Name=&#8221;Sheet3&#8221;&gt;<br />  &lt;Table&gt;<br />   &lt;Row&gt;<br />    &lt;Cell ss:Index=&#8221;4&#8221;&gt;&lt;Data ss:Type=&#8221;String&#8221;&gt;ccccccc&lt;/Data&gt;&lt;/Cell&gt;<br />   &lt;/Row&gt;<br />  &lt;/Table&gt;<br /> &lt;/Worksheet&gt;<br /> <br />&lt;/Workbook&gt;<br /> <br /> <br /> <br /> <br />以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!<br />可用於php asp.net asp vb c# &#8230;..等各種程式 !!</div>
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0"?>
+</span><span class='line'>&lt;?mso-application progid="Excel.Sheet"?>
+</span><span class='line'>&lt;Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+</span><span class='line'>xmlns:o="urn:schemas-microsoft-com:office:office"
+</span><span class='line'>xmlns:x="urn:schemas-microsoft-com:office:excel"
+</span><span class='line'>xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+</span><span class='line'>xmlns:html="http://www.w3.org/TR/REC-html40">
+</span><span class='line'>
+</span><span class='line'>&lt;Worksheet ss:Name="Sheet1">
+</span><span class='line'>&lt;Table>
+</span><span class='line'>&lt;Row>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">aaaaaa&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">aaaaa2&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">aaaa33&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;Row>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">1515aaa&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">56516aaaa2&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">a546456aaa33&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;/Table>
+</span><span class='line'>&lt;/Worksheet>
+</span><span class='line'>
+</span><span class='line'>&lt;Worksheet ss:Name="Sheet2">
+</span><span class='line'>&lt;Table>
+</span><span class='line'>&lt;Row ss:Index="5">
+</span><span class='line'>&lt;Cell>&lt;Data ss:Type="String">bbbbbb&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;/Table>
+</span><span class='line'>&lt;/Worksheet>
+</span><span class='line'>
+</span><span class='line'>&lt;Worksheet ss:Name="Sheet3">
+</span><span class='line'>&lt;Table>
+</span><span class='line'>&lt;Row>
+</span><span class='line'>&lt;Cell ss:Index="4">&lt;Data ss:Type="String">ccccccc&lt;/Data>&lt;/Cell>
+</span><span class='line'>&lt;/Row>
+</span><span class='line'>&lt;/Table>
+</span><span class='line'>&lt;/Worksheet>
+</span><span class='line'>
+</span><span class='line'>&lt;/Workbook></span></code></pre></td></tr></table></div></figure>
+ 
+以上格式可將檔案匯出成xml 檔或是xls檔, 是多Sheet 的方法!!
+可用於php asp.net asp vb c# &#8230;..等各種程式 !!
+
+
 </div>
   
   
