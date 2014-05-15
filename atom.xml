@@ -4,7 +4,7 @@
   <title><![CDATA[我的 Octopress 部落格]]></title>
   <link href="http://yehchge.github.com/atom.xml" rel="self"/>
   <link href="http://yehchge.github.com/"/>
-  <updated>2014-05-16T00:19:59+08:00</updated>
+  <updated>2014-05-16T00:27:56+08:00</updated>
   <id>http://yehchge.github.com/</id>
   <author>
     <name><![CDATA[Yehchge]]></name>
@@ -318,16 +318,51 @@ firefox中註冊事件使用：addEventListener方法，同時為了兼容ie，�
     <link href="http://yehchge.github.com/blog/2012/04/25/c-compiler/"/>
     <updated>2012-04-25T11:57:00+08:00</updated>
     <id>http://yehchge.github.com/blog/2012/04/25/c-compiler</id>
-    <content type="html"><![CDATA[<div class='post'>
-<style type="text/css"><!-- pre { font-family: monospace; color: #ffffff; background-color: #333333; } .Special { color: #ffdead; } .Underlined { color: #80a0ff; text-decoration: underline; } .Constant { color: #ffa0a0; } .Type { color: #bdb76b; font-weight: bold; } .PreProc { color: #cd5c5c; } .Statement { color: #f0e68c; font-weight: bold; } .Identifier { color: #98fb98; }  code {      display: block; /* fixes a strange ie margin bug */     font-family: Courier New;      font-size: 8pt;      overflow:auto;      background: #f0f0f0 url(https://sites.google.com/site/yehchge/home/Code_BG.png) left top repeat-y;     border: 1px solid #ccc;     padding: 1px 1px 1px 12px;     max-height:400px;     line-height: 1.2em; } --></style> <br />G++ Compiler windows 安裝環境:<br /><br />1. 至 MinGW 網站, 選擇 Download -&gt; Installer -&gt; mingw-get-inst -&gt; mingw-get-inst-20120421<br />2. 下載 mingw-get-inst-20120421.exe<br />3. 執行 mingw-get-inst-20120421.exe, 選擇 Download latest repository catalogues<br />4. Select Components 選項中, 加選 C++ Compiler<br />5. 安裝完後, 新增 hello.cpp 檔案, 輸入以下程式:<br /><br /><code><pre><br /><br /><span class="Comment">// hello.cpp</span><br /><br /><span class="PreProc">#include </span><span class="Constant">&lt;iostream&gt;</span> <span class="Comment">// Basic input and output library</span><br /><br /><span class="Type">int</span> main() {<br />    std::cout &lt;&lt; <span class="Constant">&quot;Hello World</span><span class="Special">\n</span><span class="Constant">&quot;</span>;<br />    <span class="Statement">return</span> <span class="Constant">0</span>; <span class="Comment">// Return to the operating system</span><br />}<br /><br /></pre></code><br /><br />6. 執行 C:\MinGW\bin\g++.exe hello.cpp -o hello<br />&nbsp; &nbsp;出現: cc1plus.exe - 找不到元件, 這個應用程式無法啟動，因為找不到 libgmp-10.dll，<br />&nbsp; &nbsp;重新安裝應用程式可能可以解決這個問題。<br /><br />7. 如果出現步驟 6 的狀況, 請再到 MinGW 網站, 下載 mingw-get-inst-20111118.exe 檔案.<br />&nbsp; &nbsp;下載完後, 重新安裝, 應該就會發現 C:\MinGW\bin 下面有 libgmp-10.dll 的檔案.<br /><br />8. 設定環境變數 path, 我的電腦 -&gt; 按滑鼠右鍵 -&gt; 內容 -&gt; 進階 -&gt; 環境變數 -&gt; 系統變數 -&gt; Path -&gt; 編輯<br />&nbsp; &nbsp;-&gt; 在最後分號處, 加入 C:\MinGW\bin;<br /><br />9. 如果要編譯 Windows 的程式, 可以執行如下指令:<br />&nbsp; &nbsp;C:\MinGW\bin\g++.exe sample01.cpp -o sample01 -mwindows -Wall<br /><br /></div>
-<h2>Comments</h2>
-<div class='comments'>
-<div class='comment'>
-<div class='author'>健力宝</div>
-<div class='content'>
-感谢您的文章解决了我的问题。<br /><br />谢谢！</div>
-</div>
-</div>
+    <content type="html"><![CDATA[G++ Compiler windows 安裝環境:
+
+1. 至 MinGW 網站, 選擇 Download -&gt; Installer -&gt; mingw-get-inst -&gt; mingw-get-inst-20120421
+2. 下載 mingw-get-inst-20120421.exe
+3. 執行 mingw-get-inst-20120421.exe, 選擇 Download latest repository catalogues
+4. Select Components 選項中, 加選 C++ Compiler
+5. 安裝完後, 新增 hello.cpp 檔案, 輸入以下程式:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// hello.cpp
+</span><span class='line'>
+</span><span class='line'>#include &lt;iostream> // Basic input and output library
+</span><span class='line'>
+</span><span class='line'>int main() {
+</span><span class='line'>    std::cout &lt;&lt; "Hello World\n";
+</span><span class='line'>    return 0; // Return to the operating system
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+6. 執行 C:\MinGW\bin\g++.exe hello.cpp -o hello
+出現: cc1plus.exe - 找不到元件, 這個應用程式無法啟動，因為找不到 libgmp-10.dll，
+重新安裝應用程式可能可以解決這個問題。
+
+7. 如果出現步驟 6 的狀況, 請再到 MinGW 網站, 下載 mingw-get-inst-20111118.exe 檔案.
+下載完後, 重新安裝, 應該就會發現 C:\MinGW\bin 下面有 libgmp-10.dll 的檔案.
+
+8. 設定環境變數 path, 我的電腦 -&gt; 按滑鼠右鍵 -&gt; 內容 -&gt; 進階 -&gt; 環境變數 -&gt; 系統變數 -&gt; Path -&gt; 編輯
+-&gt; 在最後分號處, 加入 C:\MinGW\bin;
+
+9. 如果要編譯 Windows 的程式, 可以執行如下指令:
+C:\MinGW\bin\g++.exe sample01.cpp -o sample01 -mwindows -Wall
+
+
+Comments
+
+健力宝
+
+感谢您的文章解决了我的问题。
+谢谢！
 ]]></content>
   </entry>
   
